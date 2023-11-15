@@ -16,6 +16,16 @@ library(dplyr)
 library(ggplot2)
 here()
 
+mytheme <- theme_classic(base_size = 14)+
+  theme(legend.background = element_rect(
+    color = "grey",
+    fill = "white"),
+    plot.title = element_text(hjust = 0.5, size = 12),
+    legend.position = "bottom")
+    
+theme_set(mytheme)
+
+
 MPA.data <- read.csv(here('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.csv'),
                      stringsAsFactors = TRUE, 
                      colClasses = c('Year.Established' = 'factor'))
@@ -48,10 +58,23 @@ LevelofProtection <- ggplot(MPA.data.clean) +
   geom_bar(aes(x=Level.of.Protection)) +
   labs(x = "Level of Protection",
        y = "Count") +
-  theme(element_text(angle = 45))
+  theme(axis.text.x = element_text(angle = 90))
 print(LevelofProtection)
-  
 
+LevelofProtection.Area <- ggplot(MPA.data.clean) +
+  geom_col(aes(
+    x = Level.of.Protection,
+    y = Area)) +
+  labs(x = "Level of Protection",
+       y = "Total Area") +
+  theme(axis.text.x = element_text(angle = 90))
+  scale_y_continuous(labels = scales::number_format(scale = 1e-4))
+print(LevelofProtection.Area)
+  
+Percent.Zone.with.No.Take <- 
+  
+  
+  
 unique(MPA.data.clean$Level.of.Protection)
 
 
