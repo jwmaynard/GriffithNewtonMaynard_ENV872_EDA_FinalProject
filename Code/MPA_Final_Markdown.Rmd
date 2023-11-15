@@ -13,7 +13,7 @@ library(dplyr)
 library(ggplot2)
 here()
 
-MPA.data <- read.csv(here('Project/NOAA_Marine_Protected_Areas_Inventory_2023.csv'),
+MPA.data <- read.csv(here('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.csv'),
                      stringsAsFactors = TRUE, 
                      colClasses = c('Year.Established' = 'factor'))
 
