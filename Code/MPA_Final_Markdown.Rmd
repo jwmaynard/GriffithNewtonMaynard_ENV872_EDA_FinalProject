@@ -18,15 +18,15 @@ MPA.data <- read.csv(here('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.cs
                      colClasses = c('Year.Established' = 'factor'))
 
 MPA.data.clean <- MPA.data %>%
-  select(OBJECTID, Site.Name, State, Level.of.Protection, Management.Plan, Year.Established, Marine.Status, Area..km2., Marine.Area..km2., Percent.Area.Marine, No.Take.Area..km2., Longitude, Latitude) 
+  select(OBJECTID, Site.Name, State, Level.of.Protection, Management.Plan, Year.Established, Marine.Status, Area..km2., Marine.Area..km2., Percent.Area.Marine, No.Take.Area..km2., Longitude, Latitude) %>% 
+  filter(Year.Established != 0)
 
 MPA.data.clean$Year.Established <- as.Date(MPA.data.clean$Year.Established, format = '%Y')
 
-MPA.data.clean <- MPA.data.clean %>% 
-  mutate(Year = year(Year.Established)) %>% 
-  select(-Year.Established)
 
+nrow(filter(MPA.data, Year.Established == 0)) #60 observations have no date found
 
+unique(MPA.data$Year.Established)
 
 colnames(MPA.data.clean)[8] <- "Area"
 colnames(MPA.data.clean)[9] <- "Marine.Area"
@@ -34,11 +34,33 @@ colnames(MPA.data.clean)[11] <- "No.Take.Area"
   
 Clean.plot <- 
   ggplot(MPA.data.clean) +
-  geom_bar(aes(x=Year)) +
-  scale_x_discrete(as.Date(c("2000", "2023"), date_break = "1 year", date_labels = "%Y")) +
+  geom_bar(aes(x=Year.Established)) +
+  scale_x_date(date_break = "1 years", date_labels = "%Y", limits = as.Date(c('2000-11-15','2023-11-15')) ) +
   labs(x = "Year", y = "Count") +
-  xlim(2000,2023)
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
 print(Clean.plot)
+
+  
+p2 <- 
+  ggplot(MPA.data.clean) +
+  geom_bar(aes(x = Level.of.Protection)) +
+  labs(x = "Level of Protection", y = "Count") 
+print(p2)
+
+p2 <- 
+  ggplot(MPA.data.clean) +
+  geom_bar(aes(x = Level.of.Protection)) +
+  labs(x = "Level of Protection", y = "Count") 
+print(p2)
+
+p3 <- 
+  ggplot(MPA.data.clean) +
+  geom_bar(aes(x = Management.Plan)) +
+  labs(x = "Management.Plan", y = "Count") + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+print(p3)
+
 
 
 
