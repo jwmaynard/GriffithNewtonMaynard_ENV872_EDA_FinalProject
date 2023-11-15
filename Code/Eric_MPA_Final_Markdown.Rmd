@@ -1,0 +1,79 @@
+---
+title: "Eric_MPA_Final_Markdown"
+author: "Eric Newton"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+#knitr::opts_chunk$set(echo = TRUE)
+
+
+library(here)
+library(tidyverse)
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+here()
+
+MPA.data <- read.csv(here('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.csv'),
+                     stringsAsFactors = TRUE, 
+                     colClasses = c('Year.Established' = 'factor'))
+
+MPA.data.clean <- MPA.data %>%
+  select(OBJECTID, Site.Name, State, Level.of.Protection, Management.Plan, Year.Established, Marine.Status, Area..km2., Marine.Area..km2., Percent.Area.Marine, No.Take.Area..km2., Longitude, Latitude) %>% 
+  filter(Year.Established != 0)
+
+MPA.data.clean$Year.Established <- as.Date(MPA.data.clean$Year.Established, format = '%Y')
+
+colnames(MPA.data.clean)[8] <- "Area"
+colnames(MPA.data.clean)[9] <- "Marine.Area"
+colnames(MPA.data.clean)[11] <- "No.Take.Area"
+  
+Clean.plot <- 
+  ggplot(MPA.data.clean) +
+  geom_bar(aes(x=Year.Established)) +
+  scale_x_date(date_breaks = "2 years", date_labels = "%Y", limits = as.Date(c("2000-11-15", "2023-11-15"))) +
+  labs(x = "Year", y = "Count")
+print(Clean.plot)
+
+
+NoTake <- MPA.data.clean %>% 
+  filter(No.Take.Area != 0)
+
+PartialNoTake <- NoTake %>% 
+  filter(Area != No.Take.Area)
+
+LevelofProtection <- ggplot(MPA.data.clean) +
+  geom_bar(aes(x=Level.of.Protection)) +
+  labs(x = "Level of Protection",
+       y = "Count") +
+  theme(element_text(angle = 45))
+print(LevelofProtection)
+  
+
+unique(MPA.data.clean$Level.of.Protection)
+
+
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
