@@ -13,6 +13,18 @@ library(dplyr)
 library(ggplot2)
 here()
 
+my_theme <-
+  theme(
+      plot.background = element_rect(fill = "#f5f0d9", color = NA),
+      panel.background = element_rect(fill = "#f5f0d9", color = NA),
+      legend.background = element_rect(fill = "#f5f0d9", color = NA),
+      panel.grid.major =  element_line(color = "#d0d0d0", linewidth = .2),
+      legend.position="top")
+
+
+      
+
+
 MPA.data <- read.csv(here('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.csv'),
                      stringsAsFactors = TRUE, 
                      colClasses = c('Year.Established' = 'factor'))
@@ -31,7 +43,7 @@ Clean.plot <-
   ggplot(MPA.data.clean) +
   geom_bar(aes(x=Year.Established)) +
   scale_x_date(date_breaks = "2 years", date_labels = "%Y", limits = as.Date(c("2000-11-15", "2023-11-15"))) +
-  labs(x = "Year", y = "Count")
+  labs(x = "Year", y = "Count") + my_theme
 print(Clean.plot)
 
 
