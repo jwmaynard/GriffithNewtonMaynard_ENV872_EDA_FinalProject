@@ -56,21 +56,32 @@ When you click the **Knit** button a document will be generated that includes bo
 ```{r Over Time info}
 
 MPA.parks.year <- MPA.data.clean %>%
-#  select(Year.Established) %>%
   mutate("year" = year(Year.Established)) %>%
-#  select(year) %>%
   group_by(year) %>%
-  summarise(count = n()) %>%
-  mutate('Cumulative' = cumsum(count))
-  
+  summarise(count = n()) %>% # Getting the number of parks created per year
+  mutate('Cumulative' = cumsum(count)) # Calculating a cumulative sum of the total number of parks per year
+
+# Plot the cumulative sum of parks per year to visualize trend over time.
 total_num_plot <-
   ggplot(MPA.parks.year) +
   geom_line(aes(x = year,
                 y = Cumulative))
-
+#Add a title, fix axis, etc
 total_num_plot
-  
 
+# Wrangle data to have the cumulative total area over time.
+MPA.totalarea.year <- MPA.data.clean %>%
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>%
+  mutate('Cum_Area' = cumsum(Area))
+
+total_area_plot <-
+  ggplot(MPA.totalarea.year) +
+  geom_line(aes(x = year,
+                y = Cum_Area))
+
+#Add a title, fix axis, etc
+total_area_plot
 ```
 
 ## Including Plots
