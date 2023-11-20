@@ -3,17 +3,19 @@ title: "Eric_MPA_Final_Markdown"
 author: "Eric Newton"
 date: "`r Sys.Date()`"
 output: pdf_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
 #knitr::opts_chunk$set(echo = TRUE)
-
 
 library(here)
 library(tidyverse)
 library(lubridate)
 library(dplyr)
 library(ggplot2)
+library(scales)
 here()
 
 mytheme <- theme_classic(base_size = 14)+
@@ -48,6 +50,63 @@ Clean.plot <-
 print(Clean.plot)
 
 
+
+
+  
+  
+  
+  
+unique(MPA.data.clean$Level.of.Protection)
+
+
+
+```
+
+## R Markdown
+
+```{Level of Protection DFs}
+Zoned.w.No.Take.Areas.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  mutate("Cum.Area" = cumsum(Area)) %>% 
+  filter(Level.of.Protection == "Zoned w/No Take Areas")
+  
+
+Uniform.Multiple.Use.df <- MPA.data.clean %>% 
+  filter(Level.of.Protection == "Uniform Multiple Use")
+
+No.Take.df <- MPA.data.clean %>% 
+  filter(Level.of.Protection == "No Take")
+
+Zoned.Multiple.Use.df <- MPA.data.clean %>% 
+  filter(Level.of.Protection == "Zoned Multiple Use")
+
+No.Access.df <- MPA.data.clean %>% 
+  filter(Level.of.Protection == "No Access")
+
+No.Impact.df <- MPA.data.clean %>% 
+  filter(Level.of.Protection == "No Impact")
+
+```
+
+```{r Level of Protection Plots}
+
+Zoned.w.No.Take.Areas.plot <- 
+  ggplot(Zoned.w.No.Take.Areas.df) +
+  geom_line(aes(x = year,
+                y = Cum.Area))
+print(Zoned.w.No.Take.Areas.plot)
+
+Uniform.Multiple.Use.plot
+
+No.Take.plot
+
+Zoned.Multiple.Use.plot
+
+No.Access.plot
+
+No.Impact.plot
+
 NoTake <- MPA.data.clean %>% 
   filter(No.Take.Area != 0)
 
@@ -70,33 +129,37 @@ LevelofProtection.Area <- ggplot(MPA.data.clean) +
   theme(axis.text.x = element_text(angle = 90))
   scale_y_continuous(labels = scales::number_format(scale = 1e-4))
 print(LevelofProtection.Area)
+
+#logtransform this data
   
-Percent.Zone.with.No.Take <- 
-  
-  
-  
-unique(MPA.data.clean$Level.of.Protection)
+Zoned.with.no.take <- MPA.data.clean %>% 
+  filter(Level.of.Protection == "Zoned w/No Take Areas")
 
-
-
-```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
 ```
 
 ## Including Plots
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r Management Plan}
+
+Management.Plan.Count <- ggplot(MPA.data.clean) +
+  geom_bar(aes(x=Management.Plan)) +
+  labs(x = "Management Plan Type",
+       y = "Count") +
+  theme(axis.text.x = element_text(angle = 90))
+print(Management.Plan.Count)
+
+Management.Plan.Area <- ggplot(MPA.data.clean) +
+  geom_col(aes(
+    x = Management.Plan,
+    y = Area)) +
+  labs(x = "Management Plan",
+       y = "Total Area (million km^2)") +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_y_continuous(labels = scales::number_format(scale = 1e-4))
+print(Management.Plan.Area)
+
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
