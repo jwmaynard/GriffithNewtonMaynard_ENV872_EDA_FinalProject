@@ -53,7 +53,16 @@ NoTake <- MPA.data.clean %>%
 PartialNoTake <- NoTake %>% 
   filter(Area != No.Take.Area)
 
-#filter(Marine.Status == Marine)?
+LevelofProtection <- ggplot(MPA.data.clean) +
+  geom_bar(aes(x=Level.of.Protection)) +
+  labs(x = "Level of Protection",
+       y = "Count") +
+  theme(element_text(angle = 45))
+print(LevelofProtection)
+  
+
+unique(MPA.data.clean$Level.of.Protection)
+
 
 ```
 
