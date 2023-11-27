@@ -61,12 +61,15 @@ MPA.parks.year <- MPA.data.clean %>%
   summarise(count = n()) %>% # Getting the number of parks created per year
   mutate('Cumulative' = cumsum(count)) # Calculating a cumulative sum of the total number of parks per year
 
-# Plot the cumulative sum of parks per year to visualize trend over time.
+# Plot the cumulative sum of NUMBER of MPAs per year to visualize trend over time.
 total_num_plot <-
   ggplot(MPA.parks.year) +
   geom_line(aes(x = year,
-                y = Cumulative))
-#Add a title, fix axis, etc
+                y = Cumulative)) +
+  labs(title = "Total Number of MPAs Over Time",
+       x = "Year",
+       y = "Cumulative Number of MPAs")
+
 total_num_plot
 
 # Wrangle data to have the cumulative total area over time.
@@ -75,12 +78,15 @@ MPA.totalarea.year <- MPA.data.clean %>%
   arrange(ymd(MPA.data.clean$Year.Established)) %>%
   mutate('Cum_Area' = cumsum(Area))
 
+# Plot the cumulative sum of AREA of MPAs per year to visualize trend over time.
 total_area_plot <-
   ggplot(MPA.totalarea.year) +
   geom_line(aes(x = year,
-                y = Cum_Area))
+                y = Cum_Area)) +
+  labs(title = "Total Area of MPAs Over Time",
+       x = "Year",
+       y = "Cumulative Area of MPAs")
 
-#Add a title, fix axis, etc
 total_area_plot
 ```
 
