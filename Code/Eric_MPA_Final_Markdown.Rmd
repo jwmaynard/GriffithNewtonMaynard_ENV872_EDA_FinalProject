@@ -2,8 +2,10 @@
 title: "Eric_MPA_Final_Markdown"
 author: "Eric Newton"
 date: "`r Sys.Date()`"
-output: pdf_document
-editor_options: 
+output:
+  html_document:
+    df_print: paged
+editor_options:
   chunk_output_type: console
 ---
 
@@ -17,6 +19,7 @@ library(dplyr)
 library(ggplot2)
 library(scales)
 library(cowplot)
+library(mapview)
 here()
 
 mytheme <- theme_classic(base_size = 14)+
@@ -24,11 +27,12 @@ mytheme <- theme_classic(base_size = 14)+
     color = "grey",
     fill = "white"),
     plot.title = element_text(hjust = 0.5, size = 12),
-    legend.position = "bottom")
+    legend.position = "bottom",
+    panel.grid.major = element_line(color = "grey", linetype = "dashed"))
+   
     
 theme_set(mytheme)
-
-
+  
 MPA.data <- read.csv(here('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.csv'),
                      stringsAsFactors = TRUE, 
                      colClasses = c('Year.Established' = 'factor'))
@@ -42,7 +46,11 @@ MPA.data.clean$Year.Established <- as.Date(MPA.data.clean$Year.Established, form
 colnames(MPA.data.clean)[8] <- "Area"
 colnames(MPA.data.clean)[9] <- "Marine.Area"
 colnames(MPA.data.clean)[11] <- "No.Take.Area"
-  
+
+ANWR <- MPA.data.clean %>% 
+  filter(Site.Name == 'Arctic National Wildlife Refuge')
+
+
 #Clean.plot <- 
   ggplot(MPA.data.clean) +
   geom_bar(aes(x=Year.Established)) +
@@ -50,11 +58,6 @@ colnames(MPA.data.clean)[11] <- "No.Take.Area"
   labs(x = "Year", y = "Count")
 #print(Clean.plot)
 
-
-
-
-  
-  
   
   
 unique(MPA.data.clean$Level.of.Protection)
@@ -75,7 +78,16 @@ Zoned.w.No.Take.Areas.df <- MPA.data.clean %>%
   arrange(ymd(MPA.data.clean$Year.Established)) %>% 
   filter(Level.of.Protection == "Zoned w/No Take Areas") %>% 
   mutate("Cum.Area" = cumsum(Area))
-  
+
+log.values <- log(Zoned.w.No.Take.Areas.df$Area +1)
+view(log.values)
+
+#When I log transform the values, the data gets skewed because there are so many
+#more observations for Uniform Multiple Use. The Zoned w/ no take has the 
+#greatest area bc of the MPAs in Hawaii, but there are only 34 obs. so when they
+#are log transformed, the sum of the log transformed area does not reflect the 
+#disproportionate size of those MPAs.
+
 
 Uniform.Multiple.Use.df <- MPA.data.clean %>% 
   mutate("year" = year(Year.Established)) %>%
@@ -107,6 +119,16 @@ No.Impact.df <- MPA.data.clean %>%
   arrange(ymd(MPA.data.clean$Year.Established)) %>% 
   filter(Level.of.Protection == "No Impact") %>% 
   mutate("Cum.Area" = cumsum(Area))
+
+Combined.Cumulative <- rbind(
+  Zoned.w.No.Take.Areas.df,
+  Uniform.Multiple.Use.df,
+  No.Take.df,
+  Zoned.Multiple.Use.df,
+  No.Access.df,
+  No.Impact.df)
+  
+
 
 ```
 
@@ -184,7 +206,35 @@ No.Impact.plot <-
   scale_y_continuous(labels = scales::number_format(scale = 1e-6))
   print(No.Impact.plot)
 
-#"Change in Area of 'No Impact' MPAs over Time"
+Combined.plot <-
+  ggplot(Combined.Cumulative) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area,
+    color = Level.of.Protection),
+    size = 1.5) +
+  labs(
+    title = "Cumulative Area of MPAs over Time by Level of Protection",
+    x = "Time",
+    y = "Cumulative Area (km)") +
+  scale_y_continuous(labels = scales::comma)
+  print(Combined.plot)
+
+Combined.no.Zoned.w.No.Take <-
+  ggplot(Combined.Cumulative %>% 
+    filter(Level.of.Protection != "Zoned w/No Take Areas")) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area,
+    color = Level.of.Protection),
+    size = 1) +
+  labs(
+    title = "Cumulative Area of MPAs over Time by Level of Protection\n excluding 'Zoned with No Take Areas'",
+    x = "Time",
+    y = "Cumulative Area (km)") +
+  scale_y_continuous(labels = scales::comma)
+  print(Combined.no.Zoned.w.No.Take)
+
   
 plot_grid(Zoned.w.No.Take.Areas.plot,
           Uniform.Multiple.Use.plot,
@@ -215,19 +265,34 @@ LoP.Area.log <- ggplot(MPA.data.clean) +
   geom_col(aes(
     x = Level.of.Protection,
     y = log(Area + 1))) +
-  labs(x = "Level of Protection",
+  labs(title = "Log Transformed Area of MPAs by 'Level of Protection'",
+       x = "Level of Protection",
        y = "Total Area") +
   theme(axis.text.x = element_text(angle = 90)) #+
   #scale_y_continuous(labels = scales::number_format(scale = 1e-4))
 #print(LoP.Area.log)
-  
-LoP.Combined <- 
+
   
 ```
 
 ## Including Plots
 
 You can also embed plots, for example:
+
+
+```{r Level of Protection Spatial Analysis}
+
+#spatial_db <- sf::st_read(here('DataRaw/NOAA_MPAI_2023.gdb'))
+
+
+
+#LoP.map <- 
+  #mapview(spatial_db, zcol = 'Prot_Lvl')
+#print(LoP.map)
+
+```
+
+
 
 ```{r Management Plan}
 
@@ -247,10 +312,5 @@ Management.Plan.Area <- ggplot(MPA.data.clean) +
   theme(axis.text.x = element_text(angle = 90)) +
   scale_y_continuous(labels = scales::number_format(scale = 1e-4))
 print(Management.Plan.Area)
-
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-```{r}
 
 ```
