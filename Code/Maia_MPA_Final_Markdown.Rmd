@@ -146,6 +146,28 @@ MPA_ttest_df$PrePost <- as.factor(ifelse(MPA_ttest_df$year < 2000, 'pre2000','po
 
 ```
 
+```{r Visuals Pre and Post 2000}
+plot_density <-
+  ggplot(MPA_ttest_df,
+         aes(Level_Val, fill = factor(PrePost))) +
+  geom_density(alpha = 0.2)
+
+plot_density
+
+
+#Exercise 1: Density plot means y axis is frequency, so you need to specify Ozone as x
+oz_density_plot <- 
+  ggplot(EPAair, aes(Ozone, fill=factor(Year))) + #this makes r know to make Year into a factor with two levels (2018 and 2019)
+  geom_density(alpha = 0.2) + #alpha changes the transparency
+  theme_bw() + #this changes the colors, can also use "scale_fill_manual(values = c("darkgreen", "lightblue"))
+  labs(x = "Ozone AQI value",
+       y = "Density",
+       fill = "") #this makes the legend title be gone
+
+oz_density_plot
+
+```
+
 Next, perform the two-sample t-test to compare means before and after 2000 for the Level of Protection, Management Plan, and the Combined Average Ranking.
 
 ```{r t-test Management, echo=FALSE}
