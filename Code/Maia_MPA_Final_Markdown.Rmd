@@ -47,7 +47,7 @@ PartialNoTake <- NoTake %>%
 #filter(Marine.Status == Marine)?
 ```
 
-## TimeSeries Stuff
+## Cumulative Number and Total Area Stuff
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -90,12 +90,111 @@ total_area_plot <-
 total_area_plot
 ```
 
-## Including Plots
+## T-Test Things
 
-You can also embed plots, for example:
+The following code is the data wrangling to create a data frame to use in a two-sided t-test
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+# Wrangling the data in order to turn qualitative variables into numeric values.
+
+# Checking the categories of Level of Protection and Management Plan colunms in the df.
+levels(MPA.data.clean$Level.of.Protection)
+levels(MPA.data.clean$Management.Plan)
+
+# Making a new df to work with for this section
+MPA_ttest_df <- MPA.data.clean %>%
+  select(OBJECTID, Level.of.Protection, Management.Plan, Year.Established) %>%
+  mutate("year" = year(Year.Established))
+
+# Creating a new column with number values assigned to each Level of Protection.
+# Range from 1 (lowest level of protection) to 6 (highest level of protection).
+# Values/ranking based off metadata information of what each Level allows.
+MPA_ttest_df$Level_Val <- as.numeric(ifelse(MPA_ttest_df$Level.of.Protection == "No Access", '6',
+                                      ifelse(MPA_ttest_df$Level.of.Protection == "No Impact",'5',
+                                      ifelse(MPA_ttest_df$Level.of.Protection == "No Take",'4',
+                                      ifelse(MPA_ttest_df$Level.of.Protection == "Uniform Multiple Use",'1',
+                                      ifelse(MPA_ttest_df$Level.of.Protection == "Zoned Multiple Use",'2',
+                                      ifelse(MPA_ttest_df$Level.of.Protection == "Zoned w/No Take Areas",'3',
+                                             '0')))))))
+
+# Do the same thing as above for the Management Plan column.
+MPA_ttest_df$Mngmt_Val <- as.numeric(ifelse(MPA_ttest_df$Management.Plan == 
+                                              "Community Agreement", '2',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "MPA Management Plan", '6',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "MPA Programmatic Management Plan", '6',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "No Management Plan", '1',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "Non-MPA Programmatic Fisheries Management Plan", '4',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "Non-MPA Programmatic Habitat Management Plan", '5',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "Non-MPA Programmatic Species Management Plan", '3',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "Non-MPA Programmatic Species Management Plan\n", '3',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "Site-Specific Management Plan", '7',
+                                             '0'))))))))))
+
+# Make another column for the combined average of the ranking from Level of Protection and Management Plan
+MPA_ttest_df$Combo_Val <- rowMeans(MPA_ttest_df[ , c(6,7)], na.rm=TRUE)
+
+# Make another column that separates years into two categories for t-test (pre and post 2000)
+MPA_ttest_df$PrePost <- as.factor(ifelse(MPA_ttest_df$year < 2000, 'pre2000','post2000'))
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r Visuals Pre and Post 2000}
+plot_density <-
+  ggplot(MPA_ttest_df,
+         aes(Level_Val, fill = factor(PrePost))) +
+  geom_density(alpha = 0.2)
+
+plot_density
+
+
+#Exercise 1: Density plot means y axis is frequency, so you need to specify Ozone as x
+oz_density_plot <- 
+  ggplot(EPAair, aes(Ozone, fill=factor(Year))) + #this makes r know to make Year into a factor with two levels (2018 and 2019)
+  geom_density(alpha = 0.2) + #alpha changes the transparency
+  theme_bw() + #this changes the colors, can also use "scale_fill_manual(values = c("darkgreen", "lightblue"))
+  labs(x = "Ozone AQI value",
+       y = "Density",
+       fill = "") #this makes the legend title be gone
+
+oz_density_plot
+
+```
+
+Next, perform the two-sample t-test to compare means before and after 2000 for the Level of Protection, Management Plan, and the Combined Average Ranking.
+
+```{r t-test Management, echo=FALSE}
+# Two-sample T-test for Level of Protection
+# Null: the protection level means are equal; alt: means are not equal)
+level.twosample <- t.test(MPA_ttest_df$Level_Val ~ MPA_ttest_df$PrePost)
+level.twosample
+
+# Two-sample T-test for Management Plan
+# Null: the protection level means are equal; alt: means are not equal)
+mngmt.twosample <- t.test(MPA_ttest_df$Mngmt_Val ~ MPA_ttest_df$PrePost)
+mngmt.twosample
+
+# Two-sample T-test for Combo of Level of Protection and Management Plan
+# Null: the protection level means are equal; alt: means are not equal)
+combo.twosample <- t.test(MPA_ttest_df$Combo_Val ~ MPA_ttest_df$PrePost)
+combo.twosample
+
+####Do we need/want GLM? Is it even viable in our case?####
+# Format as a GLM
+level.glm <- lm(MPA_ttest_df$Level_Val ~ MPA_ttest_df$PrePost)
+summary(level.glm)
+#ask if year is a predictor of Ozone levels to form this equation, shows that year IS a predictor of Ozone levels
+
+```
+
+
+
+
+
