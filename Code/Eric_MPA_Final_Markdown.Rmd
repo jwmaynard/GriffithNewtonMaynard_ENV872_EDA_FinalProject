@@ -47,8 +47,6 @@ colnames(MPA.data.clean)[8] <- "Area"
 colnames(MPA.data.clean)[9] <- "Marine.Area"
 colnames(MPA.data.clean)[11] <- "No.Take.Area"
 
-ANWR <- MPA.data.clean %>% 
-  filter(Site.Name == 'Arctic National Wildlife Refuge')
 
 
 #Clean.plot <- 
@@ -58,9 +56,6 @@ ANWR <- MPA.data.clean %>%
   labs(x = "Year", y = "Count")
 #print(Clean.plot)
 
-  
-  
-unique(MPA.data.clean$Level.of.Protection)
 
 
 
@@ -78,16 +73,6 @@ Zoned.w.No.Take.Areas.df <- MPA.data.clean %>%
   arrange(ymd(MPA.data.clean$Year.Established)) %>% 
   filter(Level.of.Protection == "Zoned w/No Take Areas") %>% 
   mutate("Cum.Area" = cumsum(Area))
-
-log.values <- log(Zoned.w.No.Take.Areas.df$Area +1)
-view(log.values)
-
-#When I log transform the values, the data gets skewed because there are so many
-#more observations for Uniform Multiple Use. The Zoned w/ no take has the 
-#greatest area bc of the MPAs in Hawaii, but there are only 34 obs. so when they
-#are log transformed, the sum of the log transformed area does not reflect the 
-#disproportionate size of those MPAs.
-
 
 Uniform.Multiple.Use.df <- MPA.data.clean %>% 
   mutate("year" = year(Year.Established)) %>%
@@ -120,7 +105,7 @@ No.Impact.df <- MPA.data.clean %>%
   filter(Level.of.Protection == "No Impact") %>% 
   mutate("Cum.Area" = cumsum(Area))
 
-Combined.Cumulative <- rbind(
+Combined.Cumulative.Level.of.Protection <- rbind(
   Zoned.w.No.Take.Areas.df,
   Uniform.Multiple.Use.df,
   No.Take.df,
@@ -128,7 +113,6 @@ Combined.Cumulative <- rbind(
   No.Access.df,
   No.Impact.df)
   
-
 
 ```
 
@@ -206,8 +190,8 @@ No.Impact.plot <-
   scale_y_continuous(labels = scales::number_format(scale = 1e-6))
   print(No.Impact.plot)
 
-Combined.plot <-
-  ggplot(Combined.Cumulative) +
+Combined.plot.LoP <-
+  ggplot(Combined.Cumulative.Level.of.Protection) +
   geom_line(aes(
     x = year,
     y = Cum.Area,
@@ -218,10 +202,10 @@ Combined.plot <-
     x = "Time",
     y = "Cumulative Area (km)") +
   scale_y_continuous(labels = scales::comma)
-  print(Combined.plot)
+  print(Combined.plot.LoP)
 
 Combined.no.Zoned.w.No.Take <-
-  ggplot(Combined.Cumulative %>% 
+  ggplot(Combined.Cumulative.Level.of.Protection %>% 
     filter(Level.of.Protection != "Zoned w/No Take Areas")) +
   geom_line(aes(
     x = year,
@@ -234,17 +218,8 @@ Combined.no.Zoned.w.No.Take <-
     y = "Cumulative Area (km)") +
   scale_y_continuous(labels = scales::comma)
   print(Combined.no.Zoned.w.No.Take)
-
   
-plot_grid(Zoned.w.No.Take.Areas.plot,
-          Uniform.Multiple.Use.plot,
-          No.Take.plot,
-          Zoned.Multiple.Use.plot,
-          No.Access.plot,
-          No.Impact.plot)
-
-  
-LevelofProtection <- ggplot(MPA.data.clean) +
+LevelofProtection.Count <- ggplot(MPA.data.clean) +
   geom_bar(aes(x=Level.of.Protection)) +
   labs(x = "Level of Protection",
        y = "Count") +
@@ -260,17 +235,6 @@ LevelofProtection.Area <- ggplot(MPA.data.clean) +
   theme(axis.text.x = element_text(angle = 90)) +
   scale_y_continuous(labels = scales::number_format(scale = 1e-6))
 #print(LevelofProtection.Area)
-
-LoP.Area.log <- ggplot(MPA.data.clean) +
-  geom_col(aes(
-    x = Level.of.Protection,
-    y = log(Area + 1))) +
-  labs(title = "Log Transformed Area of MPAs by 'Level of Protection'",
-       x = "Level of Protection",
-       y = "Total Area") +
-  theme(axis.text.x = element_text(angle = 90)) #+
-  #scale_y_continuous(labels = scales::number_format(scale = 1e-4))
-#print(LoP.Area.log)
 
   
 ```
@@ -294,8 +258,92 @@ You can also embed plots, for example:
 
 
 
-```{r Management Plan}
+```{r Management Plan dfs}
 
+Species.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "Non-MPA Programmatic Species Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Site.Specific.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "Site-Specific Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+No.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "No Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Habitat.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "Non-MPA Programmatic Habitat Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+MPA.Programmatic.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "MPA Programmatic Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Fisheries.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "MPA Programmatic Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Community.Agreement.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "MPA Programmatic Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Combined.Cumulative.Management.Plan <- rbind(
+  Species.Management.Plan.df,
+  Site.Specific.Management.Plan.df,
+  No.Management.Plan.df,
+  Habitat.Management.Plan.df,
+  MPA.Programmatic.Management.Plan.df,
+  Fisheries.Management.Plan.df,
+  Community.Agreement.df)
+
+```
+
+```{r Management Plan plots}
+
+Combined.Management.Plan.plot <-
+  ggplot(Combined.Cumulative.Management.Plan) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area,
+    color = Management.Plan),
+    size = 1.5) +
+  labs(
+    title = "Cumulative Area of MPAs over Time by Management Plan",
+    x = "Time",
+    y = "Cumulative Area (km)") +
+  scale_y_continuous(labels = scales::comma)
+  print(Combined.Management.Plan.plot)
+
+Combined.no.Site.Specific <-
+  ggplot(Combined.Cumulative.Level.of.Protection %>% 
+    filter(Level.of.Protection != "Site-Specific Management Plan")) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area,
+    color = Level.of.Protection),
+    size = 1) +
+  labs(
+    title = "Cumulative Area of MPAs over Time by Management Plan\n excluding 'Site-Specific Management Plan'",
+    x = "Time",
+    y = "Cumulative Area (km)") +
+  scale_y_continuous(labels = scales::comma)
+  print(Combined.no.Site.Specific)
+  
 Management.Plan.Count <- ggplot(MPA.data.clean) +
   geom_bar(aes(x=Management.Plan)) +
   labs(x = "Management Plan Type",
@@ -314,3 +362,4 @@ Management.Plan.Area <- ggplot(MPA.data.clean) +
 print(Management.Plan.Area)
 
 ```
+
