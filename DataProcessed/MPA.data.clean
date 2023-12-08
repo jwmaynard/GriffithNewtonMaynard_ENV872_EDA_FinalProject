@@ -1,0 +1,921 @@
+"OBJECTID","Site.Name","State","Level.of.Protection","Management.Plan","Year.Established","Marine.Status","Area","Marine.Area","Percent.Area.Marine","No.Take.Area","Longitude","Latitude"
+1,"Walrus Islands State Game Sanctuary","AK","Zoned w/No Take Areas","Non-MPA Programmatic Species Management Plan",1989-12-08,"Marine",753.325,745.4609985,99,0,-160.2310472,58.70088494
+2,"Cape Hatteras National Seashore","NC","Uniform Multiple Use","Site-Specific Management Plan",1937-12-08,"Mixed",126.102,28.92048454,23,0,-75.61717993,35.24241198
+3,"Ofu Vaoto Marine Park","ASM","No Take","No Management Plan",1994-12-08,"Marine",0.384755,0.384747893,100,0.384755284,-169.6702398,-14.18698171
+4,"Bluff Point State Park/Natural Area Preserve","CT","Zoned Multiple Use","Site-Specific Management Plan",1963-12-08,"Interface",2.9846,0.112253532,4,0,-72.03028818,41.3239707
+5,"Silver Sands State Park/Charles Island Natural Area Preserve","CT","Zoned Multiple Use","No Management Plan",1955-12-08,"Interface",1.22585,0.014841026,1,0,-73.0694981,41.20226499
+6,"Barn Island Wildlife Management Area","CT","Uniform Multiple Use","No Management Plan",1944-12-08,"Interface",3.92673,0.102672882,3,0,-71.86506569,41.34275572
+8,"Duck Island Wildlife Management Area/Natural Area Preserve (Westbrook)","CT","Uniform Multiple Use","No Management Plan",1973-12-08,"Marine",0.0132721,0.013272075,100,0,-72.47505323,41.25633943
+9,"East River Marsh Wildlife Area/ East River Wildlife Area","CT","Uniform Multiple Use","No Management Plan",1960-12-08,"Mixed",0.557494,0.034818884,6,0,-72.65505913,41.27476829
+10,"Great Harbor Wildlife Area","CT","Uniform Multiple Use","No Management Plan",1945-12-08,"Marine",0.711494,0.711494327,100,0,-72.70207404,41.26346968
+11,"Great Island Wildlife Area/Roger Tory Peterson Natural Area Preserve","CT","Uniform Multiple Use","No Management Plan",1931-12-08,"Mixed",2.29285,0.273713708,12,0,-72.33371342,41.29151046
+12,"Hammock River Marsh Wildlife Area","CT","Uniform Multiple Use","No Management Plan",1969-12-08,"Marine",0.367092,0.367091507,100,0,-72.50673351,41.26662111
+13,"Lords Cove Wildlife Area/Natural Area Preserve","CT","Uniform Multiple Use","No Management Plan",1931-12-08,"Mixed",0.680112,0.059634816,9,0,-72.362874,41.34885017
+15,"Plum Bank Marsh Wildlife Area","CT","Uniform Multiple Use","No Management Plan",1957-12-08,"Interface",1.00175,0.026511012,3,0,-72.38577148,41.27673872
+16,"Popes Island Wildlife Area","CT","Uniform Multiple Use","No Management Plan",1955-12-08,"Marine",0.0976259,0.097625896,100,0,-73.11050753,41.2194892
+17,"Quinnipiac River Marsh Wildlife Area","CT","Uniform Multiple Use","No Management Plan",1977-12-08,"Mixed",2.28382,0.137200117,6,0,-72.88317884,41.34877277
+18,"Ragged Rock Creek Marsh Wildlife Area","CT","Uniform Multiple Use","No Management Plan",1942-12-08,"Mixed",0.800953,0.057751197,7,0,-72.35905186,41.30605316
+19,"South Cove Wildlife Area","CT","Uniform Multiple Use","No Management Plan",1968-12-08,"Interface",0.105426,0.004901103,5,0,-72.36916553,41.26871073
+20,"Hammonasset Beach State Park","CT","Zoned Multiple Use","No Management Plan",1920-12-08,"Interface",2.3552,0.003729505,0,0,-72.55844508,41.26590183
+21,"Harkness Memorial State Park/William A Niering Natural Area Preserve","CT","Uniform Multiple Use","Site-Specific Management Plan",1952-12-08,"Interface",1.33631,0.00853257,1,0,-72.1173045,41.30758744
+22,"Selden Neck State Park/Natural Area Preserve","CT","Zoned Multiple Use","No Management Plan",1917-12-08,"Marine",2.27965,2.279646397,100,0,-72.41000684,41.398065
+23,"Cape Henlopen State Park","DE","Zoned Multiple Use","Site-Specific Management Plan",1964-12-08,"Interface",21.7595,0.459614336,2,0,-75.10226196,38.75873631
+24,"Augustine Wildlife Area","DE","Zoned Multiple Use","Site-Specific Management Plan",1964-12-08,"Mixed",10.5465,0.608316243,6,0,-75.59185657,39.46283284
+25,"Ted Harvey Conservation Area (Wildlife Area)","DE","Zoned Multiple Use","Site-Specific Management Plan",1979-12-08,"Interface",10.4844,0.279671669,3,0,-75.424866,39.08372876
+26,"Little Creek Wildlife Area","DE","Zoned Multiple Use","Site-Specific Management Plan",1957-12-08,"Interface",18.8365,0.471217453,3,0,-75.42588819,39.1636055
+27,"Assawoman Wildlife Area","DE","Zoned Multiple Use","Site-Specific Management Plan",1943-12-08,"Interface",11.6245,0.590642035,5,0,-75.09952555,38.49292553
+28,"Cedar Swamp Wildlife Area","DE","Zoned Multiple Use","Site-Specific Management Plan",1981-12-08,"Mixed",21.7952,1.551019073,7,0,-75.55877388,39.38817209
+29,"Alligator Harbor Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Marine",58.3904,57.79964828,99,0,-84.46590749,29.90151681
+30,"Estero Bay Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1966-12-08,"Mixed",43.5992,40.72282028,93,0,-81.87210051,26.44158622
+31,"Fort Pickens State Park Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1970-12-08,"Marine",126.004,125.1061325,99,0,-87.28498801,30.29995324
+32,"Farallon Islands Game Refuge","CA","Uniform Multiple Use","No Management Plan",1971-12-08,"Marine",46.2203,46.06332397,100,0,-123.0473107,37.73145127
+33,"Hammonasset Natural Area Preserve","CT","Uniform Multiple Use","Site-Specific Management Plan",1920-12-08,"Interface",1.67721,0.085859306,5,0,-72.5454345,41.2596578
+34,"Woodland Beach Wildlife Area","DE","Zoned Multiple Use","Site-Specific Management Plan",1953-12-08,"Mixed",25.2806,3.8462708,15,0,-75.50850951,39.33333666
+35,"St. Joseph Bay State Buffer Preserve","FL","No Take","Site-Specific Management Plan",1995-12-08,"Mixed",22.7007,1.803098798,8,22.70066643,-85.29193594,29.70985151
+36,"St. Sebastian River Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1995-12-08,"Interface",87.8309,0.243167967,0,87.8309,-80.56181277,27.8209712
+37,"Gasparilla Sound - Charlotte Harbor Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1979-12-08,"Marine",341.432,334.5368652,98,0,-82.13823126,26.81680165
+38,"Werner-Boyce Salt Springs State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Mixed",16.1406,5.078304291,31,0,-82.72277723,28.31759114
+39,"Lemon Bay Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1986-12-08,"Marine",27.0603,26.27511597,97,0,-82.34378866,26.91813993
+40,"Matlacha Pass Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1972-12-08,"Mixed",80.4238,53.61367035,67,0,-82.07478549,26.59169684
+41,"Apalachicola River Wildlife and Environmental Area","FL","Uniform Multiple Use","Site-Specific Management Plan",1974-12-08,"Interface",349.211,10.04760838,3,0,-85.02405313,29.87518931
+42,"Florida Keys Wildlife and Environmental Area","FL","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Mixed",10.5314,0.679698646,6,0,-81.20825097,24.62017591
+43,"Southern Glades Wildlife and Environmental Area","FL","Uniform Multiple Use","Site-Specific Management Plan",1997-12-08,"Marine",123.661,123.6614685,100,0,-80.5155956,25.33140528
+44,"Pine Island Sound Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Marine",229.495,219.9063263,96,0,-82.16422638,26.58562664
+45,"Pinellas County Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1972-12-08,"Marine",1430.74,1418.258789,99,0,-82.8434443,27.90379304
+46,"Apalachicola Bay Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1969-12-08,"Mixed",418.742,310.2730408,74,0,-85.0057352,29.69665144
+47,"Rocky Bayou State Park Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1970-12-08,"Marine",1.49281,1.448677301,97,0,-86.42811992,30.50390518
+48,"St. Andrews State Park Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1972-12-08,"Marine",96.9372,96.50189209,100,0,-85.70254291,30.08884821
+49,"St. Joseph Bay Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Marine",267.072,265.925293,100,0,-85.39146845,29.77157303
+50,"St. Martins Marsh Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Mixed",128.015,78.64208984,61,0,-82.69766688,28.83104855
+51,"Terra Ceia Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1998-12-08,"Interface",7.76402,0.161773384,2,0,-82.56218257,27.59787727
+52,"Yellow River Marsh Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Marine",3.38419,3.38418889,100,0,-87.06739547,30.48661279
+53,"Big Bend Seagrasses Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1985-12-08,"Marine",2764.44,2744.186768,99,0,-83.43685127,29.50339978
+54,"Boca Ciega Bay Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Marine",74.5517,73.05915833,98,0,-82.72812446,27.75887738
+55,"Cape Haze Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1975-12-08,"Mixed",61.6504,45.59809113,74,0,-82.19192411,26.79785407
+56,"Banana River Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Marine",105.804,104.0671387,98,0,-80.64146552,28.30686836
+57,"Biscayne Bay Aquatic Preserve","FL","Zoned w/No Take Areas","Site-Specific Management Plan",1974-12-08,"Marine",279.831,274.9147949,98,0,-80.22767564,25.62200035
+58,"Cockroach Bay Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1997-12-08,"Mixed",2.49764,0.687532246,28,0,-82.49319488,27.70905549
+59,"Coupon Bight Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1969-12-08,"Marine",18.7856,18.77845764,100,0,-81.3661414,24.63657355
+60,"Estero Bay Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1987-12-08,"Interface",45.9758,1.533248067,3,0,-81.89151548,26.46455661
+61,"Fort Clinch State Park Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Marine",30.5777,30.51469231,100,0,-81.41697399,30.69362615
+62,"Guana River Marsh Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1984-12-08,"Mixed",166.183,113.8264771,68,0,-81.32308755,30.06773999
+63,"Indian River Lagoon Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",2000-12-08,"Mixed",2.29112,0.153832912,7,0,-80.50216078,27.94261275
+64,"Indian River - Malabar to Vero Beach Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Marine",111.637,106.8652649,96,0,-80.48315575,27.87752431
+65,"Indian River - Vero Beach to Ft. Pierce Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Mixed",39.0147,35.20405197,90,0,-80.34063089,27.54712462
+66,"Jensen Beach to Jupiter Inlet Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1969-12-08,"Marine",93.786,91.31716919,97,0,-80.22928783,27.28318923
+67,"Lignumvitae Key Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1969-12-08,"Marine",33.6311,33.62861252,100,0,-80.67780683,24.91853299
+68,"Loxahatchee River - Lake Worth Creek Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Mixed",8.25113,5.939728737,72,0,-80.11429491,26.94874538
+69,"Mosquito Lagoon Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1970-12-08,"Mixed",19.2534,6.012829781,31,0,-80.87212339,28.97344724
+70,"Nassau River - St. Johns River Marshes Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Mixed",286.158,130.9299927,46,0,-81.46663619,30.49223537
+71,"North Fork, St. Lucie Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1984-12-08,"Mixed",20.4626,9.409356117,46,0,-80.31656624,27.23902172
+72,"Crystal River Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1974-12-08,"Interface",113.695,3.711086988,3,0,-82.64972133,28.80568686
+73,"Pellicer Creek Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1970-12-08,"Mixed",2.63766,0.642246485,24,0,-81.256653,29.66590009
+74,"Pumpkin Hill Creek Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1994-12-08,"Interface",16.5557,0.002619089,0,0,-81.51457117,30.47009089
+75,"Terra Ceia Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1983-12-08,"Marine",85.8848,85.03701019,99,0,-82.62135777,27.5809803
+76,"Tomoka Marsh Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1969-12-08,"Mixed",20.1197,9.27383709,46,0,-81.09624099,29.37346485
+77,"Yellow River Marsh Aquatic Preserve","FL","Zoned Multiple Use","Site-Specific Management Plan",1970-12-08,"Mixed",60.4555,31.28005981,52,0,-86.99723884,30.53277893
+78,"Rookery Bay Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1975-12-08,"Mixed",236.005,123.7031555,52,0,-81.70839464,25.86679841
+79,"Cape Romano - Ten Thousand Islands Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Mixed",209.168,112.630455,54,0,-81.56130448,25.89156145
+80,"Charlotte Harbor Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Mixed",183.961,11.04724121,6,0,-82.13611044,26.8472668
+81,"Amelia Island State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1983-12-08,"Interface",0.81955,0.033481117,4,0,-81.43953626,30.52136142
+82,"Anastasia State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1949-12-08,"Mixed",6.53184,1.49114418,23,0,-81.27905266,29.88547176
+83,"Anclote Key State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1960-12-08,"Marine",49.5977,48.29895782,97,0,-82.84013727,28.17721631
+84,"Avalon State Park","FL","Zoned Multiple Use","Site-Specific Management Plan",1985-12-08,"Interface",2.63447,0.022680279,1,0,-80.3246037,27.54386611
+85,"Bahia Honda State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1961-12-08,"Interface",1.99635,0.097872369,5,0,-81.26217967,24.66640022
+86,"Bald Point State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1999-12-08,"Interface",19.805,0.580991983,3,0,-84.35803221,29.92934768
+87,"Big Talbot Island State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1982-12-08,"Interface",6.94697,0.168984368,2,0,-81.43983189,30.48013697
+88,"Big Lagoon State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1977-12-08,"Mixed",2.98318,0.223939881,8,0,-87.41020818,30.31507355
+89,"Bill Baggs Cape Florida State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1966-12-08,"Mixed",1.75398,0.129366159,7,0,-80.1595871,25.67575293
+90,"Bulow Creek State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1981-12-08,"Interface",21.2036,0.172245532,1,0,-81.11623205,29.38133275
+91,"Bulow Plantation Ruins Historic State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1945-12-08,"Interface",0.600993,0.002368165,0,0,-81.142673,29.43455215
+92,"Caladesi Island State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1966-12-08,"Mixed",10.0345,7.428272724,74,0,-82.81393694,28.02149589
+93,"Camp Helen State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1996-12-08,"Interface",0.74502,0.023697715,3,0,-85.99233849,30.27307852
+94,"Cayo Costa State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1976-12-08,"Mixed",9.77071,0.800929248,8,0,-82.23866983,26.65757609
+95,"Cedar Key Scrub State Reserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1978-12-08,"Mixed",19.9399,2.541114807,13,0,-83.02955049,29.19264572
+96,"Collier-Seminole State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1944-12-08,"Mixed",29.5461,1.690138102,6,0,-81.60043176,25.97564576
+97,"Crystal River State Archaeological Site","FL","Uniform Multiple Use","Site-Specific Management Plan",1962-12-08,"Interface",0.250057,0.005943871,2,0,-82.63681591,28.90734526
+98,"San Pedro Underwater Archaeological Preserve State Park","FL","No Take","Site-Specific Management Plan",1989-12-08,"Marine",2.61639,2.616391182,100,2.616391182,-80.67666783,24.85500067
+99,"Satilla River Marsh Island Natural Area","GA","No Access","Non-MPA Programmatic Habitat Management Plan",1998-12-08,"Mixed",0.178762,0.09712822,54,0.178761661,-81.48976067,30.96760955
+100,"Pelican Spit Natural Area","GA","No Access","Non-MPA Programmatic Habitat Management Plan",1998-12-08,"Marine",0.584555,0.58455497,100,0.58455497,-81.29574484,31.21013722
+101,"St. Catherines Bar Natural Area","GA","No Access","MPA Programmatic Management Plan",1998-12-08,"Marine",1.15057,1.150568843,100,1.150568843,-81.11906842,31.69188349
+102,"Egg Island Bar Natural Area","GA","No Access","MPA Programmatic Management Plan",1998-12-08,"Marine",0.919767,0.919766665,100,0.919766665,-81.27129416,31.30603726
+103,"Sasa Bay Marine Preserve","US-GU","No Take","MPA Programmatic Management Plan",1997-12-08,"Mixed",3.13652,1.930774093,62,3.136524439,144.6772619,13.45027038
+104,"Paiko Lagoon Wildlife Sanctuary","HI","No Access","Site-Specific Management Plan",1981-12-08,"Marine",0.115707,0.113178581,98,0.115706779,-157.7249551,21.28273445
+105,"Ahihi-Kinau Natural Area Reserve","HI","No Impact","Site-Specific Management Plan",1973-12-08,"Mixed",8.40364,3.252973318,39,8.403644562,-156.4311692,20.60654177
+106,"Waikiki Marine Life Conservation District","HI","No Take","MPA Programmatic Management Plan",1988-12-08,"Marine",0.315539,0.312217504,99,0.31553942,-157.8249626,21.26756025
+107,"Honolua-Mokuleia Bay Marine Life Conservation District","HI","No Take","MPA Programmatic Management Plan",1978-12-08,"Marine",0.182953,0.176267907,96,0.182953089,-156.6409132,21.01375749
+108,"Hanauma Bay Marine Life Conservation District","HI","No Impact","Site-Specific Management Plan",1967-12-08,"Marine",0.409845,0.406844854,99,0.409845144,-157.6935715,21.2689248
+109,"Moku-o-loe Island (Coconut Island) Marine Laboratory Refuge","HI","No Access","MPA Programmatic Management Plan",1953-12-08,"Marine",0.297792,0.286334574,96,0.297791749,-157.7890211,21.43389328
+110,"North Dunes Nature Preserve","IL","No Access","No Management Plan",1988-12-08,"Interface",3.27639,0.096110396,3,3.27638793,-87.80599896,42.46907118
+111,"Illinois Beach Nature Preserve","IL","No Access","No Management Plan",1964-12-08,"Mixed",4.48092,0.34127757,8,4.480922699,-87.81171905,42.40685996
+112,"Iona's Beach Scientific & Natural Area","MN","No Impact","Non-MPA Programmatic Habitat Management Plan",2004-12-08,"Marine",0.0539314,0.05393137,100,0.05393137,-91.42205317,47.16825742
+113,"Sugarloaf Point Scientific & Natural Area","MN","No Impact","MPA Programmatic Management Plan",1992-12-08,"Mixed",0.0359117,0.032400362,90,0.035911698,-90.98311137,47.48609585
+114,"Butterwort Cliffs Scientific & Natural Area","MN","No Impact","MPA Programmatic Management Plan",1990-12-08,"Interface",0.216811,0.001970971,1,0.21681118,-90.47430153,47.71896981
+115,"Minnesota Point Pine Forest Scientific & Natural Area","MN","No Impact","MPA Programmatic Management Plan",1996-12-08,"Mixed",0.0713935,0.022248309,31,0.071393453,-92.03574233,46.71753261
+116,"Bird Island Marine Sanctuary","US-MP","No Impact","Site-Specific Management Plan",2001-12-08,"Marine",1.47164,1.451372027,99,1.471637726,145.8169445,15.25483295
+117,"Forbidden Island Marine Sanctuary","US-MP","No Impact","Site-Specific Management Plan",2000-12-08,"Marine",2.53433,2.50479722,99,2.534329653,145.7878783,15.1549049
+118,"Laulau Bay Sea Cucumber Reserve","US-MP","No Take","MPA Programmatic Management Plan",2000-12-08,"Marine",1.96686,1.966855168,100,1.966855168,145.7539934,15.16133451
+119,"Sasanhaya Fish Reserve","US-MP","No Take","MPA Programmatic Management Plan",1994-12-08,"Marine",0.8441,0.844100416,100,0.844100416,145.1659638,14.12179399
+120,"Bald Head Island State Natural Area","NC","No Take","MPA Programmatic Management Plan",1979-12-08,"Mixed",24.2123,7.758027077,32,24.21230698,-77.97152636,33.89063528
+121,"Theodore Roosevelt State Natural Area","NC","No Take","MPA Programmatic Management Plan",1971-12-08,"Interface",1.25114,0.000155807,0,1.251138091,-76.83242998,34.69720505
+122,"Deer Lake State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1996-12-08,"Interface",8.14618,0.082941622,1,0,-86.06513549,30.31084478
+123,"Delnor-Wiggins Pass State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Mixed",0.696288,0.128142238,18,0,-81.82812082,26.28163532
+124,"Don Pedro Island State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1985-12-08,"Mixed",1.02542,0.075171754,7,0,-82.30272932,26.8487899
+125,"Econfina River State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1987-12-08,"Interface",18.4444,0.875835717,5,0,-83.9212848,30.06996033
+126,"Fakahatchee Strand State Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1974-12-08,"Interface",290.717,1.357869864,0,0,-81.42189574,26.02163675
+127,"Faver-Dykes State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1950-12-08,"Interface",5.94663,0.008779601,0,0,-81.25723938,29.67279455
+128,"Fort Clinch State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1935-12-08,"Interface",5.52028,0.208646521,4,0,-81.44130146,30.69515351
+129,"Fort George Island Cultural State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1989-12-08,"Interface",2.53346,0.029528422,1,0,-81.43142298,30.42725425
+130,"Fort Pierce Inlet State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1963-12-08,"Mixed",4.70211,1.407528639,30,0,-80.31350065,27.49169889
+131,"Fred Gannon Rocky Bayou State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1966-12-08,"Interface",1.47422,0.036373671,2,0,-86.42650275,30.49610334
+132,"Gasparilla Island State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1983-12-08,"Interface",0.513419,0.025930928,5,0,-82.26107345,26.73087134
+133,"Grayton Beach State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1964-12-08,"Interface",9.03082,0.003306161,0,0,-86.15777814,30.33605844
+134,"Honeymoon Island State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1974-12-08,"Mixed",11.5286,9.555345535,83,0,-82.82864658,28.07493114
+135,"Hugh Taylor Birch State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1941-12-08,"Interface",0.71205,0.00951396,1,0,-80.10488038,26.14528573
+136,"John D. MacArthur Beach State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1981-12-08,"Interface",1.77767,0.033130322,2,0,-80.04281501,26.82626592
+137,"John Pennekamp Coral Reef State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1959-12-08,"Marine",256.191,242.2798767,95,0,-80.32668154,25.1790703
+138,"John U. Lloyd Beach State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1973-12-08,"Mixed",1.26281,0.203562036,16,0,-80.11166497,26.07514673
+139,"Jonathan Dickinson State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1947-12-08,"Interface",46.6721,0.624041855,1,0,-80.14138762,27.0039669
+140,"Lignumvitae Key Botanical State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1971-12-08,"Marine",42.5956,40.36895752,95,0,-80.68468306,24.90382072
+141,"Little Talbot Island State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1950-12-08,"Mixed",7.17784,0.750989676,10,0,-81.41558171,30.471819
+142,"Mound Key Archaeological State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1961-12-08,"Interface",0.700881,0.025695086,4,0,-81.86136454,26.42522791
+143,"Navarre Beach State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1999-12-08,"Mixed",0.61984,0.085530549,14,0,-86.85549542,30.38235637
+144,"Ochlockonee River State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Interface",1.56525,0.031191133,2,0,-84.48065054,30.00412065
+145,"Cockroach Bay Aquatic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1976-12-08,"Mixed",18.4219,16.59056664,90,0,-82.49373433,27.67802352
+146,"Oleta River State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1980-12-08,"Mixed",4.19692,0.654945076,16,0,-80.13871061,25.91651012
+147,"Oscar Scherer State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1956-12-08,"Interface",5.61368,0.005494016,0,0,-82.46007863,27.18079112
+148,"Perdido Key State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1978-12-08,"Mixed",1.22987,0.099401481,8,0,-87.46873035,30.2919897
+149,"San Marcos De Apalache Historic State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1964-12-08,"Marine",0.0681263,0.068126284,100,0,-84.21026651,30.1521246
+150,"Seabranch Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1991-12-08,"Interface",3.74175,0.00884812,0,0,-80.1684056,27.1352386
+151,"Sebastian Inlet State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1966-12-08,"Mixed",3.51933,0.554411173,16,0,-80.45184953,27.85956249
+152,"Dr. Julian G. Bruce St. George Island State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1963-12-08,"Mixed",8.2172,0.526150525,6,0,-84.74919968,29.71997785
+153,"St. Andrews State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1946-12-08,"Interface",4.75025,0.192275062,4,0,-85.72018395,30.11821395
+154,"St. Lucie Inlet Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1965-12-08,"Mixed",19.6984,16.02847099,81,0,-80.14022232,27.13426109
+155,"Stump Pass Beach State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1971-12-08,"Mixed",1.03122,0.256740898,25,0,-82.34452387,26.90422727
+156,"Tarkiln Bayou State Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1997-12-08,"Interface",15.33,0.182955414,1,0,-87.39313502,30.36210262
+157,"The Barnacle Historic State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1973-12-08,"Mixed",0.0376611,0.016813667,45,0,-80.24143808,25.72431813
+158,"T.H. Stone Memorial St. Joseph Peninsula State Park","FL","Zoned Multiple Use","Site-Specific Management Plan",1964-12-08,"Interface",11.0288,0.335350901,3,0,-85.40615028,29.79320135
+159,"Tomoka State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1946-12-08,"Mixed",6.5573,0.729044199,11,0,-81.08309564,29.31957962
+160,"Topsail Hill Preserve State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Interface",6.67059,0.204716235,3,0,-86.29029587,30.36755943
+161,"Waccasassa Bay State Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1971-12-08,"Mixed",138.407,22.93889427,17,0,-82.83092216,29.16994469
+162,"Windley Key Fossil Reef Geological State Park","FL","Uniform Multiple Use","Site-Specific Management Plan",1986-12-08,"Marine",0.13053,0.130530119,100,0,-80.59417349,24.95079243
+163,"Altamaha Wildlife Management Area","GA","Uniform Multiple Use","No Management Plan",1955-12-08,"Interface",118.792,4.12607336,3,0,-81.47532742,31.40644392
+164,"Little Tybee Island/Cabbage Island Natural Area","GA","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Mixed",33.3776,4.379027367,13,0,-80.90814311,31.9696578
+165,"Ossabaw Island Wildlife Management Area","GA","Uniform Multiple Use","Site-Specific Management Plan",1978-12-08,"Mixed",114.464,10.65989685,9,0,-81.11392308,31.79581918
+166,"Sapelo Island Wildlife Management Area","GA","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Interface",76.6046,4.213181019,5,0,-81.2657425,31.4535242
+167,"Skidaway Island State Park","GA","Uniform Multiple Use","MPA Programmatic Management Plan",1975-12-08,"Interface",2.05536,0.025339309,1,0,-81.05313917,31.95601299
+168,"Crooked River State Park","GA","Uniform Multiple Use","MPA Programmatic Management Plan",1942-12-08,"Interface",2.0752,0.028677978,1,0,-81.55248667,30.84137309
+169,"Fort McAllister State Park","GA","Uniform Multiple Use","No Management Plan",1970-12-08,"Mixed",0.984093,0.073003992,7,0,-81.18919152,31.88691278
+170,"Hofwyl-Broadfield Plantation Historic Site","GA","Uniform Multiple Use","No Management Plan",1973-12-08,"Interface",5.13464,0.07859768,2,0,-81.45205072,31.30904055
+171,"Pati Point Preserve","US-GU","Zoned Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Marine",20.1109,19.9337635,99,0,144.9395251,13.57411249
+172,"Tumon Bay Preserve","US-GU","Zoned Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Marine",4.56552,4.524246693,99,0,144.7953746,13.51678406
+173,"Haputo Ecological Reserve Area","US-GU","Uniform Multiple Use","Site-Specific Management Plan",1984-12-08,"Mixed",1.24298,0.573059738,46,0,144.8341056,13.59310983
+174,"Piti Bomb Holes Preserve","US-GU","Zoned Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Marine",3.66123,3.57734108,98,0,144.6967875,13.4736449
+175,"Orote Ecological Reserve Area","US-GU","Uniform Multiple Use","Site-Specific Management Plan",1984-12-08,"Mixed",0.75588,0.66545403,88,0,144.6281749,13.43581927
+176,"Achang Reef Flat","US-GU","Zoned Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Marine",4.65746,4.543699265,98,0,144.7037798,13.24348923
+177,"Kaho'olawe Island Reserve","HI","Zoned Multiple Use","Site-Specific Management Plan",1993-12-08,"Marine",202.944,202.9442749,100,0,-156.608789,20.49743565
+178,"Indiana Dunes State Park (Dunes Nature Preserve)","IN","Zoned w/No Take Areas","Site-Specific Management Plan",1925-12-08,"Mixed",9.42046,0.762947679,8,0,-87.03674277,41.66431293
+179,"Atchafalaya Delta Wildlife Management Area and Game Preserve","LA","Uniform Multiple Use","Site-Specific Management Plan",1977-12-08,"Marine",559.344,544.0941772,97,0,-91.39552288,29.43107871
+180,"Cape and Islands Ocean Sanctuary","MA","Uniform Multiple Use","MPA Programmatic Management Plan",1971-12-08,"Marine",2786.23,2775.998291,100,0,-70.49139713,41.44396754
+181,"Cape Cod Bay Ocean Sanctuary","MA","Uniform Multiple Use","MPA Programmatic Management Plan",1971-12-08,"Marine",1510.54,1509.034058,100,0,-70.33061052,41.91543885
+182,"Cape Cod Ocean Sanctuary","MA","Uniform Multiple Use","MPA Programmatic Management Plan",1970-12-08,"Marine",491.275,490.5265198,100,0,-69.99562368,42.08801674
+183,"North Shore Ocean Sanctuary","MA","Uniform Multiple Use","MPA Programmatic Management Plan",1972-12-08,"Marine",427.265,426.521759,100,0,-70.66646331,42.59331712
+184,"South Essex Ocean Sanctuary","MA","Uniform Multiple Use","MPA Programmatic Management Plan",1976-12-08,"Marine",223.213,223.1027222,100,0,-70.76268603,42.48611785
+185,"Egg Rock (Henry Cabot Lodge) State Wildlife Sanctuary","MA","Uniform Multiple Use","No Management Plan",1925-12-08,"Mixed",0.0105687,0.007322375,69,0,-70.89809338,42.4335351
+186,"Horseneck Beach State Reservation","MA","Uniform Multiple Use","Site-Specific Management Plan",1957-12-08,"Mixed",2.84807,0.258075714,9,0,-71.04988855,41.50499446
+187,"Milk Island (Knight) State Wildlife Sanctuary","MA","Uniform Multiple Use","No Management Plan",1925-12-08,"Mixed",0.100539,0.052498136,52,0,-70.58954036,42.62814243
+188,"Ram Island State Wildlife Sanctuary - Salisbury","MA","Uniform Multiple Use","No Management Plan",1925-12-08,"Mixed",0.108048,0.028163761,26,0,-70.87501904,42.82515799
+189,"William Forward Wildlife Management Area","MA","Uniform Multiple Use","No Management Plan",1960-12-08,"Interface",7.62068,0.234893724,3,0,-70.8773022,42.74309591
+190,"Demarest Lloyd State Park","MA","Uniform Multiple Use","Site-Specific Management Plan",1953-12-08,"Mixed",0.872635,0.048675388,6,0,-70.98461763,41.52899111
+191,"Alger Great Lakes State Bottomland Preserve","MI","Uniform Multiple Use","No Management Plan",1981-12-08,"Marine",342.524,333.7705994,97,0,-86.47527337,46.63853095
+192,"Detour Passage Great Lakes State Bottomland Preserve","MI","Uniform Multiple Use","No Management Plan",1999-12-08,"Marine",35.3915,33.73174667,95,0,-83.88507973,45.99166508
+193,"Keweenaw Great Lakes State Bottomland Preserve","MI","Uniform Multiple Use","No Management Plan",1991-12-08,"Marine",501.251,496.3811035,99,0,-88.25577857,47.32259795
+194,"Manitou Passage Great Lakes State Bottomland Preserve","MI","Uniform Multiple Use","No Management Plan",1989-12-08,"Marine",729.608,727.8898926,100,0,-86.08914782,44.96059864
+195,"Marquette Great Lakes State Bottomland Preserve","MI","Uniform Multiple Use","No Management Plan",1991-12-08,"Marine",453.001,448.9048767,99,0,-87.5711987,46.53169586
+196,"Sanilac Shores Great Lakes State Underwater Preserve","MI","Uniform Multiple Use","No Management Plan",1988-12-08,"Marine",433.694,432.8130798,100,0,-82.49063035,43.44820753
+197,"Southwest Michigan Great Lakes State Bottomland Preserve","MI","Uniform Multiple Use","No Management Plan",1999-12-08,"Marine",961.531,954.2153931,99,0,-86.41360555,42.33357389
+198,"Straits of Mackinac Great Lakes State Bottomland Preserve","MI","Uniform Multiple Use","No Management Plan",1983-12-08,"Marine",385.942,382.8374329,99,0,-84.72420795,45.79593527
+199,"Thumb Area Great Lakes State Bottomland Preserve","MI","Uniform Multiple Use","No Management Plan",1985-12-08,"Marine",690.987,689.7913818,100,0,-82.68134178,43.98924624
+200,"Whitefish Point Great Lakes State Bottomland Preserve","MI","Uniform Multiple Use","No Management Plan",1987-12-08,"Marine",992.096,987.2886963,100,0,-85.05818393,46.79447655
+201,"Bird Island Sea Cucumber Reserve","US-MP","Uniform Multiple Use","MPA Programmatic Management Plan",2000-12-08,"Marine",0.799573,0.799572825,100,0,145.8131519,15.25388407
+202,"Tank Beach Trochus Reserve","US-MP","Uniform Multiple Use","MPA Programmatic Management Plan",2000-12-08,"Marine",0.172085,0.172085449,100,0,145.7884476,15.17431547
+203,"Managaha Marine Conservation Area","US-MP","Zoned w/No Take Areas","Site-Specific Management Plan",2000-12-08,"Marine",5.05575,5.055751801,100,0,145.7125864,15.23983884
+204,"Lighthouse Reef Trochus Reserve","US-MP","Uniform Multiple Use","MPA Programmatic Management Plan",2000-12-08,"Marine",1.11015,1.110151529,100,0,145.7046826,15.18996924
+205,"Graveline Bay Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Interface",9.04375,0.443018764,5,0,-88.69271426,30.36930793
+206,"Hancock County Marsh Coastal Preserve","MS","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Mixed",92.5042,6.612710953,7,0,-89.51685498,30.22079168
+207,"Jourdan River Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Mixed",25.677,7.522524357,29,0,-89.38315757,30.35588481
+208,"Old Fort Bayou Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Mixed",5.28258,1.404391885,27,0,-88.80364127,30.42155142
+209,"Pascagoula River Marsh Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Mixed",87.2927,13.05053616,15,0,-88.59925168,30.41996983
+210,"Round Island Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Marine",0.268324,0.268323928,100,0,-88.58624229,30.29530646
+211,"Bayou La Croix Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Interface",5.07522,0.010430322,0,0,-89.43300575,30.32984987
+212,"Wolf River Marsh Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Mixed",12.0943,1.626120806,13,0,-89.26745142,30.3671832
+213,"Bayou Portage Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Mixed",4.17684,1.132913351,27,0,-89.24725844,30.34247269
+214,"Bellefontaine Marsh Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Interface",4.87711,0.005031037,0,0,-88.73799409,30.35126427
+215,"Biloxi River Marshes Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Mixed",16.2721,7.420475006,46,0,-88.99026532,30.43327838
+216,"Grand Bay Savannah Coastal Preserve","AL, MS","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Mixed",47.6816,9.894371986,21,0,-88.4407732,30.36403663
+217,"Grand Bayou Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Marine",2.3365,2.336496353,100,0,-89.40347746,30.27182699
+218,"Davis Bayou Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Mixed",8.57731,2.431966543,28,0,-88.7828109,30.38404585
+219,"Deer Island Coastal Preserve","MS","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Mixed",2.22696,0.408364683,18,0,-88.84156909,30.37288169
+220,"Escatawpa River Marsh Coastal Preserve","MS","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Mixed",11.5394,2.208894014,19,0,-88.52452206,30.4242443
+221,"Fort Macon State Park Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",2000-12-08,"Mixed",1.94011,0.18222788,9,0,-76.69096274,34.69773113
+222,"Kitty Hawk Woods Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1992-12-08,"Interface",6.33653,0.146846041,2,0,-75.7207164,36.07983909
+223,"Masonboro Island Estuarine Reserve Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1987-12-08,"Mixed",22.3736,11.82043839,53,0,-77.84605355,34.14404629
+224,"Sea Turtle Sanctuary","NC","Uniform Multiple Use","No Management Plan",1980-12-08,"Marine",24.1501,24.03188896,100,0,-77.2474313,34.5736039
+225,"Queen Anne's Revenge","NC","Uniform Multiple Use","Site-Specific Management Plan",1997-12-08,"Marine",0.236297,0.236296773,100,0,-76.68280002,34.67520002
+226,"Buxton Woods Coastal Reserve","NC","Uniform Multiple Use","Site-Specific Management Plan",1989-12-08,"Interface",3.46704,0.001245951,0,0,-75.57035091,35.25506624
+227,"Bald Head Woods Coastal Reserve","NC","Uniform Multiple Use","Site-Specific Management Plan",1994-12-08,"Interface",0.775117,0.000896359,0,0,-77.97747222,33.85360614
+228,"Bird Island Coastal Reserve","NC","Uniform Multiple Use","Site-Specific Management Plan",2002-12-08,"Mixed",6.00799,1.924010277,32,0,-78.53630599,33.86607258
+229,"Buckridge Coastal Reserve Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",2000-12-08,"Interface",66.9731,0.19097507,0,0,-76.08986745,35.72800617
+230,"Gull Rock Game Land","NC","Uniform Multiple Use","MPA Programmatic Management Plan",1971-12-08,"Interface",115.966,1.060171962,1,0,-76.11005838,35.37781134
+231,"Rachel Carson Estuarine Reserve Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1987-12-08,"Mixed",7.928,4.764479637,60,0,-76.63302862,34.70263921
+232,"Roanoke Island Marshes Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1994-12-08,"Interface",9.47414,0.309260458,3,0,-75.63874276,35.8737453
+233,"Northwest River Marsh Game Land Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",2003-12-08,"Interface",6.38585,0.158330649,2,0,-76.12769461,36.54074995
+234,"Buxton Woods Coastal Reserve Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1992-12-08,"Interface",10.3457,0.003983704,0,0,-75.57045915,35.25201221
+235,"Currituck Banks Estuarine Reserve Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1987-12-08,"Mixed",1.39731,0.087100387,6,0,-75.83435859,36.39695699
+236,"Currituck Outer Banks Preserve Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1995-12-08,"Mixed",0.259874,0.023281626,9,0,-75.83922259,36.40390608
+237,"Nags Head Woods Preserve Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1986-12-08,"Interface",6.5023,0.135600761,2,0,-75.66172262,35.98529271
+238,"Run Hill State Natural Area Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1998-12-08,"Mixed",0.514743,0.029848617,6,0,-75.67221359,36.0008386
+239,"North River Game Land Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1999-12-08,"Interface",36.402,0.577319205,2,0,-75.98631699,36.29107097
+240,"Masonboro Island State Natural Area","NC","Uniform Multiple Use","Site-Specific Management Plan",1976-12-08,"Mixed",0.734335,0.185312927,25,0,-77.85018218,34.13450423
+241,"Run Hill State Natural Area","NC","Uniform Multiple Use","MPA Programmatic Management Plan",1995-12-08,"Mixed",0.514743,0.029848617,6,0,-75.67221359,36.0008386
+242,"Dare Game Land","NC","Uniform Multiple Use","MPA Programmatic Management Plan",1971-12-08,"Interface",186.819,3.07978e-05,0,0,-75.87763754,35.71452435
+243,"Croatan Game Land","NC","Uniform Multiple Use","MPA Programmatic Management Plan",1971-12-08,"Interface",654.762,1.369037032,0,0,-77.02159767,34.86438471
+244,"Theodore Roosevelt State Natural Area Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",2000-12-08,"Interface",1.22117,5.71477e-05,0,0,-76.83264046,34.69710555
+245,"Zekes Island Estuarine Reserve Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1987-12-08,"Mixed",9.47013,6.361292362,67,0,-77.94556262,33.93275576
+246,"Carolina Beach State Park","NC","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Interface",2.55396,0.048910249,2,0,-77.91250202,34.04519722
+247,"Fort Macon State Park","NC","Uniform Multiple Use","Site-Specific Management Plan",1924-12-08,"Mixed",2.1761,0.229746863,11,0,-76.69152779,34.69826956
+248,"Goose Creek State Park","NC","Uniform Multiple Use","Site-Specific Management Plan",1974-12-08,"Interface",6.89605,0.089506313,1,0,-76.90968639,35.47161717
+249,"Hammocks Beach State Park","NC","Uniform Multiple Use","Site-Specific Management Plan",1961-12-08,"Mixed",5.08974,0.758675933,15,0,-77.13960188,34.63508201
+250,"Emily and Richardson Preyer Buckridge Coastal Reserve","NC","Uniform Multiple Use","Site-Specific Management Plan",2000-12-08,"Interface",73.8021,0.251275599,0,0,-76.09979917,35.69519421
+251,"Kitty Hawk Woods Coastal Reserve","NC","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Mixed",7.39011,0.435003281,6,0,-75.72043476,36.08194544
+252,"Permuda Island Coastal Reserve","NC","Uniform Multiple Use","Site-Specific Management Plan",1987-12-08,"Mixed",0.255463,0.085116468,33,0,-77.49226087,34.46864694
+253,"Hampton Beach State Park","NH","Zoned Multiple Use","Non-MPA Programmatic Habitat Management Plan",1933-12-08,"Mixed",0.919983,0.36318323,39,0,-70.80393617,42.91716429
+254,"Odiorne Point State Park","NH","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1961-12-08,"Mixed",1.37547,0.141314372,10,0,-70.72136189,43.04269534
+255,"Rye Harbor State Park (Ragged Neck)","NH","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1936-12-08,"Interface",0.263383,0.00557251,2,0,-70.75222891,43.00396547
+256,"Cheesequake State Park","NJ","Zoned Multiple Use","MPA Programmatic Management Plan",1938-12-08,"Mixed",6.37746,0.413480818,6,0,-74.26782329,40.44050843
+257,"Port Republic Wildlife Management Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1962-12-08,"Interface",6.64328,0.037667301,1,0,-74.47923658,39.54658762
+258,"Swan Bay Wildlife Management Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1968-12-08,"Interface",14.2163,0.034946728,0,0,-74.51044779,39.58763315
+259,"Great Bay Boulevard Wildlife Management Area","NJ","Zoned Multiple Use","MPA Programmatic Management Plan",1974-12-08,"Mixed",22.7376,1.663413644,7,0,-74.32861038,39.54166582
+260,"Fort Mott State Park","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1951-12-08,"Interface",0.372194,0.014349685,4,0,-75.55106091,39.60482066
+261,"Heislerville Wildlife Management Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1956-12-08,"Interface",26.1689,1.380151868,5,0,-74.98375557,39.20514822
+262,"Dennis Creek Wildlife Management Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1957-12-08,"Interface",29.5219,0.608345628,2,0,-74.87078911,39.1716494
+263,"Fortescue Wildlife Management Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1965-12-08,"Interface",5.51746,0.302954704,5,0,-75.18217453,39.2561205
+264,"Cape May Wetlands Wildlife Management Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1956-12-08,"Mixed",66.8703,5.57738018,8,0,-74.76515675,39.20433808
+265,"Abbotts Meadow Wildlife Management Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1994-12-08,"Interface",5.36568,0.168972209,3,0,-75.49245467,39.52182145
+266,"Barnegat Lighthouse State Park","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1957-12-08,"Mixed",0.125961,0.047235247,37,0,-74.10395398,39.76362412
+267,"Dix Wildlife Management Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1962-12-08,"Mixed",13.2815,0.764171004,6,0,-75.318568,39.36245008
+268,"Tuckahoe Wildlife Management Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1993-12-08,"Mixed",64.7056,4.004537106,6,0,-74.70991712,39.31038321
+269,"Salem River Wildlife Management Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1993-12-08,"Mixed",9.00943,1.283366799,14,0,-75.40844755,39.64456485
+270,"Cohansey River Wildlife Management Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1999-12-08,"Interface",2.52919,0.055454902,2,0,-75.31343498,39.39256042
+271,"Island Beach State Park","NJ","Zoned Multiple Use","MPA Programmatic Management Plan",1953-12-08,"Mixed",9.60455,0.865981817,9,0,-74.09325722,39.77998841
+272,"Liberty State Park","NJ","Zoned Multiple Use","MPA Programmatic Management Plan",1976-12-08,"Mixed",4.79681,2.216462851,46,0,-74.053123,40.69939368
+273,"Swan Point State Natural Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1978-12-08,"Interface",0.665059,0.004626838,1,0,-74.06508061,40.03569857
+274,"North Brigantine State Natural Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1978-12-08,"Mixed",5.44676,1.582093358,29,0,-74.34848708,39.43151374
+275,"Cape May Wetlands State Natural Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1978-12-08,"Marine",0.654005,0.654005051,100,0,-74.95512484,38.93491724
+276,"Corson's Inlet State Park","NJ","Zoned Multiple Use","MPA Programmatic Management Plan",1970-12-08,"Mixed",0.628277,0.05740162,9,0,-74.64555511,39.21418975
+277,"Swimming River Natural Area","NJ","Uniform Multiple Use","MPA Programmatic Management Plan",1967-12-08,"Marine",0.352276,0.352276355,100,0,-74.09991491,40.32326623
+278,"Old Kona Airport Marine Life Conservation District","HI","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Marine",1.06239,1.027982354,97,0,-156.011198,19.64067652
+279,"Kealakekua Bay Marine Life Conservation District","HI","Zoned w/No Take Areas","MPA Programmatic Management Plan",1969-12-08,"Marine",1.23989,1.228584051,99,0,-155.9264971,19.47681907
+280,"Kitty Hawk Woods Coastal Reserve Dedicated Nature Preserve","NC","Uniform Multiple Use","No Management Plan",1997-12-08,"Interface",6.33653,0.146846041,2,0,-75.7207164,36.07983909
+281,"Florida Keys National Marine Sanctuary","FL","Zoned w/No Take Areas","Site-Specific Management Plan",1990-12-08,"Marine",9901.11,9901.094727,100,520.758,-81.71746747,24.69331452
+282,"Headland Dunes State Nature Preserve","OH","No Take","Site-Specific Management Plan",1977-12-08,"Marine",0.0784575,0.078457475,100,0.078457475,-81.28502082,41.76158822
+283,"North Pond State Nature Preserve","OH","No Take","Site-Specific Management Plan",1999-12-08,"Interface",0.174853,1.72827e-05,0,0.174853384,-82.70236861,41.61031107
+284,"North Shore Alvar State Nature Preserve","OH","No Take","Site-Specific Management Plan",1999-12-08,"Mixed",0.0190952,0.009774517,51,0.019095225,-82.71092034,41.61994791
+285,"Sheldon Marsh State Nature Preserve","OH","No Take","Site-Specific Management Plan",1979-12-08,"Marine",1.89762,1.897617698,100,1.897617698,-82.61166951,41.42146336
+286,"Whale Cove Habitat Refuge","OR","No Take","MPA Programmatic Management Plan",1978-12-08,"Mixed",0.128369,0.112877399,88,0.128368542,-124.0706575,44.78891518
+287,"Bosque Estatal de Ceiba Natural Reserve","PR","No Take","MPA Programmatic Management Plan",1979-12-08,"Mixed",2.37002,2.052412033,87,2.370022774,-65.63094241,18.25141147
+288,"Canal Luis Peña Natural Reserve","PR","No Take","Site-Specific Management Plan",1999-12-08,"Marine",6.36335,6.240495682,98,6.3633461,-65.32673161,18.31298766
+289,"Laguna Joyuda Natural Reserve","PR","No Take","MPA Programmatic Management Plan",1980-12-08,"Marine",1.79399,1.705815196,95,1.79399085,-67.17799316,18.12989643
+290,"Isla de Desecheo Marine Reserve","PR","No Take","Site-Specific Management Plan",2000-12-08,"Marine",6.13,6.092569828,99,6.130002022,-67.48058817,18.3747149
+291,"El Pantano, Bosque de Pterocarpus y Lagunas Mandry y Santa Teresa Natural Reserve","PR","No Take","Site-Specific Management Plan",1984-12-08,"Interface",8.8373,0.021393424,0,8.837300301,-65.76729194,18.16575073
+292,"Tres Palmas de Rincón Marine Reserve","PR","No Take","Site-Specific Management Plan",2004-12-08,"Marine",0.831146,0.804282606,97,0.831145763,-67.26720073,18.34758676
+293,"Candy Abshier Wildlife Management Area","TX","Uniform Multiple Use","Site-Specific Management Plan",1990-12-08,"Interface",0.868443,0.000323237,0,0.868443429,-94.76413885,29.52987051
+294,"Cape Charles Coastal Habitat Natural Area Preserve","VA","No Take","MPA Programmatic Management Plan",1997-12-08,"Interface",0.102136,0.00043839,0,0.1021358,-76.02246915,37.25676152
+295,"Compass Point Pond Marine Reserve and Wildlife Sanctuary","US-VI","No Take","No Management Plan",1992-12-08,"Marine",0.0255997,0.025463386,99,0.025599679,-64.86431431,18.31997841
+296,"St. Croix East End Marine Park","US-VI","Zoned w/No Take Areas","Site-Specific Management Plan",2003-12-08,"Marine",150.316,150.2736816,100,12.9534,-64.59025517,17.73302952
+297,"Brackett's Landing Shoreline Sanctuary Conservation Area","WA","No Take","Site-Specific Management Plan",1970-12-08,"Mixed",0.189528,0.17798312,94,0.189527765,-122.3821878,47.81552822
+298,"Dabob Bay Natural Area Preserve","WA","Uniform Multiple Use","Site-Specific Management Plan",1987-12-08,"Mixed",0.703964,0.082561553,12,0.703964,-122.8091943,47.84973214
+299,"Zella M. Schultz/Protection Island Seabird Sanctuary","WA","No Access","MPA Programmatic Management Plan",1975-12-08,"Mixed",0.120499,0.014814762,12,0.120498694,-122.9409748,48.12215944
+300,"Sund Rock Conservation Area","WA","No Take","Non-MPA Programmatic Fisheries Management Plan",1994-12-08,"Marine",0.287945,0.286505461,100,0.287944853,-123.1176843,47.43683889
+301,"Octopus Hole Conservation Area","WA","No Take","Non-MPA Programmatic Fisheries Management Plan",1998-12-08,"Marine",0.131815,0.130941868,99,0.131814852,-123.11213,47.44783502
+302,"Orchard Rocks Conservation Area","WA","No Take","Non-MPA Programmatic Fisheries Management Plan",1998-12-08,"Marine",0.41924,0.419240057,100,0.419240057,-122.5319941,47.57754673
+303,"South 239th Street Park Conservation Area","WA","No Take","Non-MPA Programmatic Fisheries Management Plan",1998-12-08,"Marine",0.000828109,0.000801557,97,0.000828109,-122.327809,47.38793109
+304,"City of Des Moines Park Conservation Area","WA","No Take","Non-MPA Programmatic Fisheries Management Plan",1998-12-08,"Mixed",0.0372299,0.030703718,82,0.037229884,-122.3315866,47.40337462
+305,"Waketickeh Creek Conservation Area","WA","No Take","Non-MPA Programmatic Fisheries Management Plan",2000-12-08,"Marine",0.591819,0.589796722,100,0.591818571,-123.0161347,47.56115308
+306,"Saltar's Point Beach Conservation Area","WA","No Take","Non-MPA Programmatic Fisheries Management Plan",2000-12-08,"Mixed",0.0181336,0.016420942,91,0.018133586,-122.6127445,47.16919539
+307,"Keystone Conservation Area","WA","No Take","Non-MPA Programmatic Fisheries Management Plan",2002-12-08,"Marine",0.0460929,0.046092935,100,0.046092935,-122.6694578,48.15714173
+308,"South Puget Sound Wildlife Area","WA","Uniform Multiple Use","Site-Specific Management Plan",1988-12-08,"Interface",16.4765,0.301055968,2,16.4765,-122.6857418,47.21044431
+309,"Kennedy Creek Natural Area Preserve","WA","Uniform Multiple Use","Site-Specific Management Plan",1990-12-08,"Mixed",0.452346,0.109324008,24,0.452346,-123.0802432,47.09616696
+310,"Skookum Inlet Natural Area Preserve","WA","Uniform Multiple Use","Site-Specific Management Plan",1986-12-08,"Mixed",0.439653,0.151764333,35,0.439653,-123.0817083,47.1380418
+311,"North Bay Natural Area Preserve","WA","Uniform Multiple Use","MPA Programmatic Management Plan",1988-12-08,"Mixed",4.25176,1.631740928,38,4.25176,-124.1046416,47.04887691
+312,"Bone River Natural Area Preserve","WA","Uniform Multiple Use","Site-Specific Management Plan",1987-12-08,"Interface",10.6907,0.082638614,1,10.6907,-123.8860348,46.65823841
+313,"Niawiakum River Natural Area Preserve","WA","Uniform Multiple Use","Site-Specific Management Plan",1987-12-08,"Interface",2.38681,0.004920412,0,2.38681,-123.9073987,46.62668445
+314,"Buck Island Reef National Monument","US-VI","No Take","Site-Specific Management Plan",1961-12-08,"Marine",77.2626,76.56073761,99,77.26261902,-64.62221751,17.81026454
+315,"National Marine Sanctuary of American Samoa","ASM","Zoned w/No Take Areas","Site-Specific Management Plan",1986-12-08,"Marine",35373.7,35373.73047,100,0.711434,-168.1654953,-14.52712293
+316,"Redfish Rocks Marine Reserve","OR","No Take","Site-Specific Management Plan",2010-12-08,"Marine",6.81874,6.775687218,99,6.818743229,-124.4732132,42.70092849
+317,"Otter Rock Marine Reserve","OR","No Take","Site-Specific Management Plan",2010-12-08,"Marine",3.17016,3.14562726,99,3.170156479,-124.0668765,44.73749538
+318,"Gray's Reef National Marine Sanctuary","GA","Zoned w/No Take Areas","Site-Specific Management Plan",1981-12-08,"Marine",57.4181,57.4180603,100,21.374,-80.874675,31.39190514
+319,"Rose Atoll Marine National Monument","PRI","Zoned w/No Take Areas","Site-Specific Management Plan",2009-12-08,"Marine",35004.6,35004.48047,100,1637.68,-168.1479167,-14.54208666
+320,"Fagamalo Village Marine Protected Area","ASM","Uniform Multiple Use","Community Agreement",2003-12-08,"Marine",0.452446,0.452445894,100,0.452446,-170.8079167,-14.29315302
+321,"Sa'ilele Village Marine Protected Area","ASM","No Take","Community Agreement",2005-12-08,"Marine",0.0787021,0.07870207,100,0.07870207,-170.5963356,-14.25594347
+322,"Amanave Village Marine Protected Area","ASM","No Take","Community Agreement",2009-12-08,"Marine",0.344291,0.34429127,100,0.34429127,-170.8366681,-14.32536838
+323,"Dry Tortugas National Park","FL","Zoned w/No Take Areas","Site-Specific Management Plan",1935-12-08,"Marine",263.291,262.875946,100,120.495,-82.87178291,24.64889538
+324,"Pacific Remote Islands Marine National Monument","PRI","Zoned w/No Take Areas","Site-Specific Management Plan",2009-12-08,"Marine",1277860,1267727,99,13669.5,-56.87304111,16.75109131
+325,"Richardson Rock (San Miguel Island) State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2003-12-08,"Marine",105.808,105.7985535,100,105.8080139,-120.5189633,34.09648858
+326,"Judith Rock (San Miguel Island) State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2003-12-08,"Marine",11.8793,11.83963394,100,11.87932014,-120.4326937,34.00186792
+327,"Harris Point (San Miguel Island) State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2003-12-08,"Marine",65.9434,65.72153473,100,65.9434433,-120.3498283,34.09339807
+328,"Channel Islands National Marine Sanctuary","CA","Zoned w/No Take Areas","Site-Specific Management Plan",1980-12-08,"Marine",3813.73,3811.198975,100,0,-119.8372932,33.94511763
+329,"NOAA's Monitor National Marine Sanctuary","NC","Uniform Multiple Use","Site-Specific Management Plan",1975-12-08,"Marine",2.20815,2.20815134,100,0,-75.409588,35.00656799
+330,"Monterey Bay National Marine Sanctuary","CA","Zoned Multiple Use","Site-Specific Management Plan",1992-12-08,"Marine",15825.7,15817.46094,100,0,-122.350496,36.54200714
+331,"Olympic Coast National Marine Sanctuary","WA","Zoned Multiple Use","Site-Specific Management Plan",1994-12-08,"Marine",8258.56,8250.540039,100,0,-124.8828342,47.82200574
+332,"Gerry E. Studds/Stellwagen Bank National Marine Sanctuary","MA","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Marine",2192.57,2192.57251,100,0,-70.32124648,42.40440454
+333,"Hawaiian Islands Humpback Whale National Marine Sanctuary","HI","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Marine",3554.97,3549.159424,100,0,-157.0958907,20.90777666
+334,"Bayswater Point State Park","NY","Uniform Multiple Use","MPA Programmatic Management Plan",1988-12-08,"Mixed",0.0734709,0.012185581,17,0,-73.77154186,40.61290899
+337,"Jones Beach State Park","NY","Uniform Multiple Use","MPA Programmatic Management Plan",1929-12-08,"Interface",10.2782,0.429546565,4,0,-73.51535395,40.59644244
+339,"Napeague State Park","NY","Uniform Multiple Use","MPA Programmatic Management Plan",1986-12-08,"Interface",6.01631,0.104075067,2,0,-72.07373953,40.99465827
+340,"Nissequogue River State Park","NY","Uniform Multiple Use","MPA Programmatic Management Plan",1999-12-08,"Mixed",0.566833,0.039907433,7,0,-73.23110528,40.89781864
+342,"Camp Hero State Park","NY","Uniform Multiple Use","MPA Programmatic Management Plan",2002-12-08,"Interface",3.00045,0.009305074,0,0,-71.87775156,41.06178215
+343,"Robert Moses State Park - Long Island","NY","Uniform Multiple Use","MPA Programmatic Management Plan",1908-12-08,"Mixed",3.74206,0.382852405,10,0,-73.26633951,40.62308568
+344,"Shadmoor State Park","NY","Uniform Multiple Use","MPA Programmatic Management Plan",1991-12-08,"Interface",0.412144,0.001141598,0,0,-71.92766941,41.03860333
+346,"Captree State Park","NY","Uniform Multiple Use","MPA Programmatic Management Plan",1954-12-08,"Mixed",2.19195,0.338836551,15,0,-73.26229139,40.64393893
+348,"Governor Alfred E. Smith/Sunken Meadow State Park","NY","Uniform Multiple Use","MPA Programmatic Management Plan",1928-12-08,"Interface",4.68727,0.052556735,1,0,-73.26202666,40.90722201
+349,"Magee Marsh Wildlife Area","OH","Zoned Multiple Use","MPA Programmatic Management Plan",1951-12-08,"Mixed",7.90702,1.021147132,13,0,-83.16404943,41.61517358
+350,"Haystack Rock Marine Garden","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1990-12-08,"Marine",0.33688,0.334645599,99,0,-123.9684052,45.88401885
+351,"Cape Kiwanda Marine Garden","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Mixed",0.0474783,0.029835999,63,0,-123.9780174,45.21780585
+352,"Otter Rock Marine Garden","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1962-12-08,"Marine",0.214905,0.212571517,99,0,-124.0660511,44.7531402
+353,"Yaquina Head Marine Garden","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1988-12-08,"Mixed",0.3272,0.28097266,86,0,-124.075269,44.67300628
+354,"Cape Perpetua Marine Garden","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1977-12-08,"Mixed",0.159522,0.138911113,87,0,-124.1135819,44.28024099
+355,"Harris Beach Marine Garden","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Marine",0.0665697,0.063907459,96,0,-124.3117655,42.06580863
+356,"Pirate Cove Research Reserve","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1996-12-08,"Mixed",0.032732,0.001972491,6,0,-124.0661008,44.81891416
+357,"Gregory Point Research Reserve","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1996-12-08,"Marine",0.245048,0.239310637,98,0,-124.3785921,43.34101074
+358,"Boiler Bay Research Reserve","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Mixed",0.182551,0.072254919,40,0,-124.0599933,44.83049464
+359,"Neptune State Park Research Reserve","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Mixed",0.216758,0.121626601,56,0,-124.1125416,44.26340327
+360,"Cape Arago Research Reserve","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Mixed",1.08336,0.980676174,91,0,-124.3921222,43.31338364
+361,"Brookings Research Reserve","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Mixed",0.609016,0.559304237,92,0,-124.2984663,42.05107183
+362,"Yachats Marine Garden","OR","Uniform Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Mixed",0.0646642,0.047703981,74,0,-124.1086621,44.31000883
+363,"Presque Isle State Park","PA","Uniform Multiple Use","Site-Specific Management Plan",1921-12-08,"Mixed",8.13955,1.109518051,14,0,-80.10651456,42.15764525
+364,"Neshaminy State Park - Tidal Marsh Natural Area","PA","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Mixed",1.30901,0.155094549,12,0,-74.91246835,40.07775358
+365,"Little Tinicum Island Natural Area","PA","Uniform Multiple Use","No Management Plan",1982-12-08,"Mixed",0.388119,0.145781413,38,0,-75.29004294,39.85371756
+366,"Bosque Estatal de Guánica Natural Reserve","PR","Uniform Multiple Use","MPA Programmatic Management Plan",1985-12-08,"Mixed",52.4523,15.16238022,29,0,-66.87518368,17.95808312
+367,"Bosque Natural de Boquerón Natural Reserve","PR","Uniform Multiple Use","MPA Programmatic Management Plan",1998-12-08,"Marine",162.048,160.4306335,99,0,-67.17154641,17.87479305
+368,"Cabezas de San Juan Natural Reserve","PR","Uniform Multiple Use","Site-Specific Management Plan",1975-12-08,"Marine",308.358,307.4381104,100,0,-65.56210633,18.4409782
+369,"Bahías Bioluminiscentes de Vieques Natural Reserve","PR","Uniform Multiple Use","Site-Specific Management Plan",1989-12-08,"Mixed",85.6184,80.46110535,94,0,-65.45361513,18.02208917
+370,"Cueva del Indio Natural Reserve","PR","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Marine",15.6583,15.62012768,100,0,-66.63921215,18.56871362
+371,"Caño Tiburones Natural Reserve","PR","Uniform Multiple Use","Site-Specific Management Plan",1998-12-08,"Interface",15.0658,0.292537749,2,0,-66.64077062,18.4710254
+372,"La Parguera Natural Reserve","PR","Uniform Multiple Use","Site-Specific Management Plan",1979-12-08,"Marine",328.195,327.9512634,100,0,-67.04772844,17.88022178
+373,"Arrecifes de la Cordillera Natural Reserve","PR","Uniform Multiple Use","Site-Specific Management Plan",1980-12-08,"Marine",101.37,99.98957825,99,0,-65.525949,18.36106008
+374,"Río Espíritu Santo Natural Reserve","PR","Uniform Multiple Use","MPA Programmatic Management Plan",2001-12-08,"Mixed",95.0164,89.18276978,94,0,-65.78250942,18.48253628
+375,"Bosque Estatal de Piñones Natural Reserve","PR","Uniform Multiple Use","MPA Programmatic Management Plan",1918-12-08,"Mixed",8.89338,8.323058128,94,0,-65.95855173,18.44329338
+376,"Caja de Muertos Natural Reserve","PR","Zoned Multiple Use","Site-Specific Management Plan",1981-12-08,"Marine",126.192,124.651825,99,0,-66.49486215,17.8962157
+378,"Bosque Estatal de Aguirre","PR","Uniform Multiple Use","MPA Programmatic Management Plan",1983-12-08,"Mixed",4.35776,3.51446557,81,0,-66.18638194,17.94269649
+379,"Arrecifes de Guayama Natural Reserve","PR","Uniform Multiple Use","MPA Programmatic Management Plan",1980-12-08,"Marine",4.43809,4.438088894,100,0,-66.02010607,17.94183453
+380,"Arrecifes de Tourmaline Natural Reserve","PR","Zoned w/No Take Areas","MPA Programmatic Management Plan",1998-12-08,"Marine",73.0826,73.08255005,100,0,-67.29858992,18.12578671
+381,"Isla de Mona Natural Reserve","PR","Zoned w/No Take Areas","Site-Specific Management Plan",1986-12-08,"Marine",1578.1,1522.112305,96,0,-67.90459881,18.10492956
+382,"Punta Yegüas Natural Reserve","PR","Uniform Multiple Use","MPA Programmatic Management Plan",1975-12-08,"Marine",265.083,263.854248,100,0,-65.77030452,17.95800215
+383,"Hacienda La Esperanza Natural Reserve","PR","Uniform Multiple Use","MPA Programmatic Management Plan",1987-12-08,"Marine",50.9054,50.87532806,100,0,-66.51926634,18.55898182
+384,"Pantano Cibuco Natural Reserve","PR","Uniform Multiple Use","MPA Programmatic Management Plan",1993-12-08,"Mixed",2.727,1.872400284,69,0,-66.38182025,18.47797627
+385,"Bear Island Wildlife Management Area","SC","Uniform Multiple Use","Site-Specific Management Plan",1953-12-08,"Interface",47.6763,1.019800067,2,0,-80.4489961,32.60038693
+386,"Bird Key Stono Heritage Preserve","SC","Uniform Multiple Use","Site-Specific Management Plan",1982-12-08,"Mixed",0.165032,0.102972761,62,0,-79.98650968,32.62717815
+387,"St. Helena Sound Heritage Preserve","SC","Uniform Multiple Use","Site-Specific Management Plan",1991-12-08,"Mixed",39.2562,2.943157673,7,0,-80.53981847,32.52311333
+388,"Tom Yawkee Wildlife Center","SC","Uniform Multiple Use","Site-Specific Management Plan",1977-12-08,"Interface",80.26,3.822016239,5,0,-79.22322096,33.21654674
+389,"Crab Bank Seabird Sanctuary","SC","Uniform Multiple Use","Site-Specific Management Plan",1999-12-08,"Mixed",0.1127,0.066360474,59,0,-79.88432762,32.77800792
+390,"Sea Rim State Park","TX","Uniform Multiple Use","MPA Programmatic Management Plan",1973-12-08,"Interface",16.1478,0.403247565,2,0,-94.03469801,29.69535523
+391,"Boca Chica State Park","TX","Uniform Multiple Use","MPA Programmatic Management Plan",1994-12-08,"Mixed",5.45184,0.665041506,12,0,-97.16556088,25.99707017
+392,"Galveston Island State Park","TX","Uniform Multiple Use","MPA Programmatic Management Plan",1969-12-08,"Mixed",6.74866,0.728721023,11,0,-94.96625012,29.20266778
+393,"Goose Island State Park","TX","Uniform Multiple Use","MPA Programmatic Management Plan",1931-12-08,"Interface",0.946406,0.04660454,5,0,-96.98729842,28.13442067
+394,"Lower Neches Wildlife Management Area","TX","Uniform Multiple Use","MPA Programmatic Management Plan",1987-12-08,"Interface",23.7096,0.187068447,1,0,-93.8832477,30.03340933
+395,"Mad Island Wildlife Management Area","TX","Uniform Multiple Use","Site-Specific Management Plan",1989-12-08,"Interface",29.4664,1.345420599,5,0,-96.04554762,28.67620832
+396,"Wai'opae Tidepools Marine Life Conservation District","HI","No Take","MPA Programmatic Management Plan",2003-12-08,"Mixed",0.199592,0.069644041,35,0.199591756,-154.8191595,19.48608635
+397,"Henderson Creek/Enchanting Shores No Entry Zone","FL","No Access","Non-MPA Programmatic Fisheries Management Plan",1997-12-08,"Marine",0.00528469,0.005284694,100,0.005284694,-81.68679762,26.04936876
+398,"Pansy Bayou No Entry Zone","FL","No Access","Non-MPA Programmatic Fisheries Management Plan",1992-12-08,"Marine",0.301963,0.301323682,100,0.301962823,-82.58290478,27.32272308
+399,"Molokini Shoal Marine Life Conservation District","HI","Zoned w/No Take Areas","MPA Programmatic Management Plan",1977-12-08,"Marine",0.357258,0.341693044,96,0,-156.4962673,20.63262715
+400,"Manele-Hulopoe Marine Life Conservation District","HI","Zoned Multiple Use","MPA Programmatic Management Plan",1976-12-08,"Marine",1.1226,1.120919466,100,0,-156.8925892,20.73688174
+401,"Lapakahi Marine Life Conservation District","HI","Zoned w/No Take Areas","MPA Programmatic Management Plan",1979-12-08,"Marine",0.541679,0.535481393,99,0,-155.9010789,20.17009773
+402,"Mustang Island State Park","TX","Uniform Multiple Use","MPA Programmatic Management Plan",1974-12-08,"Mixed",15.617,1.00954473,6,0,-97.18161811,27.67339551
+403,"Justin Hurst Wildlife Management Area","TX","Uniform Multiple Use","Site-Specific Management Plan",1985-12-08,"Interface",56.5878,2.334569931,4,0,-95.43419387,28.92622723
+404,"J.D. Murphree Wildlife Management Area","TX","Uniform Multiple Use","Site-Specific Management Plan",1950-12-08,"Mixed",100.153,6.160006046,6,0,-94.01024556,29.78823384
+405,"False Cape State Park","VA","Uniform Multiple Use","Site-Specific Management Plan",1966-12-08,"Interface",15.6809,0.487355649,3,0,-75.88820781,36.58886996
+406,"Kiptopeke State Park","VA","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Interface",1.9915,0.00017506,0,0,-75.97793931,37.16574174
+407,"Bethel Beach Natural Area Preserve","VA","Uniform Multiple Use","MPA Programmatic Management Plan",1991-12-08,"Interface",0.301282,0.010905929,4,0,-76.25189468,37.41025198
+408,"Bush Mill Stream Natural Area Preserve","VA","Uniform Multiple Use","MPA Programmatic Management Plan",1992-12-08,"Interface",0.42518,0.000216288,0,0,-76.44708001,37.87398158
+409,"Caledon Natural Area","VA","Uniform Multiple Use","Site-Specific Management Plan",1974-12-08,"Interface",10.4485,0.216559619,2,0,-77.15551894,38.34151511
+410,"Chotank Creek Natural Area Preserve","VA","Uniform Multiple Use","Non-MPA Programmatic Fisheries Management Plan",2001-12-08,"Interface",4.4913,0.245180607,5,0,-77.12367048,38.3555908
+411,"Cumberland Marsh Natural Area Preserve","VA","Uniform Multiple Use","Non-MPA Programmatic Fisheries Management Plan",1997-12-08,"Mixed",4.44138,0.349141568,8,0,-76.98237584,37.54684233
+412,"Dameron Marsh Natural Area Preserve","VA","Uniform Multiple Use","Non-MPA Programmatic Fisheries Management Plan",1998-12-08,"Mixed",1.28002,0.081975788,6,0,-76.30044458,37.78197859
+413,"Hughlett Point Natural Area Preserve","VA","Uniform Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Interface",0.824512,0.013669154,2,0,-76.31205067,37.73794811
+414,"New Point Comfort Natural Area Preserve","VA","Uniform Multiple Use","MPA Programmatic Management Plan",1997-12-08,"Interface",0.392799,0.005545415,1,0,-76.27755617,37.31762301
+415,"North Landing River Natural Area Preserve","VA","Uniform Multiple Use","MPA Programmatic Management Plan",1990-12-08,"Interface",14.3219,0.329035729,2,0,-76.06238009,36.6233255
+416,"Northwest River Natural Area Preserve","VA","Zoned Multiple Use","MPA Programmatic Management Plan",1994-12-08,"Interface",11.1251,0.282353163,3,0,-76.19302956,36.58430564
+417,"Parkers Marsh Natural Area Preserve","VA","Zoned Multiple Use","MPA Programmatic Management Plan",1999-12-08,"Mixed",2.8481,0.311453342,11,0,-75.81775676,37.73565494
+418,"Savage Neck Dunes Natural Area Preserve","VA","Zoned Multiple Use","MPA Programmatic Management Plan",1999-12-08,"Interface",1.19819,0.000979038,0,0,-76.01118617,37.32540539
+419,"Wreck Island Natural Area Preserve","VA","Uniform Multiple Use","MPA Programmatic Management Plan",1991-12-08,"Mixed",2.89616,0.998048365,34,0,-75.80041134,37.26288401
+420,"Hog Island Wildlife Management Area","VA","Uniform Multiple Use","Site-Specific Management Plan",1950-12-08,"Mixed",9.60873,2.010010719,21,0,-76.68205873,37.17849452
+421,"St. James Marine Reserve and Wildlife Sanctuary","US-VI","Uniform Multiple Use","No Management Plan",1994-12-08,"Marine",7.05599,6.908173561,98,0,-64.84178211,18.31064957
+422,"Argyle Lagoon San Juan Islands Marine Preserve","WA","Uniform Multiple Use","MPA Programmatic Management Plan",1990-12-08,"Mixed",0.05765,0.053959932,94,0,-123.0118004,48.52091449
+423,"False Bay San Juan Islands Marine Preserve","WA","Uniform Multiple Use","MPA Programmatic Management Plan",1990-12-08,"Marine",1.29371,1.228617191,95,0,-123.0699281,48.4840455
+424,"Friday Harbor San Juan Islands Marine Preserve","WA","Uniform Multiple Use","MPA Programmatic Management Plan",1990-12-08,"Mixed",1.72854,1.582420588,92,0,-123.0096709,48.54411942
+425,"Woodard Bay Natural Resources Conservation Area","WA","Uniform Multiple Use","Site-Specific Management Plan",1987-12-08,"Mixed",2.91989,0.748371482,26,0,-122.8485615,47.12874823
+426,"Titlow Beach Marine Preserve","WA","Uniform Multiple Use","Non-MPA Programmatic Fisheries Management Plan",1994-12-08,"Mixed",0.168485,0.149400577,89,0,-122.5539645,47.24981115
+427,"Z's Reef Marine Preserve","WA","Uniform Multiple Use","Non-MPA Programmatic Fisheries Management Plan",2002-12-08,"Marine",0.226316,0.226315603,100,0,-122.6015175,47.24582399
+428,"Admiralty Head Marine Preserve","WA","Uniform Multiple Use","Non-MPA Programmatic Fisheries Management Plan",2002-12-08,"Marine",0.357287,0.35728699,100,0,-122.685414,48.16248199
+429,"Colvos Passage Marine Preserve","WA","Uniform Multiple Use","Non-MPA Programmatic Fisheries Management Plan",2000-12-08,"Marine",0.0131665,0.013166476,100,0,-122.5556062,47.34800352
+430,"Blake Island Underwater Park","WA","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1970-12-08,"Mixed",4.55748,2.6339643,58,0,-122.4932404,47.53837248
+431,"Fort Worden Underwater Park","WA","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1977-12-08,"Interface",1.79759,0.0631359,4,0,-122.7695685,48.13844505
+432,"Deception Pass Underwater Park","WA","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Mixed",15.54,2.897808313,19,0,-122.6373078,48.39626757
+433,"Fort Casey Underwater Park","WA","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1970-12-08,"Mixed",3.80966,2.184381723,57,0,-122.6642387,48.15787561
+434,"Fort Ward Underwater Park","WA","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1970-12-08,"Mixed",1.14896,0.61644429,54,0,-122.5292566,47.5844408
+435,"Kopachuck Underwater Park","WA","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1971-12-08,"Mixed",1.13398,0.716596007,63,0,-122.6878741,47.3083556
+436,"Saltwater Underwater Park","WA","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1970-12-08,"Mixed",0.0429318,0.039577141,92,0,-122.3271383,47.37298176
+437,"Tolmie Underwater Park","WA","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1971-12-08,"Mixed",0.630677,0.22811988,36,0,-122.7758186,47.12042921
+438,"San Juan County/Cypress Island Marine Biological Preserve","WA","Uniform Multiple Use","MPA Programmatic Management Plan",1923-12-08,"Mixed",1656.9,1180.988037,71,0,-122.9702599,48.56310215
+440,"Chehalis River Surge Plain Natural Area Preserve","WA","Zoned w/No Take Areas","Site-Specific Management Plan",1989-12-08,"Mixed",10.9425,0.730920255,7,0,-123.6995859,46.94091313
+441,"Shaw Island San Juan Islands Marine Preserve","WA","Uniform Multiple Use","MPA Programmatic Management Plan",1990-12-08,"Marine",1.7469,1.720289469,98,0,-122.9833998,48.55244178
+442,"Tongue Point Marine Life Sanctuary","WA","Uniform Multiple Use","Site-Specific Management Plan",1989-12-08,"Mixed",0.701239,0.082071267,12,0,-123.7008314,48.16099864
+443,"Yellow and Low Islands San Juan Islands Marine Preserve","WA","Uniform Multiple Use","MPA Programmatic Management Plan",1990-12-08,"Marine",0.807441,0.765607715,95,0,-123.0295666,48.59121099
+444,"Hudson River National Estuarine Research Reserve","NY","Uniform Multiple Use","Site-Specific Management Plan",1982-12-08,"Mixed",19.7695,9.900442123,50,0,-73.87382046,42.03573986
+445,"Jacques Cousteau National Estuarine Research Reserve","NJ","Uniform Multiple Use","Site-Specific Management Plan",1998-12-08,"Mixed",480.489,271.6716003,57,0,-74.35308251,39.5264427
+446,"Jobos Bay National Estuarine Research Reserve","PR","Uniform Multiple Use","Site-Specific Management Plan",1981-12-08,"Mixed",9.75086,8.690625191,89,0,-66.23934406,17.9358934
+447,"Narragansett Bay National Estuarine Research Reserve","RI","Uniform Multiple Use","Site-Specific Management Plan",1980-12-08,"Mixed",18.2172,8.120980263,45,0,-71.33602953,41.65132298
+448,"North Carolina National Estuarine Research Reserve","NC","Uniform Multiple Use","Site-Specific Management Plan",1985-12-08,"Mixed",42.8639,27.11989594,63,0,-77.41011466,34.13709055
+449,"Old Woman Creek National Estuarine Research Reserve","OH","Zoned Multiple Use","Site-Specific Management Plan",1980-12-08,"Interface",2.35674,0.035523962,2,0,-82.51190689,41.37442071
+450,"Padilla Bay National Estuarine Research Reserve","WA","Uniform Multiple Use","Site-Specific Management Plan",1980-12-08,"Mixed",53.6169,48.47636795,90,0,-122.5122351,48.51315201
+451,"Ashepoo-Combahee-Edisto (ACE) Basin National Estuarine Research Reserve","SC","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Mixed",571.405,176.4561157,31,0,-80.45769645,32.53451114
+452,"Sapelo Island National Estuarine Research Reserve","GA","Uniform Multiple Use","Site-Specific Management Plan",1976-12-08,"Mixed",30.816,3.78557229,12,0,-81.28420007,31.44558361
+453,"South Slough National Estuarine Research Reserve","OR","Uniform Multiple Use","Site-Specific Management Plan",1974-12-08,"Mixed",19.3524,3.908516645,20,0,-124.3118614,43.29134561
+454,"Tijuana River National Estuarine Research Reserve","CA","Uniform Multiple Use","Site-Specific Management Plan",1982-12-08,"Mixed",9.44646,0.656784058,7,0,-117.1140443,32.55246533
+455,"Waquoit Bay National Estuarine Research Reserve","MA","Uniform Multiple Use","Site-Specific Management Plan",1988-12-08,"Mixed",11.4741,4.971893311,43,0,-70.51415355,41.56377134
+456,"Wells National Estuarine Research Reserve","ME","Uniform Multiple Use","Site-Specific Management Plan",1986-12-08,"Mixed",8.19415,1.222993612,15,0,-70.5686455,43.31197443
+457,"San Francisco Bay National Estuarine Research Reserve","CA","Uniform Multiple Use","Site-Specific Management Plan",2003-12-08,"Mixed",15.0804,0.857197762,6,0,-122.2179025,38.20356085
+458,"Mission-Aransas National Estuarine Research Reserve","TX","Uniform Multiple Use","Site-Specific Management Plan",2006-12-08,"Mixed",754.196,460.247406,61,0,-96.96975611,28.13266877
+459,"Chesapeake Bay National Estuarine Research Reserve - Maryland","MD","Uniform Multiple Use","Site-Specific Management Plan",1985-12-08,"Mixed",25.6756,5.373636246,21,0,-76.16185612,38.21526125
+460,"Chesapeake Bay National Estuarine Research Reserve - Virginia","VA","Zoned Multiple Use","Site-Specific Management Plan",1991-12-08,"Mixed",20.1369,8.614090919,43,0,-76.64510608,37.56050042
+461,"Elkhorn Slough National Estuarine Research Reserve","CA","Uniform Multiple Use","Site-Specific Management Plan",1979-12-08,"Interface",5.88121,0.02793885,0,0,-121.7397129,36.81739732
+462,"Grand Bay National Estuarine Research Reserve","MS","Uniform Multiple Use","Site-Specific Management Plan",1999-12-08,"Mixed",73.3458,24.26470566,33,0,-88.43397565,30.36753313
+463,"Great Bay National Estuarine Research Reserve","NH","Uniform Multiple Use","Site-Specific Management Plan",1989-12-08,"Mixed",41.4443,27.75992584,67,0,-70.87104037,43.08714746
+464,"Guana Tolomato Matanzas National Estuarine Research Reserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1999-12-08,"Mixed",260.294,134.1468201,52,0,-81.3042406,30.06816507
+465,"Urca de Lima Underwater Archaeological Preserve","FL","Uniform Multiple Use","Community Agreement",1987-12-08,"Mixed",0.282618,0.116779082,41,0,-80.49885,27.84240002
+466,"San Pedro Underwater Archaeological Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1989-12-08,"Marine",3.14118,3.141176939,100,0,-80.6796667,24.86336684
+467,"City of Hawkinsville Underwater Archaeological Preserve","FL","Uniform Multiple Use","Community Agreement",1992-12-08,"Marine",0.0313749,0.031374939,100,0,-82.97087222,29.60744167
+468,"USS Massachusetts (BB-2) Underwater Archaeological Preserve","FL","Uniform Multiple Use","Community Agreement",1993-12-08,"Marine",0.282618,0.282618374,100,0,-87.31150001,30.29693335
+469,"SS Copenhagen Underwater Archaeological Preserve","FL","Uniform Multiple Use","Community Agreement",1994-12-08,"Marine",0.125581,0.125581041,100,0,-80.08513333,26.20581667
+470,"SS Tarpon Underwater Archaeological Preserve","FL","Uniform Multiple Use","Community Agreement",1997-12-08,"Marine",0.785191,0.785191178,100,0,-85.94258335,30.09503339
+471,"Half Moon Underwater Archaeological Preserve","FL","Uniform Multiple Use","Community Agreement",2000-12-08,"Marine",0.785191,0.785191178,100,0,-80.13448334,25.72756671
+472,"Lofthus Underwater Archaeological Preserve","FL","Uniform Multiple Use","Community Agreement",2004-12-08,"Mixed",0.785191,0.587815642,75,0,-80.03848334,26.56293338
+473,"Vamar Underwater Archaeological Preserve","FL","Uniform Multiple Use","Community Agreement",2004-12-08,"Marine",0.785191,0.785191178,100,0,-85.46343335,29.89901672
+474,"Regina Underwater Archaeological Preserve","FL","Uniform Multiple Use","Community Agreement",2004-12-08,"Marine",0.0313749,0.031374939,100,0,-82.70215,27.46891667
+475,"Georges Valentine Underwater Archaeological Preserve","FL","Uniform Multiple Use","Community Agreement",2006-12-08,"Mixed",0.785191,0.698258042,89,0,-80.16383334,27.19883338
+476,"Cabrillo National Monument","CA","Zoned w/No Take Areas","Site-Specific Management Plan",1913-12-08,"Mixed",0.649358,0.053074226,8,0,-117.2415986,32.67225021
+477,"Fort Sumter National Monument","SC","Uniform Multiple Use","Site-Specific Management Plan",1948-12-08,"Mixed",0.942527,0.589258015,63,0,-79.87068672,32.75359427
+478,"Virgin Islands Coral Reef National Monument","US-VI","Zoned Multiple Use","Site-Specific Management Plan",2001-12-08,"Marine",51.7638,51.75201416,100,0,-64.70542406,18.29012553
+479,"Acadia National Park","ME","Uniform Multiple Use","Site-Specific Management Plan",1916-12-08,"Interface",157.007,1.755246282,1,0,-68.30452227,44.3507318
+480,"Cape Lookout National Seashore","NC","Uniform Multiple Use","Site-Specific Management Plan",1966-12-08,"Mixed",113.353,57.07280731,50,0,-76.3435309,34.82636374
+481,"Channel Islands National Park","CA","Uniform Multiple Use","Site-Specific Management Plan",1938-12-08,"Mixed",996.77,488.471283,49,0,-119.911141,34.01655127
+482,"Cumberland Island National Seashore","GA","Uniform Multiple Use","Site-Specific Management Plan",1972-12-08,"Mixed",147.901,43.0857048,29,0,-81.45254464,30.85851165
+483,"Everglades National Park","FL","Zoned w/No Take Areas","Site-Specific Management Plan",1934-12-08,"Mixed",6253.26,2281.492188,36,0,-80.88182401,25.37216762
+484,"Fire Island National Seashore","NY","Zoned Multiple Use","Site-Specific Management Plan",1964-12-08,"Mixed",79.6343,57.66891479,72,0,-73.00023018,40.69664213
+485,"Gateway National Recreation Area","NY","Zoned Multiple Use","Site-Specific Management Plan",1972-12-08,"Mixed",109.303,67.50826263,62,0,-73.90823761,40.57218294
+486,"Golden Gate National Recreation Area","CA","Uniform Multiple Use","Site-Specific Management Plan",1972-12-08,"Mixed",317.866,40.22107697,13,0,-122.5562456,37.86264192
+487,"Apostle Islands National Lakeshore","WI","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Mixed",278.089,109.7824097,39,0,-90.6605204,46.96227407
+488,"Gulf Islands National Seashore","FL, MS","Uniform Multiple Use","Site-Specific Management Plan",1971-12-08,"Mixed",529.506,449.5118103,85,0,-87.75122474,30.37306335
+489,"Isle Royale National Park","MI","Uniform Multiple Use","Site-Specific Management Plan",1931-12-08,"Mixed",2223.09,1649.883057,74,0,-88.82842252,48.01095485
+490,"Kalaupapa National Historical Park","HI","Zoned w/No Take Areas","Site-Specific Management Plan",1980-12-08,"Mixed",43.291,7.778574467,18,0,-156.9511578,21.17310584
+491,"Kaloko-Honokohau National Historical Park","HI","Uniform Multiple Use","Site-Specific Management Plan",1978-12-08,"Mixed",5.19802,2.493061543,48,0,-156.0306932,19.68083191
+492,"National Park of American Samoa","ASM","Uniform Multiple Use","Site-Specific Management Plan",1988-12-08,"Mixed",43.4122,12.02220154,28,0,-169.8994282,-14.23972728
+493,"Olympic National Park","WA","Uniform Multiple Use","Site-Specific Management Plan",1909-12-08,"Interface",3697.22,11.1903162,0,0,-123.6650047,47.80212513
+494,"Padre Island National Seashore","TX","Zoned w/No Take Areas","Site-Specific Management Plan",1962-12-08,"Mixed",532.891,296.7719421,56,0,-97.35902045,26.70366538
+495,"Pictured Rocks National Lakeshore","MI","Uniform Multiple Use","Site-Specific Management Plan",1966-12-08,"Mixed",298.055,22.98317909,8,0,-86.31647236,46.56423847
+496,"Assateague Island National Seashore","VA, MD","Zoned Multiple Use","Site-Specific Management Plan",1965-12-08,"Mixed",197.543,124.3994751,63,0,-75.24538361,38.05560226
+497,"Point Reyes National Seashore","CA","Uniform Multiple Use","Site-Specific Management Plan",1962-12-08,"Mixed",291.3,51.95793152,18,0,-122.8797269,38.05500664
+498,"Redwood National Park","CA","Uniform Multiple Use","Site-Specific Management Plan",1968-12-08,"Interface",468.381,25.15667343,5,0,-124.0316551,41.37133097
+499,"Salt River Bay National Historic Park and Ecological Preserve","US-VI","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Mixed",4.17398,2.685655117,64,0,-64.75519358,17.77908536
+500,"Sleeping Bear Dunes National Lakeshore","MI","Zoned Multiple Use","Site-Specific Management Plan",1970-12-08,"Mixed",284.193,46.75009155,16,0,-86.02712481,45.11160542
+501,"Timucuan Ecological & Historic Preserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1988-12-08,"Mixed",185.527,48.56446457,26,0,-81.49947431,30.43108984
+502,"Virgin Islands National Park","US-VI","Zoned w/No Take Areas","Site-Specific Management Plan",1956-12-08,"Mixed",60.0648,23.66956902,39,0,-64.74489045,18.34272331
+503,"War in the Pacific National Historical Park","US-GU","Uniform Multiple Use","Site-Specific Management Plan",1978-12-08,"Mixed",7.76866,4.297700882,55,0,144.6908872,13.39045671
+504,"Puukohola Heiau National Historic Site","HI","Uniform Multiple Use","Site-Specific Management Plan",1972-12-08,"Mixed",0.350246,0.022343712,6,0,-155.8211629,20.02772183
+505,"Biscayne National Park","FL","Zoned Multiple Use","Site-Specific Management Plan",1968-12-08,"Marine",706.471,676.7017212,96,0,-80.210247,25.49049476
+506,"San Juan Island National Historical Park","WA","Uniform Multiple Use","Site-Specific Management Plan",1966-12-08,"Mixed",6.96909,0.563179851,8,0,-123.0477064,48.46190888
+507,"Canaveral National Seashore","FL","Uniform Multiple Use","Site-Specific Management Plan",1975-12-08,"Mixed",237.434,154.5647583,65,0,-80.75415109,28.78627487
+508,"Cape Cod National Seashore","MA","Uniform Multiple Use","Site-Specific Management Plan",1961-12-08,"Mixed",164.201,56.79206085,35,0,-70.04514246,41.95905398
+509,"Lake Superior National Estuarine Research Reserve","WI","Zoned Multiple Use","Site-Specific Management Plan",2010-12-08,"Mixed",67.5506,8.120432854,12,0,-92.1675538,46.66379728
+510,"Biscayne Bay-Card Sound Spiny Lobster Sanctuary","FL","Uniform Multiple Use","Non-MPA Programmatic Fisheries Management Plan",1984-12-08,"Marine",509.929,504.9889526,99,0,-80.25769998,25.49948659
+511,"Fort Pulaski National Monument","GA","Uniform Multiple Use","Site-Specific Management Plan",1924-12-08,"Mixed",21.9849,2.153605461,10,0,-80.9336108,32.03082034
+512,"Ebey's Landing National Historical Reserve","WA","Zoned Multiple Use","Site-Specific Management Plan",1978-12-08,"Mixed",72.2191,17.15313911,24,0,-122.6890088,48.21349288
+513,"Maury Island Aquatic Reserve","WA","Uniform Multiple Use","Site-Specific Management Plan",2000-12-08,"Marine",22.5299,22.49850082,100,0,-122.448393,47.36155881
+514,"Cherry Point Aquatic Reserve","WA","Uniform Multiple Use","Site-Specific Management Plan",2000-12-08,"Marine",12.1378,12.02003574,99,0,-122.7547052,48.85927659
+515,"Smith and Minor Island Aquatic Reserve","WA","Uniform Multiple Use","Site-Specific Management Plan",2010-12-08,"Marine",147.751,147.5377655,100,0,-122.8173007,48.27564624
+516,"Protection Island Aquatic Reserve","WA","Uniform Multiple Use","Site-Specific Management Plan",2010-12-08,"Marine",97.0938,96.3699646,99,0,-122.9364742,48.14085283
+517,"Nisqually Reach Aquatic Reserve","WA","Uniform Multiple Use","Site-Specific Management Plan",2011-12-08,"Marine",59.6071,59.5332756,100,0,-122.6903916,47.16138797
+518,"Cypress Island Aquatic Reserve","WA","Uniform Multiple Use","Site-Specific Management Plan",2000-12-08,"Marine",24.4987,24.42627335,100,0,-122.7051438,48.54932168
+519,"Fidalgo Bay Aquatic Reserve","WA","Uniform Multiple Use","Site-Specific Management Plan",2000-12-08,"Marine",3.21556,3.094754934,96,0,-122.5815094,48.47744282
+520,"Cooper River Heritage Dive Trail","SC","Uniform Multiple Use","MPA Programmatic Management Plan",1998-12-08,"Mixed",0.200946,0.153941482,77,0,-79.94442404,33.09129385
+521,"Ashley River Heritage Canoe Trail","SC","Uniform Multiple Use","MPA Programmatic Management Plan",1996-12-08,"Mixed",0.0898326,0.021206377,24,0,-80.15397167,32.91713337
+522,"St. Thomas East End Reserves","US-VI","Zoned w/No Take Areas","Site-Specific Management Plan",2011-12-08,"Marine",9.34393,9.239975929,99,0,-64.84778378,18.31055364
+523,"Glacier Bay National Park & Preserve","AK","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1925-12-08,"Mixed",13247.8,2424.555908,18,0,-136.8382141,58.79747156
+524,"Indiana Dunes National Lakeshore","IN","Zoned Multiple Use","Site-Specific Management Plan",1966-12-08,"Interface",64.4346,3.160379171,5,0,-87.09688432,41.63721449
+525,"Sitka National Historical Park","AK","Zoned Multiple Use","Non-MPA Programmatic Habitat Management Plan",1910-12-08,"Mixed",0.46933,0.205552146,44,0,-135.3156884,57.04717837
+526,"Bering Land Bridge National Park and Preserve","AK","Uniform Multiple Use","Site-Specific Management Plan",1980-12-08,"Interface",11220.6,357.6611633,3,0,-164.4038658,65.95462829
+527,"Cape Krusenstern National Monument","AK","Uniform Multiple Use","Site-Specific Management Plan",1980-12-08,"Interface",2615.93,35.5473175,1,0,-163.5019913,67.41187762
+528,"Redfish Rocks Marine Protected Area","OR","Uniform Multiple Use","Site-Specific Management Plan",2010-12-08,"Marine",13.2358,13.23579216,100,0,-124.5147296,42.69046473
+529,"Apalachicola National Estuarine Research Reserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1979-12-08,"Mixed",956.999,458.0926819,48,0,-84.99549923,29.80005583
+530,"Kachemak Bay National Estuarine Research Reserve","AK","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1999-12-08,"Mixed",1497.08,930.7130737,62,0,-151.401268,59.56442807
+531,"North Inlet-Winyah Bay National Estuarine Research Reserve","SC","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Mixed",76.7644,32.70659256,43,0,-79.2015439,33.29969312
+532,"Rookery Bay National Estuarine Research Reserve","FL","Uniform Multiple Use","Site-Specific Management Plan",1978-12-08,"Mixed",391.257,235.6312561,60,0,-81.6563312,25.92682731
+533,"Weeks Bay National Estuarine Research Reserve","AL","Uniform Multiple Use","Site-Specific Management Plan",1986-12-08,"Mixed",26.3048,17.79712486,68,0,-87.82336985,30.34796015
+534,"Marianas Trench Marine National Monument","PRI","Zoned Multiple Use","Site-Specific Management Plan",2009-12-08,"Marine",248517,248442.2344,100,0,146.1245411,14.46932217
+535,"Amaua & Auto Village Marine Protected Area","ASM","Uniform Multiple Use","Community Agreement",2003-12-08,"Marine",0.369463,0.369428337,100,0,-170.6244589,-14.27622042
+536,"Leone Pala Special Management Area","ASM","Uniform Multiple Use","No Management Plan",1994-12-08,"Mixed",0.0897165,0.016451452,18,0,-170.7853748,-14.33593488
+537,"Nu'uuli Pala Special Management Area","ASM","Uniform Multiple Use","No Management Plan",1995-12-08,"Marine",2.08446,1.975046158,95,0,-170.7078988,-14.31853434
+538,"Pago Pago Harbor Special Management Area","ASM","Uniform Multiple Use","No Management Plan",1997-12-08,"Mixed",1.63357,1.246726394,76,0,-170.6888707,-14.27326532
+539,"Masausi Village Marine Protected Area","ASM","Uniform Multiple Use","Community Agreement",2002-12-08,"Marine",0.203874,0.203846082,100,0,-170.6061128,-14.25545381
+540,"Vatia Village Marine Protected Area","ASM","Uniform Multiple Use","Community Agreement",2003-12-08,"Marine",0.628038,0.628037632,100,0,-170.6659078,-14.24710985
+541,"Aua Village Marine Protected Area","ASM","Uniform Multiple Use","Community Agreement",2003-12-08,"Marine",0.346282,0.346282452,100,0,-170.5883024,-14.2591478
+542,"Poloa Village Marine Protected Area","ASM","Uniform Multiple Use","Community Agreement",2001-12-08,"Marine",0.364152,0.360935599,99,0,-170.8367479,-14.31495292
+543,"Alofau Village Marine Protected Area","ASM","Uniform Multiple Use","Community Agreement",2001-12-08,"Marine",0.324319,0.324252427,100,0,-170.6061614,-14.2759536
+544,"Matu'u & Faganeanea Village Marine Protected Area","ASM","Uniform Multiple Use","Community Agreement",2005-12-08,"Marine",0.317699,0.317698628,100,0,-170.6852962,-14.30216274
+545,"Alega Village Marine Protected Area","ASM","Uniform Multiple Use","Community Agreement",2013-12-08,"Marine",0.149595,0.149092391,100,0,-170.6371289,-14.28190967
+546,"California Coastal National Monument - Point Arena-Stornetta Unit","CA","Uniform Multiple Use","Site-Specific Management Plan",2000-12-08,"Mixed",7.071,0.482209861,7,0,-123.7200082,38.9347408
+547,"Thunder Bay National Marine Sanctuary and Underwater Preserve","MI","Zoned Multiple Use","Site-Specific Management Plan",2000-12-08,"Marine",11063.8,11054.16309,100,0,-83.15690219,45.17949466
+548,"Pupukea Marine Life Conservation District","HI","Zoned w/No Take Areas","Community Agreement",1983-12-08,"Mixed",0.713838,0.644089639,90,0,-158.0658115,21.64475247
+549,"Cordell Bank National Marine Sanctuary","CA","Zoned Multiple Use","Site-Specific Management Plan",1989-12-08,"Marine",3334.35,3334.345215,100,0,-123.5450913,38.0772448
+550,"Greater Farallones National Marine Sanctuary","CA","Zoned Multiple Use","Non-MPA Programmatic Habitat Management Plan",1981-12-08,"Marine",8556.35,8544.423828,100,0,-123.4773429,38.30868727
+551,"Scripps Coastal Reserve","CA","Uniform Multiple Use","Site-Specific Management Plan",1965-12-08,"Marine",0.35771,0.34776625,97,0,-117.2559629,32.86777746
+552,"Turtle Island Wildlife Management Area","SC","Uniform Multiple Use","Site-Specific Management Plan",1975-12-08,"Mixed",6.68026,0.452926606,7,0,-80.90485271,32.06718675
+553,"Cas Cay-Mangrove Lagoon Marine Reserve & Wildlife Sanctuary","US-VI","Uniform Multiple Use","No Management Plan",1994-12-08,"Marine",2.96528,2.811069012,95,0,-64.87101387,18.30994217
+554,"Delaware National Estuarine Research Reserve","DE","Uniform Multiple Use","Site-Specific Management Plan",1993-12-08,"Mixed",21.8938,7.378555775,34,0,-75.46597446,39.08609236
+555,"Skunk Point (Santa Rosa Island) State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2003-12-08,"Mixed",3.80897,3.559851408,93,3.808966398,-119.9728021,33.96914257
+556,"Carrington Point (Santa Rosa Island) State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2003-12-08,"Marine",33.1819,33.07815552,100,33.18194962,-120.0485525,34.04201159
+557,"South Point (Santa Rosa Island) State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2003-12-08,"Marine",33.9555,33.75799942,99,33.95552826,-120.1384844,33.8767804
+558,"Gull Island (Santa Cruz Island) State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2003-12-08,"Marine",51.7539,51.72266769,100,51.75393295,-119.8397856,33.93571237
+559,"Scorpion (Santa Cruz Island) State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2003-12-08,"Marine",25.0202,24.90119553,100,25.02017593,-119.5688512,34.07786027
+560,"Santa Barbara Island State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2003-12-08,"Marine",33.1589,33.12553787,100,33.15887833,-119.0071741,33.44898956
+561,"Anacapa Island State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2003-12-08,"Marine",29.9783,29.87516785,100,29.97833252,-119.3840226,34.03783637
+562,"San Miguel Island Special Closure A-1","CA","No Access","MPA Programmatic Management Plan",2005-12-08,"Marine",2.24482,2.15367651,96,2.244824886,-120.4415384,34.02937462
+563,"Anacapa Island Special Closure (B)","CA","No Access","MPA Programmatic Management Plan",2005-12-08,"Mixed",0.482913,0.436076283,90,0.482913405,-119.4152886,34.01286479
+564,"Natural Bridges State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2007-12-08,"Mixed",0.658781,0.439699531,67,0.658780813,-122.0950062,36.95891161
+565,"Elkhorn Slough State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",1980-12-08,"Mixed",7.06154,1.052439094,15,7.061536789,-121.7480137,36.81560849
+566,"Moro Cojo Slough State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2007-12-08,"Mixed",0.527345,0.227550551,43,0.527344644,-121.7673864,36.79553994
+567,"Lovers Point State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2007-12-08,"Marine",0.766367,0.733090758,96,0.766366661,-121.9062241,36.62296686
+568,"Asilomar State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2007-12-08,"Marine",3.97964,3.898405075,98,3.979640722,-121.9463446,36.62607543
+569,"Carmel Pinnacles State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2007-12-08,"Marine",1.3687,1.368699193,100,1.368699193,-121.9675,36.55625
+570,"Point Lobos State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",1973-12-08,"Marine",14.2748,14.05250645,98,14.27478027,-121.9547428,36.50542256
+571,"Point Sur State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2007-12-08,"Marine",25.4162,25.35990715,100,25.41624451,-121.8805731,36.27748589
+572,"Big Creek State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",1994-12-08,"Marine",37.6725,37.66991043,100,37.67246246,-121.6361155,36.07068227
+573,"Piedras Blancas State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2007-12-08,"Marine",27.0949,27.01104546,100,27.09487915,-121.3047803,35.6809301
+574,"Morro Bay State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2007-12-08,"Mixed",2.2881,1.051660657,46,2.288100243,-120.8315375,35.3405473
+575,"Point Buchon State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2007-12-08,"Marine",17.3555,17.29925919,100,17.35549355,-120.8958879,35.22727853
+576,"Vandenberg State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",1994-12-08,"Marine",85.3739,85.07036591,100,85.37388611,-120.6423062,34.66337852
+577,"Footprint State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2007-12-08,"Marine",18.3131,18.31307793,100,18.31307793,-119.4690839,33.97611952
+578,"Point Arena State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Marine",11.3541,11.32967186,100,11.35409546,-123.752844,38.96035799
+579,"Del Mar Landing State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Mixed",0.560877,0.353981405,63,0.560876548,-123.511425,38.73929291
+580,"Stewarts Point State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Marine",62.4095,62.04696655,99,62.40945816,-123.4314921,38.63378426
+581,"Gerstle Cove State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Interface",0.0263617,0.000603723,2,0.026361668,-123.3302199,38.56646591
+582,"Russian River State Marine Recreational Management Area","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Mixed",0.921663,0.584021509,63,0.921662807,-123.116683,38.44763592
+583,"Bodega Head State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Marine",24.2346,23.9045887,99,24.23456192,-123.1051184,38.31737496
+584,"Estero de Limantour State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Mixed",3.75737,3.073987961,82,3.757365942,-122.9187392,38.03367813
+585,"Point Reyes State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Marine",24.7807,24.56887627,99,24.78066063,-122.9680593,38.0044639
+586,"Southeast Farallon Island State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Marine",13.8943,13.75146961,99,13.89433193,-123.0127307,37.69232075
+587,"Montara State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Marine",30.6399,30.50681496,100,30.63991547,-122.5473811,37.52173254
+588,"Point Reyes Headlands Special Closure","CA","No Access","MPA Programmatic Management Plan",2010-12-08,"Marine",1.74321,1.723297119,99,1.74321425,-122.9903932,37.9915821
+589,"Point Resistance Special Closure","CA","No Access","MPA Programmatic Management Plan",2010-12-08,"Marine",0.0378031,0.037803147,100,0.037803147,-122.8292328,37.99852608
+590,"Double Point/Stormy Stack Special Closure","CA","No Access","MPA Programmatic Management Plan",2010-12-08,"Mixed",0.0583156,0.053942952,93,0.058315564,-122.785813,37.94724002
+591,"Egg (Devil's Slide) Rock to Devil's Slide Special Closure","CA","No Access","MPA Programmatic Management Plan",2010-12-08,"Mixed",0.130117,0.106569581,82,0.130117461,-122.520192,37.57736967
+592,"North Farallon Islands Special Closure","CA","No Access","MPA Programmatic Management Plan",2010-12-08,"Marine",0.552268,0.532911897,96,0.552267969,-123.1053753,37.77019854
+593,"Southeast Farallon Special Closure A","CA","No Access","MPA Programmatic Management Plan",2010-12-08,"Mixed",0.426064,0.328600973,77,0.426064074,-123.0072451,37.69903952
+594,"North Farallon Islands State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Marine",46.8908,46.87144852,100,46.89080811,-123.0721936,37.78589265
+595,"Southeast Farallon Special Closure B","CA","No Access","MPA Programmatic Management Plan",2010-12-08,"Marine",0.0519544,0.051284768,99,0.05195437,-123.0028275,37.69327364
+596,"Point Conception State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",58.477,57.90333557,99,58.47698212,-120.4695463,34.42415827
+597,"Campus Point State Marine Conservation Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",27.4152,26.73693275,98,27.41522217,-119.8692483,34.38307846
+598,"Begg Rock (San Nicolas Island Quad) State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",98.5851,98.58188629,100,98.58514404,-119.6955168,33.3623918
+599,"Point Dume State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",19.5566,19.50778198,100,19.55661964,-118.8035964,33.97855759
+600,"Point Vicente State Marine Conservation Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",39.0648,39.06386948,100,39.06476593,-118.4319507,33.72008548
+601,"Bolsa Chica Basin State Marine Conservation Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Mixed",1.82498,0.279478341,15,1.824979663,-118.0406631,33.69552959
+602,"Blue Cavern (Catalina Island) Onshore State Marine Conservation Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",6.78825,6.737582207,99,6.788249969,-118.4662647,33.44907411
+603,"Long Point (Catalina Island) State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",4.33496,4.322481632,100,4.334959984,-118.3804044,33.41820616
+604,"Casino Point (Catalina Island) State Marine Conservation Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",0.0192129,0.019212896,100,0.019212896,-118.3244871,33.34913319
+605,"Laguna Beach State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",16.4409,16.4282856,100,16.44086075,-117.7969468,33.52887457
+606,"Laguna Beach State Marine Conservation Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",9.02785,9.019756317,100,9.027852058,-117.785016,33.50695092
+607,"Matlahuayl State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",2.69185,2.630768538,98,2.691852093,-117.2652163,32.8586299
+608,"South La Jolla State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",13.1006,13.06178665,100,13.10059071,-117.292904,32.81142335
+609,"Cabrillo State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",1.0143,1.002861857,99,1.014304519,-117.245943,32.66732431
+610,"Southwest Seal Rock Special Closure","CA","No Access","MPA Programmatic Management Plan",2012-12-08,"Marine",0.0579168,0.055506963,96,0.057916839,-124.3519481,41.81362892
+611,"Castle Rock Special Closure","CA","No Access","MPA Programmatic Management Plan",2012-12-08,"Mixed",0.139374,0.102888517,74,0.139373541,-124.249355,41.76128764
+612,"False Klamath Rock Special Closure","CA","No Access","MPA Programmatic Management Plan",2012-12-08,"Marine",0.0694434,0.069443442,100,0.069443442,-124.1117108,41.59308862
+613,"Reading Rock State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",24.8909,24.89090919,100,24.89090919,-124.1998841,41.31631478
+614,"South Humboldt Bay State Marine Recreational Management Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",2.08806,1.9780761,95,2.088064671,-124.2570311,40.7072273
+615,"Sugarloaf Island Special Closure","CA","No Access","MPA Programmatic Management Plan",2012-12-08,"Marine",0.0842324,0.082509413,98,0.084232353,-124.4138381,40.43752966
+616,"South Cape Mendocino State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",23.5367,23.48983574,100,23.53668785,-124.4643357,40.42511151
+617,"Steamboat Rock Special Closure","CA","No Access","MPA Programmatic Management Plan",2012-12-08,"Marine",0.0463893,0.045274198,98,0.046389278,-124.4040598,40.4146212
+618,"Mattole Canyon State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",25.3956,25.39559364,100,25.39559364,-124.4019266,40.30843015
+619,"Sea Lion Gulch State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",27.011,26.98975182,100,27.01099586,-124.37156,40.22646964
+620,"Vizcaino Rock Special Closure","CA","No Access","MPA Programmatic Management Plan",2012-12-08,"Mixed",0.0573016,0.007450808,13,0.057301585,-123.8327798,39.72629282
+621,"Ten Mile State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Mixed",30.9849,29.27648926,94,30.98492432,-123.8132038,39.57645262
+622,"Ten Mile Estuary State Marine Conservation Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Interface",0.477845,0.005394946,1,0.477844715,-123.7570776,39.54574118
+623,"Point Cabrillo State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",1.14302,1.106756687,97,1.143024445,-123.8286133,39.35014958
+624,"Papahanaumokuakea Marine National Monument","HI","Zoned w/No Take Areas","Site-Specific Management Plan",2006-12-08,"Mixed",1515720,1515714.625,100,363693,-147.1705435,25.82939812
+625,"Baker Island National Wildlife Refuge","PRI","No Access","Site-Specific Management Plan",1974-12-08,"Marine",1685.51,1683.856079,100,1685.511719,-176.4780328,0.195169634
+626,"Seal Beach National Wildlife Refuge","CA","No Take","Site-Specific Management Plan",1974-12-08,"Mixed",3.92158,0.400520921,10,3.921575546,-118.0751285,33.73906449
+627,"Seatuck National Wildlife Refuge","NY","No Access","Site-Specific Management Plan",1968-12-08,"Mixed",0.855888,0.100579917,12,0.855888426,-73.20888515,40.71353105
+628,"Siletz Bay National Wildlife Refuge","OR","Uniform Multiple Use","Site-Specific Management Plan",1991-12-08,"Mixed",2.09948,0.351555169,17,2.09948,-124.0066187,44.89290556
+629,"Tybee National Wildlife Refuge","SC","No Access","Site-Specific Management Plan",1938-12-08,"Mixed",2.75065,0.228251338,8,2.750653744,-80.9131331,32.04540434
+630,"Farallon National Wildlife Refuge","CA","No Access","Site-Specific Management Plan",1909-12-08,"Mixed",0.588375,0.298698545,51,0.588374674,-123.0128651,37.69847443
+631,"Johnston Island National Wildlife Refuge","PRI","No Access","Site-Specific Management Plan",1926-12-08,"Marine",2306.62,2305.11377,100,2306.619629,-169.5064371,16.74427365
+632,"Kingman Reef National Wildlife Refuge","PRI","No Access","Site-Specific Management Plan",2001-12-08,"Marine",1981.25,1981.249146,100,1981.250244,-162.3663525,6.401597521
+633,"Marin Islands National Wildlife Refuge","CA","No Access","Site-Specific Management Plan",1992-12-08,"Marine",1.89976,1.848546386,97,1.899761558,-122.4686672,37.96965827
+634,"Mashpee National Wildlife Refuge","MA","No Access","Site-Specific Management Plan",1995-12-08,"Interface",1.41977,0.013253225,1,1.419768929,-70.49191922,41.57915181
+635,"Palmyra Atoll National Wildlife Refuge","PRI","No Access","Site-Specific Management Plan",2001-12-08,"Marine",2166.46,2164.692139,100,2166.463379,-162.0763066,5.880712697
+636,"San Diego Bay National Wildlife Refuge","CA","No Take","Site-Specific Management Plan",1988-12-08,"Mixed",10.5715,4.395727634,42,10.57147026,-117.112974,32.59980378
+637,"Conscience Point National Wildlife Refuge","NY","No Impact","Site-Specific Management Plan",1971-12-08,"Interface",0.248657,0.003379573,1,0.24865742,-72.42061418,40.94195794
+638,"Crocodile Lake National Wildlife Refuge","FL","No Access","Site-Specific Management Plan",1980-12-08,"Interface",27.3844,0.685109437,3,27.38441086,-80.33707253,25.21354946
+639,"Cross Island National Wildlife Refuge","ME","No Take","Site-Specific Management Plan",1980-12-08,"Mixed",6.98615,0.87555784,13,6.986146927,-67.29820112,44.60956618
+640,"Grays Harbor National Wildlife Refuge","WA","No Take","Site-Specific Management Plan",1990-12-08,"Marine",5.70029,5.519807339,97,5.700287342,-123.9576671,46.97653678
+641,"Howland Island National Wildlife Refuge","PRI","No Access","Site-Specific Management Plan",1974-12-08,"Marine",1722.04,1720.187988,100,1722.042603,-176.6177043,0.807302066
+642,"Island Bay National Wildlife Refuge","FL","No Access","Site-Specific Management Plan",1908-12-08,"Mixed",0.114409,0.021649541,19,0.114409074,-82.19032689,26.77141
+643,"Jarvis Island National Wildlife Refuge","PRI","No Access","Site-Specific Management Plan",1974-12-08,"Marine",1756.62,1752.195313,100,1756.623779,-159.9983103,-0.373936032
+644,"Matlacha Pass National Wildlife Refuge","FL","No Access","Site-Specific Management Plan",1908-12-08,"Mixed",2.16228,0.418376356,19,2.162279367,-82.05491828,26.59531714
+645,"Nestucca Bay National Wildlife Refuge","OR","Uniform Multiple Use","Site-Specific Management Plan",1991-12-08,"Mixed",4.84849,0.440156579,9,4.84849,-123.9493459,45.16193448
+646,"Nomans Land Island National Wildlife Refuge","MA","No Access","Site-Specific Management Plan",1970-12-08,"Mixed",2.50305,0.277467042,11,2.503049135,-70.81526741,41.255772
+647,"Pine Island National Wildlife Refuge","FL","No Access","Site-Specific Management Plan",1908-12-08,"Mixed",2.56137,0.344440371,13,2.56137228,-82.135263,26.68175138
+648,"Pinellas National Wildlife Refuge","FL","No Access","Site-Specific Management Plan",1951-12-08,"Mixed",1.59247,1.221871138,77,1.592474699,-82.69149328,27.6666805
+649,"Protection Island National Wildlife Refuge","WA","No Access","Site-Specific Management Plan",1982-12-08,"Mixed",1.61314,0.399299979,25,1.613143682,-122.9288815,48.1266869
+650,"Rose Atoll National Wildlife Refuge","PRI","No Access","Site-Specific Management Plan",1973-12-08,"Marine",6.7895,6.705818653,99,6.78949976,-168.1559261,-14.54529302
+651,"Navassa Island National Wildlife Refuge","US-VI","No Take","No Management Plan",1999-12-08,"Marine",1481.61,1481.608521,100,1481.608521,-75.01589806,18.40325448
+652,"Goleta Slough State Marine Conservation Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",0.41023,0.410230339,100,0.410230339,-119.8358442,34.4173713
+653,"Batiquitos Lagoon State Marine Conservation Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",1.31471,1.314709544,100,1.314709544,-117.285413,33.08975543
+654,"San Elijo Lagoon State Marine Conservation Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",1.30242,1.302420855,100,1.302420855,-117.2691217,33.00915174
+655,"Famosa Slough State Marine Conservation Area","CA","No Take","MPA Programmatic Management Plan",2012-12-08,"Marine",0.0827206,0.08272057,100,0.08272057,-117.2284894,32.75199385
+656,"Anacapa Island State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2003-12-08,"Marine",18.9592,18.80678368,99,0,-119.4272823,34.03986768
+657,"Painted Cave (Santa Cruz Island) State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2003-12-08,"Marine",4.63364,4.596130371,99,0,-119.8663404,34.07816688
+658,"Ano Nuevo State Marine Reserve","CA","No Take","MPA Programmatic Management Plan",2010-12-08,"Mixed",28.9239,27.14689636,94,28.92386818,-122.3191489,37.10009081
+659,"Greyhound Rock State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Marine",31.1423,30.20311165,97,0,-122.295469,37.06090887
+660,"Elkhorn Slough State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Mixed",0.561831,0.414774656,74,0,-121.7772088,36.81309781
+661,"Soquel Canyon State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Marine",59.5973,59.59732056,100,0,-121.9934906,36.82551169
+662,"Portugese Ledge State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Marine",27.5983,27.59827042,100,0,-121.9750472,36.70032681
+663,"Edward F. Ricketts State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Marine",0.597682,0.574774742,96,0,-121.8955718,36.61452383
+664,"Pacific Grove Marine Gardens State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Marine",2.47375,2.411434174,97,0,-121.9272689,36.63880613
+665,"Carmel Bay State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",1976-12-08,"Marine",5.68193,5.575841427,98,0,-121.9385956,36.54821953
+666,"Point Lobos State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Marine",21.9727,21.97274017,100,0,-121.9945409,36.50610381
+667,"Point Sur State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Marine",27.552,27.55199814,100,0,-121.9267891,36.27623807
+668,"Big Creek State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Marine",20.367,20.36697006,100,0,-121.6724461,36.10373647
+669,"Piedras Blancas State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Marine",22.9352,22.93517685,100,0,-121.3470561,35.6823402
+670,"Cambria State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Marine",16.2418,15.86300373,98,0,-121.1365067,35.58653072
+671,"White Rock (Cambria) State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Mixed",7.55587,7.065247536,94,0,-121.0859101,35.5256589
+672,"Morro Bay State Marine Recreational Management Area","CA","Zoned Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Mixed",7.95928,7.36793232,93,0,-120.852639,35.34099799
+673,"Point Buchon State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2007-12-08,"Marine",31.6362,31.63620949,100,0,-120.9240523,35.21688987
+674,"Anacapa Island Special Closure (A)","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2005-12-08,"Mixed",1.9961,1.817800879,91,0,-119.400016,34.01125255
+675,"Point Arena State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Marine",17.4738,17.47375679,100,0,-123.7876407,38.96141401
+676,"Sea Lion Cove State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Mixed",0.581125,0.494129539,85,0,-123.730195,38.93441968
+677,"Saunders Reef State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Marine",24.2781,24.17921448,100,0,-123.6858524,38.84854431
+678,"Salt Point State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Mixed",4.7733,4.379852295,92,0,-123.3408523,38.57095805
+679,"Russian River State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Marine",2.18028,2.16003418,99,0,-123.1357153,38.44685893
+680,"Bodega Head State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Marine",31.9466,31.92891502,100,0,-123.0863043,38.27363479
+681,"Estero de San Antonio State Marine Recreational Management Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Mixed",0.188698,0.149169579,79,0,-122.9681147,38.27259007
+682,"Drakes Estero State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Mixed",6.48101,5.727195263,88,0,-122.9391264,38.06249171
+683,"Point Reyes State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Marine",31.8207,31.82068253,100,0,-122.9934279,37.96231553
+684,"Duxbury Reef State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Mixed",1.79116,1.624908566,91,0,-122.7221476,37.90040215
+685,"Southeast Farallon Island State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Marine",33.5946,33.5945816,100,0,-123.0385376,37.67669406
+686,"Pillar Point State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Marine",17.3878,17.38777733,100,0,-122.5377434,37.48733379
+687,"Stewarts Point State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Mixed",3.07447,2.161530733,70,0,-123.4036199,38.6479919
+688,"Kashtayit State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Mixed",5.2382,4.905784607,94,0,-120.2240845,34.46274669
+689,"Naples State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Mixed",6.75448,6.273460388,93,0,-119.9506337,34.42667066
+690,"Point Dume State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",41.3374,41.27082062,100,0,-118.8499756,33.99769805
+691,"Abalone Cove State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",12.4495,12.39034081,100,0,-118.3855357,33.71255932
+692,"Bolsa Bay State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Mixed",0.179456,0.084271319,47,0,-118.0573116,33.70717784
+693,"Arrow Point to Lion Head Point (Catalina Island) State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",1.69077,1.681413054,99,0,-118.5205012,33.46481536
+694,"Lover's Cove (Catalina Island) State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",0.157363,0.157362938,100,0,-118.3178756,33.34393399
+695,"Farnsworth Onshore (Catalina Island) State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Mixed",6.72695,6.082956791,90,0,-118.4812964,33.33242307
+696,"Farnsworth Offshore (Catalina Island) State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",17.3261,17.32608223,100,0,-118.5167179,33.33321881
+697,"Cat Harbor (Catalina Island) State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Mixed",0.664081,0.528517127,80,0,-118.5077398,33.42859478
+698,"Upper Newport Bay State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Mixed",3.22573,1.973173261,61,0,-117.88624,33.64795816
+699,"Crystal Cove State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",9.16484,9.161218643,100,0,-117.8460104,33.56777878
+700,"Dana Point State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",9.00837,8.994600296,100,0,-117.7365264,33.47976745
+701,"Swami's State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",33.0036,32.94812012,100,0,-117.3199041,33.02394374
+702,"San Diego-Scripps Coastal State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",3.78371,3.737302065,99,0,-117.262781,32.87487046
+703,"South La Jolla State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",6.38825,6.388253689,100,0,-117.3280651,32.81334897
+704,"Punta Guaniquilla Natural Reserve","PR","Uniform Multiple Use","Site-Specific Management Plan",1976-12-08,"Marine",80.5489,80.54888916,100,0,-67.30940268,18.0389842
+705,"Chincoteague Bay Submerged Aquatic Vegetation Sanctuary","VA","Uniform Multiple Use","MPA Programmatic Management Plan",1998-12-08,"Marine",43.3507,42.02112961,97,0,-75.33287862,37.98111869
+706,"William B. Trower Bayshore Natural Area Preserve","VA","Uniform Multiple Use","MPA Programmatic Management Plan",1996-12-08,"Marine",0.115993,0.11599344,100,0,-76.00456016,37.194879
+707,"Jean Lafitte National Historical Park and Preserve, Barataria Preserve","LA","Uniform Multiple Use","Site-Specific Management Plan",1978-12-08,"Interface",88.1814,1.719325781,2,0,-90.14021624,29.81737792
+708,"Thunder Bay State Bottomland Preserve","MI","Uniform Multiple Use","No Management Plan",1981-12-08,"Marine",1160.55,1151.237183,99,0,-83.19523072,45.02793999
+709,"Blue Cavern (Catalina Island) Offshore State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",19.983,19.98295593,100,0,-118.4700278,33.48371588
+710,"Rockport Rocks Special Closure","CA","No Access","MPA Programmatic Management Plan",2012-12-08,"Interface",0.0676745,0.002324984,3,0.06767448,-123.8339111,39.73624262
+711,"Tijuana River Mouth State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",7.83444,7.79928112,100,0,-117.1385662,32.5488763
+712,"Pyramid Point State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",36.2699,36.23685455,100,0,-124.2548059,41.9804293
+713,"Point St. George Reef Offshore State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",24.6852,24.6851902,100,0,-124.4133238,41.84112201
+714,"Reading Rock State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",30.9987,30.32361794,98,0,-124.1266519,41.31458171
+715,"Samoa State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",33.867,33.32213593,98,0,-124.1874401,40.89154631
+716,"Big Flat State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",30.0432,28.56201553,95,0,-124.2454845,40.14136233
+717,"Double Cone Rock State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",47.9527,45.75841141,95,0,-123.8738152,39.7737824
+718,"Ten Mile Beach State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",9.17673,8.703584671,95,0,-123.8044618,39.54845808
+719,"MacKerricher State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",6.44151,6.377657413,99,0,-123.8083504,39.48322657
+720,"Russian Gulch State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",0.565108,0.536645174,95,0,-123.8113919,39.32724713
+721,"Big River Estuary State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Mixed",0.324304,0.278250277,86,0,-123.7814305,39.3029951
+722,"Van Damme State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Mixed",0.14696,0.138026774,94,0,-123.7926012,39.27213107
+723,"Navarro River Estuary State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Mixed",0.236526,0.168079287,71,0,-123.7556828,39.19569304
+724,"Albany Mudflats State Marine Park","CA","Uniform Multiple Use","MPA Programmatic Management Plan",1986-12-08,"Mixed",0.668021,0.620273948,93,0,-122.3154829,37.89327562
+725,"Bair Island State Marine Park","CA","Uniform Multiple Use","MPA Programmatic Management Plan",1986-12-08,"Interface",7.83109,0.147193536,2,0,-122.2223027,37.52623904
+726,"Corte Madera Marsh State Marine Park","CA","Uniform Multiple Use","MPA Programmatic Management Plan",1976-12-08,"Mixed",2.45326,1.481732726,60,0,-122.4990817,37.93271363
+727,"Fagan Marsh State Marine Park","CA","Uniform Multiple Use","MPA Programmatic Management Plan",1979-12-08,"Interface",1.7113,0.077675067,5,0,-122.2959184,38.21787302
+728,"Marin Islands State Marine Park","CA","Uniform Multiple Use","MPA Programmatic Management Plan",1993-12-08,"Marine",1.41882,1.408736825,99,0,-122.4669994,37.97018461
+729,"Peytonia Slough State Marine Park","CA","Uniform Multiple Use","MPA Programmatic Management Plan",1976-12-08,"Mixed",2.12524,0.122900121,6,0,-122.0410771,38.22322931
+730,"Redwood Shores State Marine Park","CA","Uniform Multiple Use","MPA Programmatic Management Plan",1976-12-08,"Mixed",0.893773,0.294454783,33,0,-122.247107,37.54050342
+731,"Robert W. Crown State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",1980-12-08,"Marine",0.03763,0.037600957,100,0,-122.2775148,37.76803592
+732,"Ernest F. Hollings Ace Basin National Wildlife Refuge","SC","Uniform Multiple Use","Site-Specific Management Plan",1990-12-08,"Interface",48.9332,1.266342759,3,0,-80.52193264,32.63352869
+733,"San Pablo Bay National Wildlife Refuge","CA","Uniform Multiple Use","Site-Specific Management Plan",1974-12-08,"Mixed",72.366,36.89837646,51,0,-122.3876932,38.13316115
+734,"Shell Keys National Wildlife Refuge","LA","Uniform Multiple Use","Site-Specific Management Plan",1907-12-08,"Marine",0.015896,0.015895952,100,0,-91.85495553,29.41595659
+735,"St. Marks National Wildlife Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1931-12-08,"Interface",303.873,10.52662373,3,0,-84.24293492,30.09429212
+736,"St. Vincent National Wildlife Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1968-12-08,"Interface",49.4639,1.17922914,2,0,-85.13596513,29.66248543
+737,"Bandon Marsh National Wildlife Refuge","OR","Uniform Multiple Use","Site-Specific Management Plan",1983-12-08,"Mixed",3.67467,0.958307266,26,0,-124.3896368,43.14796058
+738,"Stewart B. McKinney National Wildlife Refuge","CT","Uniform Multiple Use","Site-Specific Management Plan",1985-12-08,"Mixed",4.20403,0.64962709,15,0,-72.95336645,41.16026179
+739,"Susquehanna National Wildlife Refuge","MD","Uniform Multiple Use","Site-Specific Management Plan",1939-12-08,"Marine",0.00556192,0.005561918,100,0,-76.08352121,39.49472152
+740,"Swanquarter National Wildlife Refuge","NC","Uniform Multiple Use","Site-Specific Management Plan",1932-12-08,"Interface",67.4997,1.804233313,3,0,-76.31488032,35.41797323
+741,"Ten Thousand Islands National Wildlife Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1996-12-08,"Mixed",137.937,51.22806931,37,0,-81.56751142,25.91330028
+742,"Tijuana Slough National Wildlife Refuge","CA","Uniform Multiple Use","Site-Specific Management Plan",1980-12-08,"Mixed",4.43773,0.608003855,14,0,-117.1190945,32.55538253
+743,"Wallops Island National Wildlife Refuge","VA","Uniform Multiple Use","Site-Specific Management Plan",1971-12-08,"Interface",1.5074,0.02102872,1,0,-75.46555364,37.92364606
+744,"Wassaw National Wildlife Refuge","GA","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Mixed",41.5284,4.717190266,11,0,-80.99478789,31.89456451
+745,"Wertheim National Wildlife Refuge","NY","Uniform Multiple Use","Site-Specific Management Plan",1947-12-08,"Mixed",10.8033,1.40775001,13,0,-72.89982714,40.77670419
+746,"Whittlesey Creek National Wildlife Refuge","WI","Uniform Multiple Use","Site-Specific Management Plan",1990-12-08,"Interface",1.44938,0.014551047,1,0,-90.96507194,46.59469623
+747,"Willapa National Wildlife Refuge","WA","Uniform Multiple Use","Site-Specific Management Plan",1936-12-08,"Mixed",65.8255,20.99583054,32,0,-123.9827524,46.45200536
+748,"Wolf Island National Wildlife Refuge","GA","Uniform Multiple Use","Site-Specific Management Plan",1930-12-08,"Mixed",18.8717,1.229314804,7,0,-81.30711233,31.3422223
+749,"Yukon Delta National Wildlife Refuge","AK","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1980-12-08,"Mixed",84092,11820.50391,14,0,-163.3154685,61.26572924
+750,"Block Island National Wildlife Refuge","RI","Uniform Multiple Use","Site-Specific Management Plan",1973-12-08,"Mixed",0.522421,0.049688332,10,0,-71.57564983,41.22460341
+751,"Cedar Keys National Wildlife Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1929-12-08,"Mixed",3.77112,1.06151855,28,0,-83.05304621,29.09779051
+752,"Big Boggy National Wildlife Refuge","TX","Uniform Multiple Use","Site-Specific Management Plan",1983-12-08,"Interface",18.2768,0.386485934,2,0,-95.81576866,28.75786566
+753,"Lewis and Clark National Wildlife Refuge","OR, WA","Uniform Multiple Use","Site-Specific Management Plan",1972-12-08,"Mixed",53.3004,27.42386246,51,0,-123.6205756,46.21529144
+754,"Mackay Island National Wildlife Refuge","NC, VA","Uniform Multiple Use","Site-Specific Management Plan",1960-12-08,"Interface",33.7776,1.64952302,5,0,-75.95585979,36.52446866
+755,"Big Branch Marsh National Wildlife Refuge","LA","Uniform Multiple Use","Site-Specific Management Plan",1994-12-08,"Interface",72.9668,0.702293038,1,0,-89.86933783,30.26022617
+756,"Moosehorn National Wildlife Refuge","ME","Uniform Multiple Use","Site-Specific Management Plan",1937-12-08,"Interface",118.944,0.619365454,1,0,-67.26589628,45.08594348
+757,"Billy Frank Jr. Nisqually National Wildlife Refuge","WA","Zoned w/No Take Areas","Site-Specific Management Plan",1974-12-08,"Mixed",18.6473,5.402279854,29,0,-122.8092654,47.08248884
+758,"Pearl Harbor National Wildlife Refuge","HI","Uniform Multiple Use","Site-Specific Management Plan",1972-12-08,"Interface",0.463516,0.000294587,0,0,-158.0280958,21.29840582
+759,"Blackbeard Island National Wildlife Refuge","GA","Uniform Multiple Use","Site-Specific Management Plan",1924-12-08,"Interface",22.6959,1.002570152,4,0,-81.20747653,31.50267536
+760,"Supawna Meadows National Wildlife Refuge","NJ","Uniform Multiple Use","Site-Specific Management Plan",1934-12-08,"Mixed",12.2296,2.906404734,24,0,-75.51685579,39.59752549
+761,"Blackwater National Wildlife Refuge","MD","Uniform Multiple Use","Site-Specific Management Plan",1933-12-08,"Interface",115.959,0.575404525,0,0,-76.11288318,38.43138969
+762,"Bombay Hook National Wildlife Refuge","DE","Uniform Multiple Use","Site-Specific Management Plan",1937-12-08,"Mixed",62.3461,3.802141428,6,0,-75.44753352,39.25166966
+763,"Lower Rio Grande Valley National Wildlife Refuge","TX","Uniform Multiple Use","Site-Specific Management Plan",1979-12-08,"Mixed",398.68,31.70918274,8,0,-97.87637325,25.97469746
+764,"Mariana Arc Of Fire National Wildlife Refuge","PRI","Uniform Multiple Use","Site-Specific Management Plan",2009-12-08,"Marine",222.567,220.4118652,99,0,144.4350525,12.93636626
+765,"Mariana Trench National Wildlife Refuge","PRI","Uniform Multiple Use","Site-Specific Management Plan",2009-12-08,"Marine",205562,205498.9063,100,0,146.3071272,14.46925681
+766,"Bon Secour National Wildlife Refuge","AL","Uniform Multiple Use","Site-Specific Management Plan",1980-12-08,"Mixed",27.8534,2.780823469,10,0,-87.88477921,30.23513215
+767,"Wake Atoll National Wildlife Refuge","PRI","No Take","Site-Specific Management Plan",2009-12-08,"Marine",2025.08,2024.913452,100,2025.076416,166.6291002,19.29718207
+768,"Alaska Maritime National Wildlife Refuge","AK","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1980-12-08,"Mixed",18396.6,3222.691406,18,0,-129.4442634,58.07854593
+769,"Brazoria National Wildlife Refuge","TX","Uniform Multiple Use","Site-Specific Management Plan",1966-12-08,"Mixed",186.541,10.61623096,6,0,-95.23258366,29.11006896
+770,"Breton National Wildlife Refuge","LA","Uniform Multiple Use","Site-Specific Management Plan",1904-12-08,"Mixed",113.803,93.56358337,82,0,-88.89909641,29.79867181
+771,"Cape May National Wildlife Refuge","NJ","Uniform Multiple Use","Site-Specific Management Plan",1989-12-08,"Interface",49.0666,1.564634681,3,0,-74.80052943,39.2113429
+772,"Cape Romain National Wildlife Refuge","SC","Uniform Multiple Use","Site-Specific Management Plan",1930-12-08,"Mixed",248.708,117.5003967,47,0,-79.50130305,33.00674056
+773,"Cedar Island National Wildlife Refuge","NC","Uniform Multiple Use","Site-Specific Management Plan",1964-12-08,"Interface",58.1151,2.268422365,4,0,-76.33920484,34.9473336
+774,"Chassahowitzka National Wildlife Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1943-12-08,"Mixed",114.802,55.62887573,48,0,-82.66964027,28.71626892
+775,"Chincoteague National Wildlife Refuge","VA","Zoned Multiple Use","Site-Specific Management Plan",1943-12-08,"Mixed",53.5055,6.10653162,11,0,-75.37808282,37.89461176
+776,"Crystal River National Wildlife Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1983-12-08,"Mixed",0.366718,0.061596803,17,0,-82.60888665,28.77490922
+777,"Currituck National Wildlife Refuge","NC","Uniform Multiple Use","Site-Specific Management Plan",1984-12-08,"Mixed",34.7812,15.66784,45,0,-75.87681161,36.46670509
+778,"Delta National Wildlife Refuge","LA","Uniform Multiple Use","Site-Specific Management Plan",1935-12-08,"Mixed",204.123,69.31699371,34,0,-89.20466175,29.2370964
+779,"Don Edwards San Francisco Bay National Wildlife Refuge","CA","Uniform Multiple Use","Site-Specific Management Plan",1972-12-08,"Mixed",117.539,17.27967072,15,0,-122.0728276,37.48183172
+780,"Dungeness National Wildlife Refuge","WA","Uniform Multiple Use","Site-Specific Management Plan",1915-12-08,"Mixed",5.78434,3.776635647,65,0,-123.1362216,48.16669621
+781,"Eastern Neck National Wildlife Refuge","MD","Uniform Multiple Use","Site-Specific Management Plan",1962-12-08,"Mixed",8.48687,0.67098242,8,0,-76.22327529,39.03112554
+782,"Alligator River National Wildlife Refuge","NC","Uniform Multiple Use","Site-Specific Management Plan",1984-12-08,"Interface",606.966,1.438188553,0,0,-75.87162706,35.7679099
+783,"Eastern Shore of Virginia National Wildlife Refuge","VA","Uniform Multiple Use","Site-Specific Management Plan",1984-12-08,"Mixed",5.44062,0.551589012,10,0,-75.9563566,37.1351776
+784,"Edwin B. Forsythe National Wildlife Refuge","NJ","Zoned w/No Take Areas","Site-Specific Management Plan",1939-12-08,"Mixed",175.82,13.94474983,8,0,-74.31023664,39.61418463
+785,"Fisherman Island National Wildlife Refuge","VA","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Mixed",8.82563,3.49813509,40,0,-75.959512,37.09502023
+786,"Grand Bay National Wildlife Refuge","MS","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Interface",42.1363,1.484189749,4,0,-88.41702939,30.4153016
+787,"Great Bay National Wildlife Refuge","NH","Uniform Multiple Use","Site-Specific Management Plan",1992-12-08,"Interface",4.66881,0.002883374,0,0,-70.86309745,43.08376684
+788,"Great White Heron National Wildlife Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1938-12-08,"Marine",545.533,518.9122314,95,0,-81.57872216,24.71053115
+789,"Guam National Wildlife Refuge","US-GU","Zoned w/No Take Areas","Site-Specific Management Plan",1993-12-08,"Mixed",4.95538,3.446830988,70,0,144.8672549,13.65077508
+790,"Anahuac National Wildlife Refuge","TX","Uniform Multiple Use","Site-Specific Management Plan",1963-12-08,"Interface",156.685,0.699373007,0,0,-94.47378066,29.61044971
+791,"Harris Neck National Wildlife Refuge","GA","Uniform Multiple Use","Site-Specific Management Plan",1962-12-08,"Interface",11.4674,0.270757914,2,0,-81.2686073,31.63331859
+792,"Hobe Sound National Wildlife Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1969-12-08,"Mixed",4.1622,0.28424862,7,0,-80.12666134,27.10467785
+793,"Huron National Wildlife Refuge","MI","Uniform Multiple Use","Site-Specific Management Plan",1905-12-08,"Mixed",0.600964,0.236742318,39,0,-87.98023569,46.95191886
+794,"J.N. 'Ding Darling' National Wildlife Refuge","FL","Zoned Multiple Use","Site-Specific Management Plan",1945-12-08,"Mixed",26.5414,9.580431938,36,0,-82.11161151,26.46061178
+795,"Aransas National Wildlife Refuge","TX","Uniform Multiple Use","Site-Specific Management Plan",1937-12-08,"Mixed",473.37,55.59077835,12,0,-96.74551907,28.24136546
+796,"Key West National Wildlife Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1908-12-08,"Marine",856.234,847.8786011,99,0,-81.99159284,24.5585591
+797,"Laguna Atascosa National Wildlife Refuge","TX","Uniform Multiple Use","Site-Specific Management Plan",1949-12-08,"Mixed",371.374,113.7510605,31,0,-97.33154092,26.19313638
+798,"Lower Suwannee National Wildlife Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1979-12-08,"Interface",210.021,4.077912807,2,0,-83.10731326,29.39229403
+799,"Glenn Martin National Wildlife Refuge","MD","Uniform Multiple Use","Site-Specific Management Plan",1995-12-08,"Mixed",17.3456,2.63122797,15,0,-76.00721387,38.00604471
+800,"Merritt Island National Wildlife Refuge","FL","Zoned w/No Take Areas","Site-Specific Management Plan",1963-12-08,"Mixed",525.646,201.293869,38,0,-80.70105695,28.58574001
+801,"Midway Atoll National Wildlife Refuge","HI","Uniform Multiple Use","Site-Specific Management Plan",1988-12-08,"Marine",2360.73,2360.72998,100,0,-177.3694949,28.23132807
+802,"Monomoy National Wildlife Refuge","MA","Zoned Multiple Use","Site-Specific Management Plan",1944-12-08,"Mixed",32.2064,25.46146584,79,0,-69.99749202,41.59482081
+803,"National Key Deer Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1954-12-08,"Mixed",329.701,292.375,89,0,-81.38836788,24.75874817
+804,"Ninigret National Wildlife Refuge","RI","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Interface",3.57528,0.092066929,3,0,-71.66062068,41.36265494
+805,"Arctic National Wildlife Refuge","AK","Uniform Multiple Use","Non-MPA Programmatic Habitat Management Plan",1960-12-08,"Interface",79933.1,407.164032,1,0,-144.2531224,68.58414383
+806,"Oyster Bay National Wildlife Refuge","NY","Uniform Multiple Use","Site-Specific Management Plan",1968-12-08,"Marine",13.7997,13.2409296,96,0,-73.52159931,40.90569346
+807,"Parker River National Wildlife Refuge","MA","Uniform Multiple Use","Site-Specific Management Plan",1941-12-08,"Mixed",18.5233,1.975543261,11,0,-70.80875081,42.74904259
+808,"Pea Island National Wildlife Refuge","NC","Uniform Multiple Use","Site-Specific Management Plan",1937-12-08,"Mixed",20.2142,2.184933186,11,0,-75.49478903,35.69851503
+809,"Pelican Island National Wildlife Refuge","FL","Uniform Multiple Use","Site-Specific Management Plan",1903-12-08,"Mixed",21.9905,16.53605843,75,0,-80.44064054,27.80984672
+810,"John H. Chafee National Wildlife Refuge","RI","Uniform Multiple Use","Site-Specific Management Plan",1989-12-08,"Interface",2.23157,0.039030299,2,0,-71.46908681,41.44578941
+811,"Pinckney Island National Wildlife Refuge","SC","Uniform Multiple Use","Site-Specific Management Plan",1975-12-08,"Mixed",16.4439,2.946315289,18,0,-80.76983688,32.25407926
+812,"Back Bay National Wildlife Refuge","VA","Zoned Multiple Use","Site-Specific Management Plan",1938-12-08,"Mixed",35.1261,4.65438509,13,0,-75.94935235,36.65184553
+813,"Plum Tree Island National Wildlife Refuge","VA","Zoned w/No Take Areas","Site-Specific Management Plan",1972-12-08,"Mixed",12.425,2.597458839,21,0,-76.32855894,37.1397289
+814,"Pond Island National Wildlife Refuge","ME","Uniform Multiple Use","Site-Specific Management Plan",1973-12-08,"Mixed",0.0474856,0.01211227,26,0,-69.77070029,43.7394416
+815,"Prime Hook National Wildlife Refuge","DE","Uniform Multiple Use","Site-Specific Management Plan",1963-12-08,"Interface",41.0973,0.358798474,1,0,-75.26090461,38.8461011
+816,"Rachel Carson National Wildlife Refuge","ME","Uniform Multiple Use","Site-Specific Management Plan",1966-12-08,"Mixed",22.4481,1.851982117,8,0,-70.50293835,43.10072978
+817,"Sabine National Wildlife Refuge","LA","Uniform Multiple Use","Site-Specific Management Plan",1937-12-08,"Interface",506.956,1.33507967,0,0,-93.57934535,29.9024059
+818,"Sachuest Point National Wildlife Refuge","RI","Uniform Multiple Use","Site-Specific Management Plan",1970-12-08,"Mixed",0.986753,0.096455194,10,0,-71.24387419,41.48151305
+819,"San Bernard National Wildlife Refuge","TX","Zoned w/No Take Areas","Site-Specific Management Plan",1968-12-08,"Interface",252.203,6.358444214,3,0,-95.61969081,28.88099387
+820,"Estero Americano State Marine Recreational Management Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2010-12-08,"Marine",0.339802,0.339801967,100,0,-122.9953502,38.30563606
+821,"San Dieguito Lagoon State Marine Conservation Area","CA","Uniform Multiple Use","MPA Programmatic Management Plan",2012-12-08,"Marine",0.29382,0.293820202,100,0,-117.2542459,32.96580578
+822,"Target Rock National Wildlife Refuge","NY","Uniform Multiple Use","Site-Specific Management Plan",1967-12-08,"Marine",0.317477,0.317477167,100,0,-73.43406281,40.92682203
+823,"Hopkins Marine Life Refuge","CA","No Take","No Management Plan",1984-12-08,"Marine",0.338678,0.324654013,96,0.338677973,-121.9029211,36.62209238
+824,"San Diego Marine Life Refuge","CA","No Take","No Management Plan",1957-12-08,"Marine",0.359345,0.348404348,97,0.3593449,-117.2559628,32.8677347
+825,"Bodega Marine Life Refuge","CA","No Take","No Management Plan",1965-12-08,"Mixed",0.708543,0.621945798,88,0.708543479,-123.0756624,38.31822632
+826,"Cascade Head Marine Reserve","OR","No Take","MPA Programmatic Management Plan",2014-12-08,"Marine",25.0875,24.99552536,100,25.08746147,-124.0437353,45.01072265
+827,"Cape Perpetua Marine Reserve","OR","No Take","MPA Programmatic Management Plan",2014-12-08,"Marine",36.4764,36.31614304,100,36.47642899,-124.1480884,44.25430468
+828,"Cape Falcon Marine Reserve","OR","No Take","MPA Programmatic Management Plan",2016-12-08,"Marine",32.0324,31.85034752,99,32.03242493,-123.9966327,45.76487452
+829,"Edmonds Underwater Park","WA","No Take","No Management Plan",1970-12-08,"Mixed",0.189528,0.17798312,94,0.189527765,-122.3821878,47.81552822
+830,"Passage Key National Wildlife Refuge","FL","No Access","Non-MPA Programmatic Species Management Plan",1905-12-08,"Mixed",0.256142,0.232517421,91,0.256141722,-82.74294147,27.55579012
+831,"Castle Rock National Wildlife Refuge","CA","No Access","Non-MPA Programmatic Species Management Plan",1979-12-08,"Mixed",0.055537,0.014418789,26,0.055536982,-124.2494125,41.76154186
+832,"Huleia National Wildlife Refuge","HI","No Access","Non-MPA Programmatic Species Management Plan",1973-12-08,"Mixed",0.974963,0.068813644,7,0.974963248,-159.3834412,21.94700004
+833,"James Campbell National Wildlife Refuge","HI","No Access","Non-MPA Programmatic Species Management Plan",1976-12-08,"Interface",4.35395,0.0003386,0,4.353951931,-157.9601559,21.69163538
+834,"Michigan Islands National Wildlife Refuge","MI","No Access","Non-MPA Programmatic Species Management Plan",1947-12-08,"Mixed",3.65759,0.491893232,13,3.657589912,-84.03547192,45.70137636
+835,"Moody National Wildlife Refuge","TX","No Access","Non-MPA Programmatic Species Management Plan",1963-12-08,"Interface",14.2854,0.008786367,0,14.28544426,-94.68324822,29.55264635
+836,"Nansemond National Wildlife Refuge","VA","No Access","Non-MPA Programmatic Species Management Plan",1973-12-08,"Mixed",1.71796,0.237200364,14,1.717961788,-76.54622491,36.81791627
+837,"Cabo Rojo National Wildlife Refuge","PR","No Take","Non-MPA Programmatic Species Management Plan",1974-12-08,"Mixed",7.57343,2.73499155,36,7.573432922,-67.18826304,17.96172623
+838,"Desecheo National Wildlife Refuge","PR","No Access","Site-Specific Management Plan",1976-12-08,"Mixed",1.31854,0.171425298,13,1.318544745,-67.48015694,18.38330282
+839,"Doheny Beach Marine Life Refuge","CA","Uniform Multiple Use","No Management Plan",1969-12-08,"Marine",0.420587,0.412823796,98,0,-117.6791847,33.45923562
+840,"South Laguna Beach Marine Life Refuge","CA","Uniform Multiple Use","No Management Plan",1968-12-08,"Marine",0.198358,0.198358044,100,0,-117.7499884,33.50497627
+841,"Niguel Marine Life Refuge","CA","Uniform Multiple Use","No Management Plan",1971-12-08,"Marine",1.33712,1.330104828,99,0,-117.7251877,33.47520715
+842,"Dana Point Marine Life Refuge","CA","Uniform Multiple Use","No Management Plan",1971-12-08,"Marine",0.507652,0.507363081,100,0,-117.7131528,33.45901301
+843,"Laguna Beach Marine Life Refuge","CA","Uniform Multiple Use","No Management Plan",1968-12-08,"Marine",0.479442,0.479442269,100,0,-117.7972094,33.5438477
+844,"Irvine Coast Marine Life Refuge","CA","Uniform Multiple Use","No Management Plan",1971-12-08,"Marine",1.11929,1.11730504,100,0,-117.839912,33.57067479
+845,"Newport Beach Marine Life Refuge","CA","Uniform Multiple Use","No Management Plan",1968-12-08,"Marine",0.0807331,0.080732994,100,0,-117.8665258,33.58712389
+846,"Point Fermin Marine Life Refuge","CA","Uniform Multiple Use","No Management Plan",1969-12-08,"Mixed",0.187542,0.139911905,75,0,-118.2881864,33.70523814
+847,"City of Encinitas Marine Life Refuge","CA","Uniform Multiple Use","No Management Plan",1969-12-08,"Marine",0.307421,0.307420522,100,0,-117.296837,33.03880881
+848,"Cape Falcon Shoreside Marine Protected Area","OR","Uniform Multiple Use","MPA Programmatic Management Plan",2016-12-08,"Mixed",0.611825,0.38453263,63,0,-123.9700982,45.789665
+849,"Cape Falcon West Marine Protected Area","OR","Uniform Multiple Use","MPA Programmatic Management Plan",2016-12-08,"Marine",19.0951,19.09508514,100,0,-124.0415764,45.76685768
+850,"Cascade Head North Marine Protected Area","OR","Uniform Multiple Use","MPA Programmatic Management Plan",2014-12-08,"Marine",31.5521,31.30669594,99,0,-124.0472228,45.05838466
+851,"Cascade Head South Marine Protected Area","OR","Uniform Multiple Use","MPA Programmatic Management Plan",2014-12-08,"Marine",24.87,24.82437325,100,0,-124.0523121,44.965232
+852,"Cascade Head West Marine Protected Area","OR","Uniform Multiple Use","MPA Programmatic Management Plan",2014-12-08,"Marine",3.34617,3.346174717,100,0,-124.0791667,45.01041667
+853,"Cape Perpetua North Marine Protected Area","OR","Uniform Multiple Use","MPA Programmatic Management Plan",2014-12-08,"Marine",29.3204,29.06873512,99,0,-124.1418295,44.30906402
+854,"Cape Perpetua Southeast Marine Protected Area","OR","Uniform Multiple Use","MPA Programmatic Management Plan",2014-12-08,"Marine",19.4136,19.2915802,99,0,-124.1295767,44.16289368
+855,"Cape Perpetua Seabird Protection Area","OR","Uniform Multiple Use","MPA Programmatic Management Plan",2014-12-08,"Marine",57.6056,57.60564423,100,0,-124.1634223,44.16034514
+856,"Carkeek Park Marine Preserve","WA","Uniform Multiple Use","No Management Plan",2005-12-08,"Mixed",0.0996619,0.083851904,84,0,-122.380766,47.71145069
+857,"Discovery Park Marine Preserve","WA","Uniform Multiple Use","No Management Plan",2005-12-08,"Mixed",0.165705,0.15017876,91,0,-122.4283195,47.6579815
+858,"Emma Schmitz Memorial Marine Preserve","WA","Uniform Multiple Use","No Management Plan",2005-12-08,"Marine",0.0256236,0.025585415,100,0,-122.4077724,47.56375482
+859,"Lincoln Park Marine Preserve","WA","Uniform Multiple Use","No Management Plan",2005-12-08,"Mixed",0.0410933,0.033459544,81,0,-122.3988722,47.52816224
+860,"Golden Gardens Park Marine Preserve","WA","Uniform Multiple Use","No Management Plan",2005-12-08,"Mixed",0.0561027,0.048376996,86,0,-122.4045892,47.69636075
+861,"Richey Viewpoint Marine Preserve","WA","Uniform Multiple Use","No Management Plan",2005-12-08,"Marine",0.0468105,0.046810493,100,0,-122.4171436,47.57347103
+862,"Northeast Canyons and Seamounts Marine National Monument","NJ, NY","Uniform Multiple Use","Non-MPA Programmatic Fisheries Management Plan",2016-12-08,"Marine",12726.1,12698.92578,100,0,-67.04583992,39.74866329
+863,"He'eia National Estuarine Research Reserve","HI","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",2016-12-08,"Mixed",5.6579,3.76104188,66,0,-157.8039485,21.43656499
+864,"San Juan Islands National Wildlife Refuge","WA","Zoned w/No Take Areas","Non-MPA Programmatic Species Management Plan",1960-12-08,"Mixed",1.8429,0.699753344,38,0,-122.9010192,48.74643026
+865,"Kakahaia National Wildlife Refuge","HI","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1976-12-08,"Interface",0.181457,1.47302e-05,0,0,-156.9417325,21.06433103
+866,"Kilauea Point National Wildlife Refuge","HI","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1985-12-08,"Interface",0.759856,0.03784427,5,0,-159.3947933,22.22263687
+867,"Caloosahatchee National Wildlife Refuge","FL","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1920-12-08,"Mixed",0.0740888,0.005923151,8,0,-81.80020847,26.69861186
+868,"Ottawa National Wildlife Refuge","OH","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1961-12-08,"Mixed",27.4801,1.919996977,7,0,-83.17267275,41.62139743
+869,"Petit Manan National Wildlife Refuge","ME","No Take","Non-MPA Programmatic Species Management Plan",1974-12-08,"Mixed",26.167,4.271677494,16,26.1670208,-68.04229816,44.42275218
+870,"Archie Carr National Wildlife Refuge","FL","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1991-12-08,"Mixed",1.03609,0.087287851,8,0,-80.49190935,28.00016891
+871,"Bayou Savage National Wildlife Refuge","LA","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1986-12-08,"Mixed",103.694,6.223464966,6,0,-89.85443421,30.04745078
+872,"Cedar Point National Wildlife Refuge","OH","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1964-12-08,"Mixed",10.5768,3.105120897,29,0,-83.3203613,41.68713013
+873,"Detroit River International Wildlife Refuge","US-MI, CA-ON","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",2001-12-08,"Mixed",20.9229,8.099783897,39,0,-83.28339713,41.76492699
+874,"Egmont Key National Wildlife Refuge","FL","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1974-12-08,"Mixed",1.34556,0.145016953,11,0,-82.76284406,27.58914092
+875,"Elizabeth Alexandra Morton National Wildlife Refuge","NY","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1954-12-08,"Mixed",0.718893,0.06620606,9,0,-72.37069054,40.99165562
+876,"Franklin Island National Wildlife Refuge","ME","No Take","Non-MPA Programmatic Species Management Plan",1972-12-08,"Mixed",0.0449263,0.019676797,44,0.044926278,-69.37411551,43.89185175
+877,"Harbor Island National Wildlife Refuge","MI","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1983-12-08,"Mixed",2.87693,0.525172949,18,0,-83.75824677,46.04670058
+878,"Humboldt Bay National Wildlife Refuge","CA","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1971-12-08,"Mixed",14.204,3.823057413,27,0,-124.2004546,40.68757649
+879,"McFaddin National Wildlife Refuge","TX","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1980-12-08,"Interface",239.484,11.87984848,5,0,-94.18400007,29.66511603
+880,"Nantucket National Wildlife Refuge","MA","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1973-12-08,"Mixed",0.0851649,0.033566449,39,0,-70.04901314,41.39033031
+881,"Rappahannock River Valley National Wildlife Refuge","VA","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1996-12-08,"Interface",36.0284,0.690354288,2,0,-76.84746236,37.93885545
+882,"Salinas River National Wildlife Refuge","CA","No Take","Non-MPA Programmatic Species Management Plan",1973-12-08,"Mixed",1.55144,0.660008669,43,1.551440358,-121.7997031,36.73924931
+883,"Seal Island National Wildlife Refuge","ME","No Take","Non-MPA Programmatic Species Management Plan",1974-12-08,"Mixed",0.389603,0.04576695,12,0.389603347,-68.741008,43.88690306
+884,"Texas Point National Wildlife Refuge","TX","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1979-12-08,"Interface",33.8058,0.209171042,1,0,-93.89605192,29.69647334
+885,"Thacher Island National Wildlife Refuge","MA","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1972-12-08,"Mixed",0.0690427,0.024334263,35,0,-70.57491935,42.63904815
+886,"Trustom Pond National Wildlife Refuge","RI","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1974-12-08,"Interface",3.23044,0.009438523,0,0,-71.58276489,41.37618349
+887,"Amagansett National Wildlife Refuge","NY","Zoned w/No Take Areas","Non-MPA Programmatic Species Management Plan",1968-12-08,"Interface",0.163189,0.163189,0,0,-72.12779839,40.96915689
+888,"Mississippi Sandhill Crane National Wildlife Refuge","MS","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1975-12-08,"Interface",81.853,81.853,0,0,-88.7353056,30.47429193
+889,"Sandy Point National Wildlife Refuge","US-VI","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1984-12-08,"Mixed",2.10775,0.286356956,14,0,-64.89324248,17.68622196
+890,"Vieques National Wildlife Refuge","PR","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",2001-12-08,"Mixed",71.2046,5.139745235,7,0,-65.40535144,18.12757968
+891,"Culebra National Wildlife Refuge","PR","Uniform Multiple Use","Non-MPA Programmatic Species Management Plan",1909-12-08,"Mixed",5.89051,0.792690098,13,0,-65.2956768,18.32669134
+894,"Tortugas North Ecological Reserve","FL","No Take","",1990-12-08,"Marine",283.758,283.7581482,100,283.7581482,-82.98281359,24.71738621
+895,"Western Sambo Ecological Reserve","FL","No Take","",1990-12-08,"Mixed",30.887,30.25731277,98,30.88696098,-81.70606844,24.52073743
+897,"Tortugas South Ecological Reserve","FL","No Take","",1990-12-08,"Marine",188.049,188.0494385,100,188.0494537,-83.11666666,24.425
+898,"Carysfort/South Carysfort Reef Sanctuary Preservation Area","FL","No Take","",1990-12-08,"Marine",5.30809,5.308093548,100,5.308093548,-80.21468435,25.2176199
+900,"Coffins Patch Sanctuary Preservation Area","FL","No Take","",1990-12-08,"Mixed",1.00867,1.008673906,100,1.008673906,-80.96664362,24.68506228
+902,"Davis Reef Sanctuary Preservation Area","FL","No Take","",1990-12-08,"Mixed",0.358057,0.358056635,100,0.358056635,-80.50489916,24.92276915
+903,"Dry Rocks Sanctuary Preservation Area","FL","No Take","",1990-12-08,"Mixed",0.206629,0.206629023,100,0.206629023,-80.29809804,25.12361111
+905,"The Elbow Sanctuary Preservation Area","FL","No Take","",1990-12-08,"Marine",1.03921,1.039209008,100,1.039209008,-80.26070544,25.14371477
+906,"French Reef Sanctuary Preservation Area","FL","No Take","",1990-12-08,"Mixed",0.486534,0.486533999,100,0.486533999,-80.34955555,25.03538889
+911,"Laguna Tortuguero Natural Reserve","PR","Uniform Multiple Use","MPA Programmatic Management Plan",1980-12-08,"MIxed",12.7155,2.11926055,17,1.79399,-66.44507817,18.46147202
+912,"Cayo Ratones Natural Reserve","PR","Uniform Multiple Use","MPA Programmatic Management Plan",1983-12-08,"Mixed",0.00528698,0.001347893,25,0,-67.1882706,18.11664877
+947,"Grecian Rocks Sanctuary Preservation Area","FL","No Take","",1990-12-08,"Marine",0.433249,0.433248907,100,0.433248907,-80.30491766,25.11081519
+949,"Looe Key Sanctuary Preservation Area","FL","No Take","",1990-12-08,"Marine",1.52265,1.522651076,100,1.522651076,-81.40586092,24.54815443
+950,"Molasses Reef Sanctuary Preservation Area","FL","No Take","",1990-12-08,"Marine",1.00616,1.006164908,100,1.006164908,-80.37402128,25.01257126
+952,"Sombrero Key Sanctuary Preservation Area","FL","No Take","",1990-12-08,"Marine",0.679806,0.679805934,100,0.679805934,-81.11033333,24.62588889
+953,"Conch Reef Research Only Area","FL","No Take","",1990-12-08,"Marine",0.389963,0.389963448,100,0.389963448,-80.45338889,24.95130046
+954,"Looe Key Research Only Area","FL","No Take","",1990-12-08,"Marine",0.602799,0.602798581,100,0.602798581,-81.38916424,24.5675362
+955,"Tennessee Reef Research Only Area","FL","No Take","",1990-12-08,"Marine",0.348565,0.348565429,100,0.348565429,-80.78083622,24.74578246
+958,"Alligator Reef Sanctuary Preservation Area","FL","No Take","",1990-12-08,"Marine",0.840552,0.840552449,100,0.840552449,-80.62075102,24.84799591
+959,"Papahanaumokuakea Marine National Monument Particularly Sensitive Sea Area","HI","No Take","",2006-12-08,"Marine",363687,363680.1563,100,363686.9375,-170.266684,25.49425994
+960,"Hawaiian Islands National Wildlife Refuge","HI","No Take","Non-MPA Programmatic Species Management Plan
+",1909-12-08,"Mixed",1040.86,1034.95105,99,1040.861572,-170.7716609,23.7629476
+961,"Tortugas Marine Reserves Habitat Areas of Particular Concern","FL","No Take","Non-MPA Programmatic Fisheries Management Plan",2002-12-08,"Marine",231.05,231.049942,100,231.049942,-83.10792985,24.483419
+962,"Anacapa Island Federal Marine Conservation Area","CA","No Take","Non-MPA Programmatic Fisheries Management Plan",2007-12-08,"Marine",6.10903,6.109033585,100,6.109034061,-119.4272557,34.07479007
+963,"Richardson Rock (San Miguel Island) Federal Marine Reserve","CA","No Take","Non-MPA Programmatic Fisheries Management Plan",2007-12-08,"Marine",82.9811,82.98114777,100,82.98114777,-120.5609293,34.05613844
+964,"Harris Point (San Miguel Island) Federal Marine Reserve","CA","No Take","Non-MPA Programmatic Fisheries Management Plan",2007-12-08,"Marine",61.3258,61.32575226,100,61.32575226,-120.3420075,34.16623436
+965,"South Point (Santa Rosa Island) Federal Marine Reserve","CA","No Take","Non-MPA Programmatic Fisheries Management Plan",2007-12-08,"Marine",4.89629,4.896295071,100,4.896294594,-120.1464902,33.84538102
+966,"Gull Island (Santa Cruz Island) Federal Marine Reserve","CA","No Take","Non-MPA Programmatic Fisheries Management Plan",2007-12-08,"Marine",37.6428,37.64284897,100,37.64284897,-119.8449277,33.88449561
+967,"Scorpion (Santa Cruz Island) Federal Marine Reserve","CA","No Take","Non-MPA Programmatic Fisheries Management Plan",2007-12-08,"Marine",22.8505,22.85048866,100,22.85048866,-119.5693383,34.12974004
+968,"Santa Barbara Island Federal Marine Reserve","CA","No Take","Non-MPA Programmatic Fisheries Management Plan",2007-12-08,"Marine",114.218,114.2175446,100,114.2175446,-118.9624533,33.41017804
+969,"Anacapa Island Federal Marine Reserve","CA","No Take","Non-MPA Programmatic Fisheries Management Plan",2007-12-08,"Marine",9.82665,9.82665062,100,9.82665062,-119.3847223,34.07422862
+970,"Footprint (Anacapa Channel) Federal Marine Reserve","CA","No Take","Non-MPA Programmatic Fisheries Management Plan",2007-12-08,"Marine",55.4215,55.42150116,100,55.42149735,-119.4765405,33.93491317
+971,"James V Fitzgerald Marine Reserve","CA","No Take","No Management Plan",1969-12-08,"Mixed",2.09924,1.967750192,94,2.09923625,-122.5135273,37.51054819
+973,"Mallows Bay-Potomac National Marine Sanctuary","MD","Uniform Multiple Use","MPA Management Plan",2019-12-08,"Marine",46.1189,45.91984177,100,0,-77.29080904,38.44016884
+974,"Steller Sea Lion Rookery Buffer Areas","AK","No Access","Non-MPA Programmatic Fisheries Management Plan",2013-12-08,"Marine",3384.32,3349.614258,99,3384.317627,-73.94192674,58.14817725
+976,"Waialea Bay Marine Life Conservation District","HI","Uniform Multiple Use","MPA Programmatic Management Plan",1985-12-08,"Marine",0.141852,0.135217384,95,0,-155.8301537,19.98170901
+977,"Flower Garden Banks National Marine Sanctuary","TX, LA","Zoned Multiple Use","Site-Specific Management Plan",1992-12-08,"Marine",146.23,146.2297211,100,0,-93.32691592,27.86578357
+978,"Wisconsin-Shipwreck Coast National Marine Sanctuary","WI","Uniform Multiple Use","Site-Specific Management Plan",2021-12-08,"Marine",2496.8,2496.800781,100,0,-87.58118542,43.78133577
+979,"Connecticut National Estuarine Research Reserve","CT","Uniform Multiple Use","Site-Specific Management Plan",2022-12-08,"Mixed",210.785,0,96,0,0,0
