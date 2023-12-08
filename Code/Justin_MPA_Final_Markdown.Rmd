@@ -44,53 +44,262 @@ MPA.sites.sf <- MPA.data.clean %>%
   st_as_sf(coords = c("Longitude","Latitude"),
            crs = 4326)
 
-mapview(MPA.sites.sf, zcol = "Management.Plan")
+mapview(filter(MPA.sites.sf, State == "AK"), zcol = "Management.Plan")
+
+MPA.data.sf <- MPA.data %>% 
+  st_as_sf(coords = c("Longitude","Latitude"),
+           crs = 4326)
 
 
 
 
 ```
+
+
 ```{r}
-leaflet() %>% addTiles() %>% 
-  addCircleMarkers(data = MPA.sites.sf,
-                   radius = .1, 
-                   fill = 
-             popup = ~as.character(Site.Name))
+mapview(filter(MPA.sites.sf, MPA.data.sf$State == "AK"), zcol = "Management.Plan")
+
+```
+```{r}
+      test <- MPA.sites.sf[MPA.sites.sf$State == "AK",]
+```
+
+
+
+
+```{r}
+
+```
+
+
+
+
+
+
+```{r}
+
+ state.count <- ggplot(MPA.data.clean) +
+  geom_bar(aes(x=State)) +
+  labs(x = "State",
+       y = "Count") +
+  theme(axis.text.x = element_text(angle = 90))
+
 ```
 
 
 ```{r}
-here()
-
-database <- sf::st_read(here('DataRaw/NOAA_MPAI_2023.gdb')) #, layer = "Management Agency")
+database <- sf::st_read(here('DataRaw/NOAA_MPAI_2023.gdb')) 
 
 database_transformed <- st_transform(database, c=4326)
 
 
 
-
-
-```
-```{r}
-
-
-leaflet() %>% addTiles() %>% 
-  addPolygons(data = database_transformed)
-
-```
-
-
-
-```{r}
 database_transformed_alaska <- database_transformed %>% 
   filter(State == "AK") 
 
+unique(database_transformed$State)
 
+database_transformed_northeast <- database_transformed %>% 
+  filter(State %in% c("CT", "DE", "NY", "NJ, NY", "MA", "NH", "PA", "RI"))
+
+
+
+mapView(database_transformed_alaska, zcol = "Mgmt_Agen") %>% mapviewOptions(mapview.maxpixels = 100000)
+
+#mapView(database_transformed_northeast, zcol = "Prot_Lvl")
+
+#mapView(database_transformed_northeast, zcol = "Mgmt_Agen")
+
+
+#leaflet() %>% addTiles() %>% 
+#  addCircleMarkers(data = MPA.sites.sf.AK,
+ #                  radius = .1, 
+  #           popup = ~as.character(Site.Name))
+
+```
+
+
+```{r}
+
+df1 <- MPA.data.sf %>% 
+  select(Site.ID, Level.of.Protection)
+
+joined_data <- st_join(database_transformed, df1, by = "Site.ID")
 
 ```
 
 ```{r}
-mapView(database_transformed_alaska, zcol = "Mgmt_Agen")
+unique(joined_data$State)
+```
 
+
+```{r}
+MPA.sites.sf <- MPA.sites.sf %>% 
+  mutate(Regions = recode(State,
+                          "AK" = "Alaska",
+                          "NC" = "South",
+                          "ASM" = "Pacific",
+                          "CT" ="Northeast",
+                          "DE" = "Northeast",
+                          "FL" = "South - Gulf Coast",
+                          "CA" = "West",
+                          "GA" = "South",
+                          "US-GU" = "Guam & Northern Mariana Islands",
+                          "HI" = "Pacific",
+                          "IL" = "Midwest",
+                          "MN" = "Midwest",
+                          "US-MP" = "Guam & Northern Mariana Islands",
+                          "IN" = "Midwest",
+                          "LA" = "South - Gulf Coast",
+                          "MA" = "Northeast",
+                          "MI" = "Midwest",
+                          "MS" = "South - Gulf Coast",
+                          "AL, MS" = "South - Gulf Coast",
+                          "NH" = "Northeast",
+                          "NJ" = "Northeast",
+                          "OH" = "Midwest",
+                          "OR" = "West",
+                          "PR" = "Caribbean",
+                          "TX" = "South - Gulf Coast",
+                          "VA" = "South",
+                          "US-VI" = "Caribbean",
+                          "WA" = "West",
+                          "PRI" = "Caribbean",
+                          "NY" = "Northeast",
+                          "PA" = "Northeast",
+                          "SC" = "South",
+                          "RI" = "Northeast",
+                          "ME" = "Northeast",
+                          "MD" = "Northeast",
+                          "WI" = "Midwest",
+                          "FL, MS" = "South - Gulf Coast",
+                          "VA, MD" = "South",
+                          "AL" = "South - Gulf Coast",
+                          "OR, WA" = "West",
+                          "NC, VA" = "South",
+                          "NJ, NY" = "Northeast",
+                          "US-MI, CA-ON" = "Midwest",
+                          "GA, SC" = "South",
+                          "TX, LA" = "South - Gulf Coast",
+                          ))
+
+
+
+
+```
+
+
+```{r}
+
+
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "650"] <- "Pacific"
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "643"] <- "Pacific"
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "625"] <- "Pacific"
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "635"] <- "Pacific"
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "641"] <- "Pacific"
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "632"] <- "Pacific"
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "631"] <- "Pacific"
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "319"] <- "Pacific"
+
+MPA.sites.sf$Regions <- as.character(MPA.sites.sf$Regions)
+
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "767"] <- "Pacific West of Date Line"
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "765"] <- "Pacific West of Date Line"
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "534"] <- "Pacific West of Date Line"
+MPA.sites.sf$Regions[MPA.sites.sf$OBJECTID == "764"] <- "Pacific West of Date Line"
+
+MPA.sites.sf$Regions <- as.factor(MPA.sites.sf$Regions)
+
+
+```
+
+
+
+
+
+```{r}
+
+joined_data_renamed <- joined_data %>% 
+  mutate(Regions = recode(State,
+                          "AK" = "Alaska",
+                          "NC" = "South",
+                          "ASM" = "Pacific",
+                          "CT" ="Northeast",
+                          "DE" = "Northeast",
+                          "FL" = "South - Gulf Coast",
+                          "CA" = "West",
+                          "GA" = "South",
+                          "US-GU" = "Guam & Northern Mariana Islands",
+                          "HI" = "Pacific",
+                          "IL" = "Midwest",
+                          "MN" = "Midwest",
+                          "US-MP" = "Guam & Northern Mariana Islands",
+                          "IN" = "Midwest",
+                          "LA" = "South - Gulf Coast",
+                          "MA" = "Northeast",
+                          "MI" = "Midwest",
+                          "MS" = "South - Gulf Coast",
+                          "AL, MS" = "South - Gulf Coast",
+                          "NH" = "Northeast",
+                          "NJ" = "Northeast",
+                          "OH" = "Midwest",
+                          "OR" = "West",
+                          "PR" = "Caribbean",
+                          "TX" = "South - Gulf Coast",
+                          "VA" = "South",
+                          "US-VI" = "Caribbean",
+                          "WA" = "West",
+                          "PRI" = "Caribbean",
+                          "NY" = "Northeast",
+                          "PA" = "Northeast",
+                          "SC" = "South",
+                          "RI" = "Northeast",
+                          "ME" = "Northeast",
+                          "MD" = "Northeast",
+                          "WI" = "Midwest",
+                          "FL, MS" = "South - Gulf Coast",
+                          "VA, MD" = "South",
+                          "AL" = "South - Gulf Coast",
+                          "OR, WA" = "West",
+                          "NC, VA" = "South",
+                          "NJ, NY" = "Northeast",
+                          "US-MI, CA-ON" = "Midwest",
+                          "GA, SC" = "South",
+                          "TX, LA" = "South - Gulf Coast",
+                          ))
+
+
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "650"] <- "Pacific"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "643"] <- "Pacific"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "625"] <- "Pacific"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "635"] <- "Pacific"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "641"] <- "Pacific"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "632"] <- "Pacific"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "631"] <- "Pacific"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "319"] <- "Pacific"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "324"] <- "Pacific"
+
+324
+
+
+
+joined_data_renamed$Regions <- as.character(joined_data_renamed$Regions)
+
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "767"] <- "Pacific West of Date Line"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "765"] <- "Pacific West of Date Line"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "534"] <- "Pacific West of Date Line"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "764"] <- "Pacific West of Date Line"
+joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "624"] <- "Pacific West of Date Line"
+
+joined_data_renamed$Regions <- as.factor(joined_data_renamed$Regions)
+```
+
+
+
+
+```{r}
+leaflet() %>% 
+  addProviderTiles(providers$Esri.NatGeoWorldMap) %>% 
+  addPolygons(data = joined_data, color = joined_data$) 
 ```
 
