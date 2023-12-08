@@ -49,11 +49,10 @@ PartialNoTake <- NoTake %>%
 
 ## Cumulative Number and Total Area Stuff
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Understanding and visualizing the growth of MPAs in the United States over time is a critical piece in acheiving the 30x30 goal. The following code was used to plot the cumulative growth over time of the number of MPAs and the total area of MPAs. 
 
 ```{r Over Time info}
+library(ggrepel)
 
 MPA.parks.year <- MPA.data.clean %>%
   mutate("year" = year(Year.Established)) %>%
@@ -68,7 +67,16 @@ total_num_plot <-
                 y = Cumulative)) +
   labs(title = "Total Number of MPAs Over Time",
        x = "Year",
-       y = "Cumulative Number of MPAs")
+       y = "Cumulative Number of MPAs") +
+  geom_point(data=MPA.parks.year %>% filter(year == 2000| year == 2009| year == 2014),
+             aes(x = year,
+                 y = Cumulative)) +
+  geom_label_repel(data=MPA.parks.year %>% filter(year == 2000| year == 2009| year == 2014),
+                                            aes(label = year,
+                                                x = year,
+                                                y = Cumulative),
+                                            box.padding   = 0.35, 
+                                            point.padding = 0.75)
 
 total_num_plot
 
@@ -81,23 +89,32 @@ MPA.totalarea.year <- MPA.data.clean %>%
 # Plot the cumulative sum of AREA of MPAs per year to visualize trend over time.
 total_area_plot <-
   ggplot(MPA.totalarea.year) +
-  geom_line(aes(x = year,
+  geom_line(aes(x = Year.Established,
                 y = Cum_Area)) +
   labs(title = "Total Area of MPAs Over Time",
        x = "Year",
-       y = "Cumulative Area of MPAs")
+       y = "Cumulative Area of MPAs") +
+  scale_x_date(date_breaks = "10 years", date_labels = "%Y")
 
 total_area_plot
 ```
+
+These plots reveal a strong upward trend of MPAs both in number and in area. However, this does not tell us anything about the strength of the MPAs being created. We decided to focus on MPAs before and after an executive order was released from President Bill Clinton in 2000, which aimed to improve the protections provided from MPAs. 
+
+From [Executive Order 13158](https://www.govinfo.gov/content/pkg/WCPD-2000-05-29/pdf/WCPD-2000-05-29-Pg1230.pdf):
+“To this end, the purpose of this order is to, consistent with domestic and international law: (a) **strengthen** the management, protection, and conservation of existing marine protected areas and **establish new or expanded MPAs**; (b) develop a scientifically based, comprehensive national **system of MPAs** representing diverse U.S. marine ecosystems, and the Nation’s natural and cultural resources; and (c) **avoid causing harm** to MPAs through federally conducted, approved, or funded activities.”
+
+This landmark declaration helped spur the future creation of large and important MPAs in subsequent years. In 2009, [President Bush created](https://www.fws.gov/national-monument/pacific-remote-islands-marine/about-us) the Pacific Remote Islands Marine National Monument just before his presidency ended, and then in 2014, [President Obama expanded that MPA](https://obamawhitehouse.archives.gov/the-press-office/2014/09/25/presidential-proclamation-pacific-remote-islands-marine-national-monumen#:~:text=NOW%2C%20THEREFORE%2C%20I%2C%20BARACK,to%20be%20part%20of%20the) to include almost 500,000 square miles of ocean, corals, and small islands.    
+
 
 ## T-Test Things
 
 The following code is the data wrangling to create a data frame to use in a two-sided t-test
 
-```{r pressure, echo=FALSE}
+```{r Pre- T-test Wrangling, echo=FALSE}
 # Wrangling the data in order to turn qualitative variables into numeric values.
 
-# Checking the categories of Level of Protection and Management Plan colunms in the df.
+# Checking the categories of Level of Protection and Management Plan columns in the df.
 levels(MPA.data.clean$Level.of.Protection)
 levels(MPA.data.clean$Management.Plan)
 
@@ -106,9 +123,46 @@ MPA_ttest_df <- MPA.data.clean %>%
   select(OBJECTID, Level.of.Protection, Management.Plan, Year.Established) %>%
   mutate("year" = year(Year.Established))
 
+```
+
+To assign rankings for each Level of Protection and Management Plan, the metadata was used to compare the various types. Low numbers are lower protections, and high numbers are higher protections. Information used along with our rankings (in parenthesis) are below.
+
+**Level of Protection (1-Low, 7-High):**
+(1) Uniform Multiple Use: MPAs or zones with a consistent level of protection and allowable activities, including certain extractive uses, across the entire protected area 
+
+(2) Zoned Multiple Use: MPAs that allow some extractive activities throughout the entire site, but that use marine zoning to allocate specific uses to compatible places or times in order to reduce user conflicts and adverse impacts
+
+(3) Zoned w/No Take Areas: Multiple-use MPAs that contain at least one legally established management zone in which all resource extraction is prohibited
+
+(4) No Take: MPAs or zones that allow human access and even some potentially harmful uses, but that totally prohibit the extraction or significant destruction of natural or cultural resources. This includes Papahanuamokuakea Marine National Monument, which allows very limited subsistence fishing activities by Native Hawaiians by permit.
+
+(5) No Impact: MPAs or zones that allow human access, but that prohibit all activities that could harm the site's resources or disrupt the ecological or cultural services they provide. Examples of activities typically prohibited in no-impact MPAs include resource extraction of any kind (fishing, collecting, or mining); discharge of pollutants 
+
+(6) No Access: MPAs or zones that restrict all human access to the area in order to prevent potential ecological disturbance, unless specifically permitted for designated special uses such as research, monitoring or restoration
+
+**Management Level (1-Low, 7-High):**
+(1) No Management Plan: No management plan has been developed for the site, or the management plan is still in draft form
+
+(2) Community Agreement: A verbal or written community agreement has been reached for the management of the site
+
+(3) Non-MPA Programmatic Species Management Plan: A species management plan has been developed, which includes the management of the site
+
+(4) Non-MPA Programmatic Fisheries Management Plan: A fisheries management plan has been developed, which includes the management of the site
+
+(5) Non-MPA Programmatic Habitat Management Plan: A habitat management plan has been developed, which includes the management of the site
+
+(6) MPA Programmatic Management Plan: A management plan has been developed for a broader MPA program, which includes the site
+
+(7) Site-Specific Management Plan: A management plan has been developed specifically for the site
+
+These rankings were then assigned to each MPA in the following code chunk.
+
+```{r Assigning Rankings, echo=FALSE}
 # Creating a new column with number values assigned to each Level of Protection.
 # Range from 1 (lowest level of protection) to 6 (highest level of protection).
 # Values/ranking based off metadata information of what each Level allows.
+
+# Starting with Level of Protection
 MPA_ttest_df$Level_Val <- as.numeric(ifelse(MPA_ttest_df$Level.of.Protection == "No Access", '6',
                                       ifelse(MPA_ttest_df$Level.of.Protection == "No Impact",'5',
                                       ifelse(MPA_ttest_df$Level.of.Protection == "No Take",'4',
@@ -146,25 +200,46 @@ MPA_ttest_df$PrePost <- as.factor(ifelse(MPA_ttest_df$year < 2000, 'pre2000','po
 
 ```
 
-```{r Visuals Pre and Post 2000}
-plot_density <-
+Before performing the t-tests, two plots for visualization of the data were created. These help show the difference between the pre- and post-2000 groups to get a better idea of the data.
+
+```{r Visuals Pre and Post 2000, echo=FALSE}
+# Making a basic plot to visualize the frequency of different rankings for pre/post 2000.
+
+# Starting with Level of Protection
+LevelProt_density <-
   ggplot(MPA_ttest_df,
          aes(Level_Val, fill = factor(PrePost))) +
-  geom_density(alpha = 0.2)
-
-plot_density
-
-
-#Exercise 1: Density plot means y axis is frequency, so you need to specify Ozone as x
-oz_density_plot <- 
-  ggplot(EPAair, aes(Ozone, fill=factor(Year))) + #this makes r know to make Year into a factor with two levels (2018 and 2019)
-  geom_density(alpha = 0.2) + #alpha changes the transparency
-  theme_bw() + #this changes the colors, can also use "scale_fill_manual(values = c("darkgreen", "lightblue"))
-  labs(x = "Ozone AQI value",
+  geom_density(alpha = 0.2) +
+  labs(x = "Level of Protection Ranking",
        y = "Density",
-       fill = "") #this makes the legend title be gone
+       fill = "",
+       title = "Comparison of Level of Protection Rankings")
 
-oz_density_plot
+LevelProt_density
+
+# Moving on to Management Plan
+Mngmt_density <-
+  ggplot(MPA_ttest_df,
+         aes(Mngmt_Val, fill = factor(PrePost))) +
+  geom_density(alpha = 0.2) +
+  labs(x = "Management Plan Ranking",
+       y = "Density",
+       fill = "",
+       title = "Comparison of Management Plan Rankings")
+
+Mngmt_density
+
+# Finally on to Combined Ranking
+Combo_density <-
+  ggplot(MPA_ttest_df,
+         aes(Combo_Val, fill = factor(PrePost))) +
+  geom_density(alpha = 0.2) +
+  labs(x = "Combined Ranking",
+       y = "Density",
+       fill = "",
+       title = "Comparison of Combined Rankings")
+
+Combo_density
 
 ```
 
@@ -186,14 +261,13 @@ mngmt.twosample
 combo.twosample <- t.test(MPA_ttest_df$Combo_Val ~ MPA_ttest_df$PrePost)
 combo.twosample
 
-####Do we need/want GLM? Is it even viable in our case?####
-# Format as a GLM
-level.glm <- lm(MPA_ttest_df$Level_Val ~ MPA_ttest_df$PrePost)
-summary(level.glm)
-#ask if year is a predictor of Ozone levels to form this equation, shows that year IS a predictor of Ozone levels
-
 ```
 
+Results:
+
+When comparing pre-2000 and post-2000 ranked Levels of Protection and Management Plans, we can conclude that overall there appears to a significant difference between the two time periods. For Levels of Protection, the t-test reveals that in the post-2000 era, MPAs were given significantly higher Levels of Protection than before 2000 (p-value = 4.593e-10). For Management Plans, no significant difference was found between the two time periods (p-value = 0.2563). However, when using the combined ranking for the MPAs, which took the average score between Level of Protection and Management Plan, the post-2000 group still had significantly higher protections than the pre-2000 group (p-value = 0.0006872). 
+
+This means we can reject our null hypothesis and accept our alternative hypothesis that the pre- and post-2000 groups would have different overall protections. We can also infer that the executive order from President Clinton may have helped make this change, although this cannot be 100% confirmed, as correlation does not always mean causation. Further studies into the creation of each MPA should be done to evaluate the reasons behind various Level of Protection and Management Plan choices.
 
 
 
