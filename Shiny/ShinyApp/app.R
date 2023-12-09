@@ -20,6 +20,8 @@ library(sf)
 library(shiny)
 library(leaflet)
 library(RColorBrewer)
+library(mapview); mapviewOptions(fgb = FALSE)
+sf::sf_use_s2(FALSE)
 
 
 MPA.data <- read.csv(here('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.csv'),
@@ -100,6 +102,7 @@ joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "632"] <- "Pacific"
 joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "631"] <- "Pacific"
 joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "319"] <- "Pacific"
 joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "324"] <- "Pacific"
+
 #joined_data_renamed$Regions <- as.character(joined_data_renamed$Regions)
 
 joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "767"] <- "Pacific"

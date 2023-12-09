@@ -4,7 +4,7 @@ author: "Justin Maynard, Eric Newton, Maia Griffith"
 date: '`r Sys.Date()`'
 toc: TRUE
 output: html_document
-#runtime: shiny
+runtime: shiny
 ---
 \newpage
 \tableofcontents 
@@ -90,14 +90,14 @@ MPA.data.clean <- MPA.data %>%
 
 MPA.data.clean$Year.Established <- as.Date(MPA.data.clean$Year.Established, format = '%Y')
 
+
 colnames(MPA.data.clean)[8] <- "Area"
 colnames(MPA.data.clean)[9] <- "Marine.Area"
 colnames(MPA.data.clean)[11] <- "No.Take.Area"
 
-write.csv(MPA.data.clean, row.names = FALSE, 
-          file = "./DataProcessed/MPA.data.clean")
+#write.csv(MPA.data.clean, row.names = FALSE, 
+#          file = "./DataProcessed/MPA.data.clean.csv")
 ```
-
 
 \newpage
 
@@ -686,18 +686,16 @@ joined_data_renamed <- joined_data %>%
                           "GA, SC" = "South",
                           "TX, LA" = "South",
                           ))
-```
-
-
-```{r, echo=FALSE, message = FALSE, warning = FALSE}
 
 ui <- fluidPage(
   leafletOutput("map"),
-  absolutePanel(bottom = 10, left = 10,
+  absolutePanel(bottom = 10, right = 10,
                 selectInput("regions", label = "Select region to visualize", choices = unique(joined_data_renamed$Regions), selected = "Northeast"),
-                selectInput("filter", 
+                                selectInput("filter", 
                             label = "Select way to filter",
                             choices = c("Mgmt_Plan", "Level.of.Protection"))
+                            #choices = c("Management.Plan", "Level.of.Protection"))
+  
 
                   
   )
@@ -714,7 +712,8 @@ server <- function(input, output, session) {
     regionSelection =  input$regions 
     filterSelection = input$filter
     
-    m <- mapview(filter(joined_data_renamed, Regions == regionSelection), zcol = filterSelection)
+    m <- mapview(filter(joined_data_renamed, Regions == regionSelection), zcol = filterSelection, layer.name= c(filterSelection)) 
+    
     output$map <- renderLeaflet({
       m@map
     })
@@ -726,6 +725,7 @@ shinyApp(ui, server)
 
 
 ```
+
 
 \newpage
 
