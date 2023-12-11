@@ -2,10 +2,11 @@
 title: "Final Project"
 author: "Justin Maynard, Eric Newton, Maia Griffith"
 date: '`r Sys.Date()`'
-toc: true
 output: 
-  html_document:
-    
+  html_notebook: 
+    toc: yes
+    fig_width: 7
+    fig_caption: yes
 runtime: shiny
 ---
 \newpage
@@ -89,7 +90,7 @@ Table 1: Basic Dataset Information
 |Variables Used | OBJECTID, Site.Name, State, Level.of.Protection, Management.Plan, Year.Established, Marine.Status, Area..km2., Marine.Area..km2., Percent.Area.Marine, No.Take.Area..km2., Longitude, Latitude|
 |Data Range|1903 to 2022|
 
-```{r First Wrangling of Data, echo=FALSE, message = FALSE, warning = FALSE}
+```{r First Wrangling of Data, echo=FALSE, message=FALSE, warning=FALSE}
 MPA.data.clean <- MPA.data %>%
   select(OBJECTID, Site.Name, State, Level.of.Protection, Management.Plan, Year.Established, Marine.Status, Area..km2., Marine.Area..km2., Percent.Area.Marine, No.Take.Area..km2., Longitude, Latitude) %>% 
   filter(Year.Established != 0)
@@ -112,7 +113,7 @@ colnames(MPA.data.clean)[11] <- "No.Take.Area"
 
 Before analyzing the data, wanted to get an idea of the data we were working with, and created a simple visualization of the number MPAs created per year (see Figure 1 below). This showed us that there is quite a lot of variance among the years.
 
-```{r Exploring Processed Data 1, echo=FALSE, message = FALSE, warning = FALSE, fig.cap= 'Figure 1: Plot visualizing the number of MPAs created per year in the United States of America.'}
+```{r Exploring Processed Data 1, echo=FALSE, fig.cap = 'Figure 1: Preliminary data visualiztion to understand our data, showing the number of MPAs created per year in the United States.', message=FALSE, warning=FALSE}
 Clean.plot <- 
   ggplot(MPA.data.clean) +
   geom_bar(aes(x=Year.Established)) +
@@ -125,7 +126,7 @@ Clean.plot
 
 Understanding and visualizing the growth of MPAs in the United States over time is a critical piece in achieving the 30x30 goal. The following figures show the cumulative growth over time of the number of MPAs (Figure 2) and the total area of MPAs (Figure 3). 
 
-```{r Cumulative Number of Parks, echo=FALSE, message = FALSE, warning = FALSE, fig.cap= 'Figure 2: Plot visualizing the cumulative number of MPAs in the USA overtime.'}
+```{r Cumulative Number of Parks, echo=TRUE, fig.cap='Figure 2: Plot showing the cumulative sum of the total number of MPAs in the United States over time.', message=FALSE, warning=FALSE}
 MPA.parks.year <- MPA.data.clean %>%
   mutate("year" = year(Year.Established)) %>%
   group_by(year) %>%
@@ -153,7 +154,7 @@ total_num_plot <-
 total_num_plot
 ```
 
-```{r Cumulative Area of Parks, echo=FALSE, message = FALSE, warning = FALSE, fig.cap= 'Figure 3: Plot visualizing the cumulative area of MPAs in the USA overtime.'}
+```{r Cumulative Area of Parks, echo=FALSE, fig.cap = 'Figure 3: Plot showing the cumulative sum of total MPA area in the United States over time.', message=FALSE, warning=FALSE}
 # Wrangle data to have the cumulative total area over time.
 MPA.totalarea.year <- MPA.data.clean %>%
   mutate("year" = year(Year.Established)) %>%
@@ -228,11 +229,13 @@ Combined.Cumulative.Level.of.Protection <- rbind(
   
 ```
 
-## Question 1: What is the comparison of different Levels of Protection and Management Plans across all MPAs overtime?
+## Question 1: 
+
+What is the comparison of different Levels of Protection and Management Plans across all MPAs overtime?
 
 <Eric add some info here about the plots you are making and how the plots answer the question>
 
-```{r Level of Protection Plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 4: INSERT'}
+```{r Level of Protection Plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 4: INSERT', fig.width= 7}
 # Create plot of cumulative area of MPAs over time by Level of Protection. 
 Combined.plot.LoP <-
   ggplot(Combined.Cumulative.Level.of.Protection) +
@@ -247,7 +250,9 @@ Combined.plot.LoP <-
     y = "Cumulative Area (km2)") +
   scale_y_continuous(labels = scales::comma)
   print(Combined.plot.LoP)
-  
+```
+
+```{r LoP no Zoned No Take, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 5: INSERT', fig.width = 7}
 # Create plot of cumulative area of MPAs over time by Level of Protection without
 # 'Zoned w No Take' Level of Protection for visualization of Level of Protection levels
 # with smaller cumulative areas.   
@@ -265,7 +270,9 @@ Combined.no.Zoned.w.No.Take <-
     y = "Cumulative Area (km2)") +
   scale_y_continuous(labels = scales::comma)
   print(Combined.no.Zoned.w.No.Take)
+```
   
+```{r LoP bar plot, echo=FALSE, fig.cap='Figure 6: INSERT', message=FALSE, warning=FALSE}
 LevelofProtection.Count <- ggplot(MPA.data.clean) +
   geom_bar(aes(x=Level.of.Protection)) +
   labs(x = "Level of Protection",
@@ -277,7 +284,7 @@ LevelofProtection.Count <- ggplot(MPA.data.clean) +
 ```
 
 
-```{r Management Plan dfs, echo=FALSE, message = FALSE, warning = FALSE}
+```{r Management Plan dfs, echo=FALSE, message=FALSE, warning=FALSE}
 # Create new data frames for each Management Plan.
 Species.Management.Plan.df <- MPA.data.clean %>% 
   mutate("year" = year(Year.Established)) %>%
@@ -334,7 +341,7 @@ Combined.Cumulative.Management.Plan <- rbind(
 ```
 
 
-```{r Management Plan plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure X: INSERT'}
+```{r Management Plan plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 7: INSERT', fig.width=7}
 
 # Create plot of cumulative area of MPAs over time by Management Plan. 
 Combined.Management.Plan.plot <-
@@ -350,7 +357,9 @@ Combined.Management.Plan.plot <-
     y = "Cumulative Area (km2)") +
   scale_y_continuous(labels = scales::comma)
   print(Combined.Management.Plan.plot)
-  
+```
+
+```{r MP w/o site specific, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 8: INSERT', fig.width=7}
 # Create plot of cumulative area of MPAs over time by Management Plan without
 # 'Site Specific' Management Plans for visualization of Managmenet Plan levels 
 # with smaller cumulative areas.  
@@ -368,7 +377,9 @@ Combined.no.Site.Specific <-
     y = "Cumulative Area (km2)") +
   scale_y_continuous(labels = scales::comma)
   print(Combined.no.Site.Specific)
-  
+```
+
+```{r Management Plan count, echo=FALSE, fig.cap='Figure 9: INSERT', message=FALSE, warning=FALSE}
 Management.Plan.Count <- ggplot(MPA.data.clean) +
   geom_bar(aes(x=Management.Plan)) +
   labs(title = "Count of MPAs by Managment Plan",
@@ -381,9 +392,11 @@ Management.Plan.Count <- ggplot(MPA.data.clean) +
 ```
 
 
-## Question 2: How do MPAs from pre-2000 compare to post-2000 in terms of Level of Protection and Management Plan?
+## Question 2: 
 
-```{r Pre- T-test Wrangling, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure X: INSERT'}
+How do MPAs from pre-2000 compare to post-2000 in terms of Level of Protection and Management Plan?
+
+```{r Pre- T-test Wrangling, echo=FALSE, message = FALSE, warning = FALSE}
 # Wrangling the data in order to turn qualitative variables into numeric values.
 
 # Checking the categories of Level of Protection and Management Plan columns in the df.
@@ -430,7 +443,7 @@ To assign rankings for each Level of Protection and Management Plan, the metadat
 
 These rankings were then assigned to each MPA.
 
-```{r Assigning Rankings, echo=FALSE, message = FALSE, warning = FALSE}
+```{r Assigning Rankings, message=FALSE, warning=FALSE, include=FALSE}
 # Creating a new column with number values assigned to each Level of Protection.
 # Range from 1 (lowest level of protection) to 6 (highest level of protection).
 # Values/ranking based off metadata information of what each Level allows.
@@ -473,9 +486,11 @@ MPA_ttest_df$PrePost <- as.factor(ifelse(MPA_ttest_df$year < 2000, 'pre2000','po
 
 ```
 
+### Q2 Plots
+
 Before performing the t-tests, three plots for visualization of the data were created. These help show the difference between the pre- and post-2000 groups to get a better idea of the data.
 
-```{r Levels Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure X: Plot showing variation in Levels of Protection in the pre-2000 and post-2000 groups.'}
+```{r Levels Visuals Pre and Post 2000, echo=FALSE, fig.cap='Figure 10: Plot showing variation in Levels of Protection in the pre-2000 and post-2000 groups.', message=FALSE, warning=FALSE}
 # Making a basic plot to visualize the frequency of different rankings for pre/post 2000.
 
 # Starting with Level of Protection
@@ -491,7 +506,7 @@ LevelProt_density <-
 LevelProt_density
 ```
 
-```{r Management Plan Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure X: Plot showing variation in Management Plans in the pre-2000 and post-2000 groups.'}
+```{r Management Plan Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 11: Plot showing variation in Management Plans in the pre-2000 and post-2000 groups.'}
 # Moving on to Management Plan
 Mngmt_density <-
   ggplot(MPA_ttest_df,
@@ -505,7 +520,7 @@ Mngmt_density <-
 Mngmt_density
 ```
 
-```{r Combined Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure X: Plot showing variation in combined ranking scores in the pre-2000 and post-2000 groups.'}
+```{r Combined Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 12: Plot showing variation in combined ranking scores in the pre-2000 and post-2000 groups.'}
 # Finally on to Combined Ranking
 Combo_density <-
   ggplot(MPA_ttest_df,
@@ -520,9 +535,9 @@ Combo_density
 
 ```
 
-Next, perform the Welch Two Sample t-test to compare means before and after 2000 for the Level of Protection, Management Plan, and the Combined Average Ranking.
+Next, perform the Welch Two Sample t-test to compare means before and after 2000 for the Level of Protection, Management Plan, and the Combined Average Ranking. For **Levels of Protection**, the t-test reveals that in the post-2000 era, MPAs were given significantly higher Levels of Protection than before 2000 (df = 362.42, p-value = 4.593e-10). For **Management Plans**, no significant difference was found between the two time periods (df = 574, p-value = 0.2563). However, when using the **combined ranking** for the MPAs, which took the average score between Level of Protection and Management Plan, the post-2000 group still had significantly higher protections than the pre-2000 group (df = 403.16, p-value = 0.0006872). 
 
-```{r t-tests, echo=FALSE, message = FALSE, warning = FALSE}
+```{r t-tests, message=FALSE, warning=FALSE, include=FALSE}
 # Two-sample T-test for Level of Protection
 # Null: the protection level means are equal; alt: means are not equal)
 level.twosample <- t.test(MPA_ttest_df$Level_Val ~ MPA_ttest_df$PrePost)
@@ -540,14 +555,12 @@ combo.twosample
 
 ```
 
-Results:
+## Question 3: 
 
-For Levels of Protection, the t-test reveals that in the post-2000 era, MPAs were given significantly higher Levels of Protection than before 2000 (df = 362.42, p-value = 4.593e-10). For Management Plans, no significant difference was found between the two time periods (df = 574, p-value = 0.2563). However, when using the combined ranking for the MPAs, which took the average score between Level of Protection and Management Plan, the post-2000 group still had significantly higher protections than the pre-2000 group (df = 403.16, p-value = 0.0006872). 
-
-##Qestion 3: Where are the MPAs and how can we visualize it across the USA?
+Where are the MPAs and how can we visualize it across the USA?
 
 <Justin insert some overview info about what you did in your code>
-```{r, echo=FALSE, message = FALSE, warning = FALSE}
+```{r Shiny Maps, echo=FALSE, message=FALSE, warning=FALSE}
 MPA.sites.sf <- MPA.data.clean %>% 
   st_as_sf(coords = c("Longitude","Latitude"),
            crs = 4326)
