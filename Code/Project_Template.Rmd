@@ -21,7 +21,7 @@ runtime: shiny
 knitr::opts_chunk$set(
 	message = FALSE,
 	warning = FALSE,
-	include = FALSE
+	include = TRUE
 )
 # Set your working directory
 library(here)
@@ -235,7 +235,7 @@ What is the comparison of different Levels of Protection and Management Plans ac
 
 <Eric add some info here about the plots you are making and how the plots answer the question>
 
-```{r Level of Protection Plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 4: INSERT', fig.width= 7}
+```{r Level of Protection Plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 4: Plot showing the cumulative sum of MPA area over time by Level of Protection.', fig.width= 7}
 # Create plot of cumulative area of MPAs over time by Level of Protection. 
 Combined.plot.LoP <-
   ggplot(Combined.Cumulative.Level.of.Protection) +
@@ -252,7 +252,7 @@ Combined.plot.LoP <-
   print(Combined.plot.LoP)
 ```
 
-```{r LoP no Zoned No Take, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 5: INSERT', fig.width = 7}
+```{r LoP no Zoned No Take, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 5: Plot showing cumulative area of MPAs over time by Level of Protection with MPAs Zoned with No Take Areas omitted.', fig.width = 7}
 # Create plot of cumulative area of MPAs over time by Level of Protection without
 # 'Zoned w No Take' Level of Protection for visualization of Level of Protection levels
 # with smaller cumulative areas.   
@@ -272,7 +272,7 @@ Combined.no.Zoned.w.No.Take <-
   print(Combined.no.Zoned.w.No.Take)
 ```
   
-```{r LoP bar plot, echo=FALSE, fig.cap='Figure 6: INSERT', message=FALSE, warning=FALSE}
+```{r LoP bar plot, echo=FALSE, fig.cap='Figure 6: Count of MPAs in the United States by Level of Protection.', message=FALSE, warning=FALSE}
 LevelofProtection.Count <- ggplot(MPA.data.clean) +
   geom_bar(aes(x=Level.of.Protection)) +
   labs(x = "Level of Protection",
@@ -319,13 +319,13 @@ MPA.Programmatic.Management.Plan.df <- MPA.data.clean %>%
 Fisheries.Management.Plan.df <- MPA.data.clean %>% 
   mutate("year" = year(Year.Established)) %>%
   arrange(ymd(MPA.data.clean$Year.Established)) %>% 
-  filter(Management.Plan == "MPA Programmatic Management Plan") %>% 
+  filter(Management.Plan == "Non-MPA Programmatic Fisheries Management Plan") %>% 
   mutate("Cum.Area" = cumsum(Area))
 
 Community.Agreement.df <- MPA.data.clean %>% 
   mutate("year" = year(Year.Established)) %>%
   arrange(ymd(MPA.data.clean$Year.Established)) %>% 
-  filter(Management.Plan == "MPA Programmatic Management Plan") %>% 
+  filter(Management.Plan == "Community Agreement") %>% 
   mutate("Cum.Area" = cumsum(Area))
 
 # Combine data frames into a cumulative data frame with each Management Plan.
@@ -341,7 +341,7 @@ Combined.Cumulative.Management.Plan <- rbind(
 ```
 
 
-```{r Management Plan plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 7: INSERT', fig.width=7}
+```{r Management Plan plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 7: Plot showing the cumulative sum of MPA area over time by Management Plan', fig.width=7}
 
 # Create plot of cumulative area of MPAs over time by Management Plan. 
 Combined.Management.Plan.plot <-
@@ -359,17 +359,17 @@ Combined.Management.Plan.plot <-
   print(Combined.Management.Plan.plot)
 ```
 
-```{r MP w/o site specific, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 8: INSERT', fig.width=7}
+```{r MP w/o site specific, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 8: Plot showing the cumulative sum of MPA area over time by Management Area with Site-Specific Management Plans omitted.', fig.width=7}
 # Create plot of cumulative area of MPAs over time by Management Plan without
 # 'Site Specific' Management Plans for visualization of Managmenet Plan levels 
 # with smaller cumulative areas.  
 Combined.no.Site.Specific <-
-  ggplot(Combined.Cumulative.Level.of.Protection %>% 
-    filter(Level.of.Protection != "Site-Specific Management Plan")) +
+  ggplot(Combined.Cumulative.Management.Plan %>% 
+    filter(Management.Plan != "Site-Specific Management Plan")) +
   geom_line(aes(
     x = year,
     y = Cum.Area,
-    color = Level.of.Protection),
+    color = Management.Plan),
     size = 1) +
   labs(
     title = "Cumulative Area of MPAs over Time by Management Plan\n excluding 'Site-Specific Management Plan'",
@@ -379,7 +379,7 @@ Combined.no.Site.Specific <-
   print(Combined.no.Site.Specific)
 ```
 
-```{r Management Plan count, echo=FALSE, fig.cap='Figure 9: INSERT', message=FALSE, warning=FALSE}
+```{r Management Plan count, echo=FALSE, fig.cap='Figure 9: Count of MPAs in the United States by Level of Protection.', message=FALSE, warning=FALSE}
 Management.Plan.Count <- ggplot(MPA.data.clean) +
   geom_bar(aes(x=Management.Plan)) +
   labs(title = "Count of MPAs by Managment Plan",
@@ -668,12 +668,13 @@ shinyApp(ui, server)
 
 ```
 
-
 \newpage
 
 # Summary and Conclusions
 
-<Eric insert something about your plots>
+Our analysis of MPA growth over time by Level of Protection and Management Plan clearly demonstrates a Level of Protection category and Management Plan that far exceeds others in area. MPAs with a 'Zoned with No Take Areas' Level of Protection and Site Specific Management Plans cover more area than other categories by an order of magnitude, as illustrated in Figures 4 and 7. Two large MPAs principally account for this distinction - Papahanaumokuakea Marine National Monument and Pacific Remote Islands Marine National Monument. While 'Zoned with No Take Areas' is considered a relatively low Level of Protection, Site Specific Management Plans are the strongest Management Plan type in our ranking. 
+
+To better visualize the change in MPA area over time for other Level of Protection categories and Management Plans, plots were made that omit 'Zoned with No Take Areas' MPAs with Site Specific Management Plans. These plots reveal that MPAs with 'Uniform Multiple Use' protection, the category we assigned as the lowest Level of Protection, accounted for the second largest cumulative area. Conversely, MPAs with Non-MPA Programmatic Habitat Management Plans make up the second largest cumulative area, a relatively strong Management Plan type. 
 
 When comparing pre-2000 and post-2000 ranked Levels of Protection and Management Plans, we can conclude that overall there appears to a significant difference between the two time periods. This means we can reject our null hypothesis and accept our alternative hypothesis that the pre- and post-2000 groups would have different overall protections. We can also infer that the executive order from President Clinton may have helped make this change, although this cannot be 100% confirmed, as correlation does not always mean causation. Further studies into the creation of each MPA should be done to evaluate the reasons behind various Level of Protection and Management Plan choices.
 
