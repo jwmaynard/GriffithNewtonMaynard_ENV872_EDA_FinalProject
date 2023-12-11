@@ -2,8 +2,10 @@
 title: "Final Project"
 author: "Justin Maynard, Eric Newton, Maia Griffith"
 date: '`r Sys.Date()`'
-toc: TRUE
-output: html_document
+toc: true
+output: 
+  html_document:
+    
 runtime: shiny
 ---
 \newpage
@@ -15,6 +17,11 @@ runtime: shiny
 \newpage
 
 ```{r setup, echo=FALSE, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(
+	message = FALSE,
+	warning = FALSE,
+	include = FALSE
+)
 # Set your working directory
 library(here)
 here()
@@ -42,7 +49,6 @@ mytheme <- theme_classic(base_size = 14)+
     legend.position = "bottom",
     panel.grid.major = element_line(color = "grey", linetype = "dashed"))
    
-    
 theme_set(mytheme)
 
 # Load your datasets
@@ -97,6 +103,7 @@ colnames(MPA.data.clean)[11] <- "No.Take.Area"
 
 #write.csv(MPA.data.clean, row.names = FALSE, 
 #          file = "./DataProcessed/MPA.data.clean.csv")
+# Used code above to save our processed data, but commented out due to issues with RShiny.
 ```
 
 \newpage
@@ -104,18 +111,20 @@ colnames(MPA.data.clean)[11] <- "No.Take.Area"
 # Exploratory Analysis 
 
 Before analyzing the data, wanted to get an idea of the data we were working with, and created a simple visualization of the number MPAs created per year (see Figure 1 below). This showed us that there is quite a lot of variance among the years.
+
 ```{r Exploring Processed Data 1, echo=FALSE, message = FALSE, warning = FALSE, fig.cap= 'Figure 1: Plot visualizing the number of MPAs created per year in the United States of America.'}
 Clean.plot <- 
   ggplot(MPA.data.clean) +
   geom_bar(aes(x=Year.Established)) +
   scale_x_date(date_breaks = "2 years", date_labels = "%Y", limits = as.Date(c("2000-11-15", "2023-11-15"))) +
   labs(x = "Year", y = "Count", title = "Number MPAs per Year") +
-  theme(axis.text.x = element_text(angle = 45))
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
 
 Clean.plot
 ```
 
-Understanding and visualizing the growth of MPAs in the United States over time is a critical piece in acheiving the 30x30 goal. The following figures show the cumulative growth over time of the number of MPAs (Figure 2) and the total area of MPAs (Figure 3). 
+Understanding and visualizing the growth of MPAs in the United States over time is a critical piece in achieving the 30x30 goal. The following figures show the cumulative growth over time of the number of MPAs (Figure 2) and the total area of MPAs (Figure 3). 
+
 ```{r Cumulative Number of Parks, echo=FALSE, message = FALSE, warning = FALSE, fig.cap= 'Figure 2: Plot visualizing the cumulative number of MPAs in the USA overtime.'}
 MPA.parks.year <- MPA.data.clean %>%
   mutate("year" = year(Year.Established)) %>%
@@ -159,7 +168,8 @@ total_area_plot <-
   labs(title = "Total Area of MPAs Over Time",
        x = "Year",
        y = "Cumulative Area of MPAs") +
-  scale_x_date(date_breaks = "10 years", date_labels = "%Y")
+  scale_x_date(date_breaks = "10 years", date_labels = "%Y") +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
 
 total_area_plot
 ```
