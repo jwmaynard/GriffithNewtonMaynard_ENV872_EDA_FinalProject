@@ -170,7 +170,7 @@ These plots reveal a strong upward trend of MPAs both in number and in area. How
 # Analysis
 Each question of our analysis required more wrangling of the data before creating plots, running tests, and making maps.
 ```{r Level of Protection DFs, echo=FALSE, message = FALSE, warning = FALSE}
-# Create new data frames for each Level of Protection
+# Create new data frames for each Level of Protection.
 Zoned.w.No.Take.Areas.df <- MPA.data.clean %>% 
   mutate("year" = year(Year.Established)) %>%
   arrange(ymd(MPA.data.clean$Year.Established)) %>% 
@@ -207,6 +207,7 @@ No.Impact.df <- MPA.data.clean %>%
   filter(Level.of.Protection == "No Impact") %>% 
   mutate("Cum.Area" = cumsum(Area))
 
+# Combine data frames into a cumulative data frame with each Level of Protection.
 Combined.Cumulative.Level.of.Protection <- rbind(
   Zoned.w.No.Take.Areas.df,
   Uniform.Multiple.Use.df,
@@ -222,79 +223,7 @@ Combined.Cumulative.Level.of.Protection <- rbind(
 <Eric add some info here about the plots you are making and how the plots answer the question>
 
 ```{r Level of Protection Plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 4: INSERT'}
-
-Zoned.w.No.Take.Areas.plot <- 
-  ggplot(Zoned.w.No.Take.Areas.df) +
-  geom_line(aes(
-    x = year,
-    y = Cum.Area)) +
-  labs(
-    title = "Zoned with No Take Areas",
-    x = "Time",
-    y = "Area (million km^2)") +
-  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
-#  print(Zoned.w.No.Take.Areas.plot)
-
-Uniform.Multiple.Use.plot <- 
-  ggplot(Uniform.Multiple.Use.df) +
-  geom_line(aes(
-    x = year,
-    y = Cum.Area)) +
-  labs(
-    title = "Uniform Multiple Use",
-    x = "Time",
-    y = "Area (million km^2)") +
-  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
-#  print(Uniform.Multiple.Use.plot)
-
-No.Take.plot <- 
-  ggplot(No.Take.df) +
-  geom_line(aes(
-    x = year,
-    y = Cum.Area)) +
-  labs(
-    title = "No Take",
-    x = "Time",
-    y = "Area (million km^2)") +
-  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
-#  print(No.Take.plot)
-
-Zoned.Multiple.Use.plot <- 
-  ggplot(Zoned.Multiple.Use.df) +
-  geom_line(aes(
-    x = year,
-    y = Cum.Area)) +
-  labs(
-    title = "Zoned Multiple Use",
-    x = "Time",
-    y = "Area (million km^2)") +
-  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
-#  print(Zoned.Multiple.Use.plot)
-
-No.Access.plot <- 
-  ggplot(No.Access.df) +
-  geom_line(aes(
-    x = year,
-    y = Cum.Area)) +
-  labs(
-    title = "No Access",
-    x = "Time",
-    y = "Area (million km^2)") +
-  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
-#  print(No.Access.plot)
-
-No.Impact.plot <-
-  ggplot(No.Impact.df) +
-  geom_line(aes(
-    x = year,
-    y = Cum.Area)) +
-  labs(
-    title = "No Impact",
-    x = "Time",
-    y = "Area (million km^2)") +
-  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
-#  print(No.Impact.plot)
-
+# Create plot of cumulative area of MPAs over time by Level of Protection. 
 Combined.plot.LoP <-
   ggplot(Combined.Cumulative.Level.of.Protection) +
   geom_line(aes(
@@ -305,11 +234,13 @@ Combined.plot.LoP <-
   labs(
     title = "Cumulative Area of MPAs over Time by Level of Protection",
     x = "Time",
-    y = "Cumulative Area (km)") +
+    y = "Cumulative Area (km2)") +
   scale_y_continuous(labels = scales::comma)
-
-Combined.plot.LoP
-
+  print(Combined.plot.LoP)
+  
+# Create plot of cumulative area of MPAs over time by Level of Protection without
+# 'Zoned w No Take' Level of Protection for visualization of Level of Protection levels
+# with smaller cumulative areas.   
 Combined.no.Zoned.w.No.Take <-
   ggplot(Combined.Cumulative.Level.of.Protection %>% 
     filter(Level.of.Protection != "Zoned w/No Take Areas")) +
@@ -321,7 +252,7 @@ Combined.no.Zoned.w.No.Take <-
   labs(
     title = "Cumulative Area of MPAs over Time by Level of Protection\n excluding 'Zoned with No Take Areas'",
     x = "Time",
-    y = "Cumulative Area (km)") +
+    y = "Cumulative Area (km2)") +
   scale_y_continuous(labels = scales::comma)
   print(Combined.no.Zoned.w.No.Take)
   
@@ -330,23 +261,14 @@ LevelofProtection.Count <- ggplot(MPA.data.clean) +
   labs(x = "Level of Protection",
        y = "Count") +
   theme(axis.text.x = element_text(angle = 90))
-#print(LevelofProtection.Count)
+  print(LevelofProtection.Count)
 
-LevelofProtection.Area <- ggplot(MPA.data.clean) +
-  geom_col(aes(
-    x = Level.of.Protection,
-    y = Area)) +
-  labs(x = "Level of Protection",
-       y = "Total Area") +
-  theme(axis.text.x = element_text(angle = 90)) +
-  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
-#print(LevelofProtection.Area)
 
 ```
 
 
 ```{r Management Plan dfs, echo=FALSE, message = FALSE, warning = FALSE}
-
+# Create new data frames for each Management Plan.
 Species.Management.Plan.df <- MPA.data.clean %>% 
   mutate("year" = year(Year.Established)) %>%
   arrange(ymd(MPA.data.clean$Year.Established)) %>% 
@@ -389,6 +311,7 @@ Community.Agreement.df <- MPA.data.clean %>%
   filter(Management.Plan == "MPA Programmatic Management Plan") %>% 
   mutate("Cum.Area" = cumsum(Area))
 
+# Combine data frames into a cumulative data frame with each Management Plan.
 Combined.Cumulative.Management.Plan <- rbind(
   Species.Management.Plan.df,
   Site.Specific.Management.Plan.df,
@@ -403,6 +326,7 @@ Combined.Cumulative.Management.Plan <- rbind(
 
 ```{r Management Plan plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure X: INSERT'}
 
+# Create plot of cumulative area of MPAs over time by Management Plan. 
 Combined.Management.Plan.plot <-
   ggplot(Combined.Cumulative.Management.Plan) +
   geom_line(aes(
@@ -413,10 +337,13 @@ Combined.Management.Plan.plot <-
   labs(
     title = "Cumulative Area of MPAs over Time by Management Plan",
     x = "Time",
-    y = "Cumulative Area (km)") +
+    y = "Cumulative Area (km2)") +
   scale_y_continuous(labels = scales::comma)
   print(Combined.Management.Plan.plot)
-
+  
+# Create plot of cumulative area of MPAs over time by Management Plan without
+# 'Site Specific' Management Plans for visualization of Managmenet Plan levels 
+# with smaller cumulative areas.  
 Combined.no.Site.Specific <-
   ggplot(Combined.Cumulative.Level.of.Protection %>% 
     filter(Level.of.Protection != "Site-Specific Management Plan")) +
@@ -428,26 +355,18 @@ Combined.no.Site.Specific <-
   labs(
     title = "Cumulative Area of MPAs over Time by Management Plan\n excluding 'Site-Specific Management Plan'",
     x = "Time",
-    y = "Cumulative Area (km)") +
+    y = "Cumulative Area (km2)") +
   scale_y_continuous(labels = scales::comma)
   print(Combined.no.Site.Specific)
   
 Management.Plan.Count <- ggplot(MPA.data.clean) +
   geom_bar(aes(x=Management.Plan)) +
-  labs(x = "Management Plan Type",
+  labs(title = "Count of MPAs by Managment Plan",
+       x = "Management Plan Type",
        y = "Count") +
   theme(axis.text.x = element_text(angle = 90))
-print(Management.Plan.Count)
+  print(Management.Plan.Count)
 
-Management.Plan.Area <- ggplot(MPA.data.clean) +
-  geom_col(aes(
-    x = Management.Plan,
-    y = Area)) +
-  labs(x = "Management Plan",
-       y = "Total Area (million km^2)") +
-  theme(axis.text.x = element_text(angle = 90)) +
-  scale_y_continuous(labels = scales::number_format(scale = 1e-4))
-print(Management.Plan.Area)
 
 ```
 
