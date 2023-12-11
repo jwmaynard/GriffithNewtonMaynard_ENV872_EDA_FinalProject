@@ -1,0 +1,748 @@
+---
+title: "Final Project"
+author: "Justin Maynard, Eric Newton, Maia Griffith"
+date: '`r Sys.Date()`'
+toc: true
+output: 
+  html_document:
+    
+runtime: shiny
+---
+\newpage
+\tableofcontents 
+\newpage
+\listoftables 
+\newpage
+\listoffigures 
+\newpage
+
+```{r setup, echo=FALSE, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(
+	message = FALSE,
+	warning = FALSE,
+	include = FALSE
+)
+# Set your working directory
+library(here)
+here()
+
+# Load your packages
+library(shiny)
+library(leaflet)
+library(RColorBrewer)
+library(ggrepel)
+library(tidyverse)
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+library(sf)
+library(knitr)
+library(mapview); mapviewOptions(fgb = FALSE)
+sf::sf_use_s2(FALSE)
+
+# Set your ggplot theme
+mytheme <- theme_classic(base_size = 14)+
+  theme(legend.background = element_rect(
+    color = "grey",
+    fill = "white"),
+    plot.title = element_text(hjust = 0.5, size = 12),
+    legend.position = "bottom",
+    panel.grid.major = element_line(color = "grey", linetype = "dashed"))
+   
+theme_set(mytheme)
+
+# Load your datasets
+MPA.data <- read.csv(here('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.csv'),
+                     stringsAsFactors = TRUE, 
+                     colClasses = c('Year.Established' = 'factor'))
+```
+
+
+# Rationale and Research Questions
+
+Many countries around the world, including the United States, have committed to protecting 30% of their land and water, including protecting 30% of their ocean, [by 2030](https://www.state.gov/the-united-states-announces-the-first-cohort-of-countries-to-endorse-the-ocean-conservation-pledge-at-cop27/#:~:text=During%20the%20seventh%20Our%20Ocean,their%20national%20jurisdiction%20by%202030.) by 2030. Current estimates reveal that the USA appears to be doing quite well, with [around 26%](https://www.frontiersin.org/articles/10.3389/fmars.2022.849927/full) of our oceans and waters currently under some type of protection. However, not all of the protected areas provide the same level of conservation or management. Understanding and visualizing the growth of MPAs and analyzing their protective strength in the United States over time is a critical piece in achieving the 30x30 goal.
+
+We decided to focus on MPAs before and after an executive order was released from President Bill Clinton in 2000, which aimed to improve the protections provided from MPAs. 
+
+From [Executive Order 13158](https://www.govinfo.gov/content/pkg/WCPD-2000-05-29/pdf/WCPD-2000-05-29-Pg1230.pdf):
+“To this end, the purpose of this order is to, consistent with domestic and international law: (a) **strengthen** the management, protection, and conservation of existing marine protected areas and **establish new or expanded MPAs**; (b) develop a scientifically based, comprehensive national **system of MPAs** representing diverse U.S. marine ecosystems, and the Nation’s natural and cultural resources; and (c) **avoid causing harm** to MPAs through federally conducted, approved, or funded activities.”
+
+This landmark declaration helped spur the future creation of large and important MPAs in subsequent years. Our dataset is from NOAA's list of Marine Protected Areas in the United States, which includes information on the size, location, type, and status of MPAs.
+
+## Research Questions
+1. What is the comparison of different Levels of Protection and Management Plans across all MPAs overtime?
+2. How do MPAs from pre-2000 compare to post-2000 in terms of Level of Protection and Management Plan?
+3. Where are the MPAs and how can we visualize it across the USA?
+
+
+\newpage
+
+# Dataset Information
+The dataset from NOAA was created by NOAA using information from state and federal agencies dealing with the creation and management of MPAs in the USA. Almost all the MPAs had all the information populated fully, and the metadata included descriptions of each item. The metadata was key in creating the rankings for protections later on. To process the data, we selected only the columns we were going to use in our analysis: OBJECTID, Site.Name, State, Level.of.Protection, Management.Plan, Year.Established, Marine.Status, Area..km2., Marine.Area..km2., Percent.Area.Marine, No.Take.Area..km2., Longitude, Latitude. Then we filtered out the few rows without a Year.Established, formatted our Year.Established as a date, and then renamed a few columns for ease of coding. The basic structure is outline below (Table 1).
+
+Table 1: Basic Dataset Information
+
+|Detail | Description|
+|:-----|:------|
+|Data Source| [NOAA Marine Protected Area Inventory](https://marineprotectedareas.noaa.gov/dataanalysis/mpainventory/)|
+|Metadata Source|[ONMS Metadata Library](https://www.fisheries.noaa.gov/inport/item/69507)|
+|Variables Used | OBJECTID, Site.Name, State, Level.of.Protection, Management.Plan, Year.Established, Marine.Status, Area..km2., Marine.Area..km2., Percent.Area.Marine, No.Take.Area..km2., Longitude, Latitude|
+|Data Range|1903 to 2022|
+
+```{r First Wrangling of Data, echo=FALSE, message = FALSE, warning = FALSE}
+MPA.data.clean <- MPA.data %>%
+  select(OBJECTID, Site.Name, State, Level.of.Protection, Management.Plan, Year.Established, Marine.Status, Area..km2., Marine.Area..km2., Percent.Area.Marine, No.Take.Area..km2., Longitude, Latitude) %>% 
+  filter(Year.Established != 0)
+
+MPA.data.clean$Year.Established <- as.Date(MPA.data.clean$Year.Established, format = '%Y')
+
+
+colnames(MPA.data.clean)[8] <- "Area"
+colnames(MPA.data.clean)[9] <- "Marine.Area"
+colnames(MPA.data.clean)[11] <- "No.Take.Area"
+
+#write.csv(MPA.data.clean, row.names = FALSE, 
+#          file = "./DataProcessed/MPA.data.clean.csv")
+# Used code above to save our processed data, but commented out due to issues with RShiny.
+```
+
+\newpage
+
+# Exploratory Analysis 
+
+Before analyzing the data, wanted to get an idea of the data we were working with, and created a simple visualization of the number MPAs created per year (see Figure 1 below). This showed us that there is quite a lot of variance among the years.
+
+```{r Exploring Processed Data 1, echo=FALSE, message = FALSE, warning = FALSE, fig.cap= 'Figure 1: Plot visualizing the number of MPAs created per year in the United States of America.'}
+Clean.plot <- 
+  ggplot(MPA.data.clean) +
+  geom_bar(aes(x=Year.Established)) +
+  scale_x_date(date_breaks = "2 years", date_labels = "%Y", limits = as.Date(c("2000-11-15", "2023-11-15"))) +
+  labs(x = "Year", y = "Count", title = "Number MPAs per Year") +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+
+Clean.plot
+```
+
+Understanding and visualizing the growth of MPAs in the United States over time is a critical piece in achieving the 30x30 goal. The following figures show the cumulative growth over time of the number of MPAs (Figure 2) and the total area of MPAs (Figure 3). 
+
+```{r Cumulative Number of Parks, echo=FALSE, message = FALSE, warning = FALSE, fig.cap= 'Figure 2: Plot visualizing the cumulative number of MPAs in the USA overtime.'}
+MPA.parks.year <- MPA.data.clean %>%
+  mutate("year" = year(Year.Established)) %>%
+  group_by(year) %>%
+  summarise(count = n()) %>% # Getting the number of parks created per year
+  mutate('Cumulative' = cumsum(count)) # Calculating a cumulative sum of the total number of parks per year
+
+# Plot the cumulative sum of NUMBER of MPAs per year to visualize trend over time.
+total_num_plot <-
+  ggplot(MPA.parks.year) +
+  geom_line(aes(x = year,
+                y = Cumulative)) +
+  labs(title = "Total Number of MPAs Over Time",
+       x = "Year",
+       y = "Cumulative Number of MPAs") +
+  geom_point(data=MPA.parks.year %>% filter(year == 2000| year == 2009| year == 2014),
+             aes(x = year,
+                 y = Cumulative)) +
+  geom_label_repel(data=MPA.parks.year %>% filter(year == 2000| year == 2009| year == 2014),
+                                            aes(label = year,
+                                                x = year,
+                                                y = Cumulative),
+                                            box.padding   = 0.35, 
+                                            point.padding = 0.75)
+
+total_num_plot
+```
+
+```{r Cumulative Area of Parks, echo=FALSE, message = FALSE, warning = FALSE, fig.cap= 'Figure 3: Plot visualizing the cumulative area of MPAs in the USA overtime.'}
+# Wrangle data to have the cumulative total area over time.
+MPA.totalarea.year <- MPA.data.clean %>%
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>%
+  mutate('Cum_Area' = cumsum(Area))
+
+# Plot the cumulative sum of AREA of MPAs per year to visualize trend over time.
+total_area_plot <-
+  ggplot(MPA.totalarea.year) +
+  geom_line(aes(x = Year.Established,
+                y = Cum_Area)) +
+  labs(title = "Total Area of MPAs Over Time",
+       x = "Year",
+       y = "Cumulative Area of MPAs") +
+  scale_x_date(date_breaks = "10 years", date_labels = "%Y") +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+
+total_area_plot
+```
+These plots reveal a strong upward trend of MPAs both in number and in area. However, this does not tell us anything about the strength of the MPAs being created. Our analysis will focus on visualizing and testing to see if there was in fact a difference in park strength before and after President Clinton's executive order.
+
+\newpage
+
+# Analysis
+Each question of our analysis required more wrangling of the data before creating plots, running tests, and making maps.
+```{r Level of Protection DFs, echo=FALSE, message = FALSE, warning = FALSE}
+# Create new data frames for each Level of Protection
+Zoned.w.No.Take.Areas.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Level.of.Protection == "Zoned w/No Take Areas") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Uniform.Multiple.Use.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Level.of.Protection == "Uniform Multiple Use") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+No.Take.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Level.of.Protection == "No Take") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Zoned.Multiple.Use.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Level.of.Protection == "Zoned Multiple Use") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+  
+No.Access.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Level.of.Protection == "No Access") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+No.Impact.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Level.of.Protection == "No Impact") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Combined.Cumulative.Level.of.Protection <- rbind(
+  Zoned.w.No.Take.Areas.df,
+  Uniform.Multiple.Use.df,
+  No.Take.df,
+  Zoned.Multiple.Use.df,
+  No.Access.df,
+  No.Impact.df)
+  
+```
+
+## Question 1: What is the comparison of different Levels of Protection and Management Plans across all MPAs overtime?
+
+<Eric add some info here about the plots you are making and how the plots answer the question>
+
+```{r Level of Protection Plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 4: INSERT'}
+
+Zoned.w.No.Take.Areas.plot <- 
+  ggplot(Zoned.w.No.Take.Areas.df) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area)) +
+  labs(
+    title = "Zoned with No Take Areas",
+    x = "Time",
+    y = "Area (million km^2)") +
+  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
+#  print(Zoned.w.No.Take.Areas.plot)
+
+Uniform.Multiple.Use.plot <- 
+  ggplot(Uniform.Multiple.Use.df) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area)) +
+  labs(
+    title = "Uniform Multiple Use",
+    x = "Time",
+    y = "Area (million km^2)") +
+  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
+#  print(Uniform.Multiple.Use.plot)
+
+No.Take.plot <- 
+  ggplot(No.Take.df) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area)) +
+  labs(
+    title = "No Take",
+    x = "Time",
+    y = "Area (million km^2)") +
+  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
+#  print(No.Take.plot)
+
+Zoned.Multiple.Use.plot <- 
+  ggplot(Zoned.Multiple.Use.df) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area)) +
+  labs(
+    title = "Zoned Multiple Use",
+    x = "Time",
+    y = "Area (million km^2)") +
+  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
+#  print(Zoned.Multiple.Use.plot)
+
+No.Access.plot <- 
+  ggplot(No.Access.df) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area)) +
+  labs(
+    title = "No Access",
+    x = "Time",
+    y = "Area (million km^2)") +
+  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
+#  print(No.Access.plot)
+
+No.Impact.plot <-
+  ggplot(No.Impact.df) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area)) +
+  labs(
+    title = "No Impact",
+    x = "Time",
+    y = "Area (million km^2)") +
+  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
+#  print(No.Impact.plot)
+
+Combined.plot.LoP <-
+  ggplot(Combined.Cumulative.Level.of.Protection) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area,
+    color = Level.of.Protection),
+    size = 1.5) +
+  labs(
+    title = "Cumulative Area of MPAs over Time by Level of Protection",
+    x = "Time",
+    y = "Cumulative Area (km)") +
+  scale_y_continuous(labels = scales::comma)
+
+Combined.plot.LoP
+
+Combined.no.Zoned.w.No.Take <-
+  ggplot(Combined.Cumulative.Level.of.Protection %>% 
+    filter(Level.of.Protection != "Zoned w/No Take Areas")) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area,
+    color = Level.of.Protection),
+    size = 1) +
+  labs(
+    title = "Cumulative Area of MPAs over Time by Level of Protection\n excluding 'Zoned with No Take Areas'",
+    x = "Time",
+    y = "Cumulative Area (km)") +
+  scale_y_continuous(labels = scales::comma)
+  print(Combined.no.Zoned.w.No.Take)
+  
+LevelofProtection.Count <- ggplot(MPA.data.clean) +
+  geom_bar(aes(x=Level.of.Protection)) +
+  labs(x = "Level of Protection",
+       y = "Count") +
+  theme(axis.text.x = element_text(angle = 90))
+#print(LevelofProtection.Count)
+
+LevelofProtection.Area <- ggplot(MPA.data.clean) +
+  geom_col(aes(
+    x = Level.of.Protection,
+    y = Area)) +
+  labs(x = "Level of Protection",
+       y = "Total Area") +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_y_continuous(labels = scales::number_format(scale = 1e-6))
+#print(LevelofProtection.Area)
+
+```
+
+
+```{r Management Plan dfs, echo=FALSE, message = FALSE, warning = FALSE}
+
+Species.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "Non-MPA Programmatic Species Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Site.Specific.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "Site-Specific Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+No.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "No Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Habitat.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "Non-MPA Programmatic Habitat Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+MPA.Programmatic.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "MPA Programmatic Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Fisheries.Management.Plan.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "MPA Programmatic Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Community.Agreement.df <- MPA.data.clean %>% 
+  mutate("year" = year(Year.Established)) %>%
+  arrange(ymd(MPA.data.clean$Year.Established)) %>% 
+  filter(Management.Plan == "MPA Programmatic Management Plan") %>% 
+  mutate("Cum.Area" = cumsum(Area))
+
+Combined.Cumulative.Management.Plan <- rbind(
+  Species.Management.Plan.df,
+  Site.Specific.Management.Plan.df,
+  No.Management.Plan.df,
+  Habitat.Management.Plan.df,
+  MPA.Programmatic.Management.Plan.df,
+  Fisheries.Management.Plan.df,
+  Community.Agreement.df)
+
+```
+
+
+```{r Management Plan plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure X: INSERT'}
+
+Combined.Management.Plan.plot <-
+  ggplot(Combined.Cumulative.Management.Plan) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area,
+    color = Management.Plan),
+    size = 1.5) +
+  labs(
+    title = "Cumulative Area of MPAs over Time by Management Plan",
+    x = "Time",
+    y = "Cumulative Area (km)") +
+  scale_y_continuous(labels = scales::comma)
+  print(Combined.Management.Plan.plot)
+
+Combined.no.Site.Specific <-
+  ggplot(Combined.Cumulative.Level.of.Protection %>% 
+    filter(Level.of.Protection != "Site-Specific Management Plan")) +
+  geom_line(aes(
+    x = year,
+    y = Cum.Area,
+    color = Level.of.Protection),
+    size = 1) +
+  labs(
+    title = "Cumulative Area of MPAs over Time by Management Plan\n excluding 'Site-Specific Management Plan'",
+    x = "Time",
+    y = "Cumulative Area (km)") +
+  scale_y_continuous(labels = scales::comma)
+  print(Combined.no.Site.Specific)
+  
+Management.Plan.Count <- ggplot(MPA.data.clean) +
+  geom_bar(aes(x=Management.Plan)) +
+  labs(x = "Management Plan Type",
+       y = "Count") +
+  theme(axis.text.x = element_text(angle = 90))
+print(Management.Plan.Count)
+
+Management.Plan.Area <- ggplot(MPA.data.clean) +
+  geom_col(aes(
+    x = Management.Plan,
+    y = Area)) +
+  labs(x = "Management Plan",
+       y = "Total Area (million km^2)") +
+  theme(axis.text.x = element_text(angle = 90)) +
+  scale_y_continuous(labels = scales::number_format(scale = 1e-4))
+print(Management.Plan.Area)
+
+```
+
+
+## Question 2: How do MPAs from pre-2000 compare to post-2000 in terms of Level of Protection and Management Plan?
+
+```{r Pre- T-test Wrangling, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure X: INSERT'}
+# Wrangling the data in order to turn qualitative variables into numeric values.
+
+# Checking the categories of Level of Protection and Management Plan columns in the df.
+levels(MPA.data.clean$Level.of.Protection)
+levels(MPA.data.clean$Management.Plan)
+
+# Making a new df to work with for this section
+MPA_ttest_df <- MPA.data.clean %>%
+  select(OBJECTID, Level.of.Protection, Management.Plan, Year.Established) %>%
+  mutate("year" = year(Year.Established))
+
+```
+
+### Ranking Protections
+To assign rankings for each Level of Protection and Management Plan, the metadata was used to compare the various types. Low numbers are lower protections, and high numbers are higher protections. Information used along with our rankings (in parenthesis) are below.
+
+**Level of Protection (1-Low, 7-High):**
+(1) Uniform Multiple Use: MPAs or zones with a consistent level of protection and allowable activities, including certain extractive uses, across the entire protected area 
+
+(2) Zoned Multiple Use: MPAs that allow some extractive activities throughout the entire site, but that use marine zoning to allocate specific uses to compatible places or times in order to reduce user conflicts and adverse impacts
+
+(3) Zoned w/No Take Areas: Multiple-use MPAs that contain at least one legally established management zone in which all resource extraction is prohibited
+
+(4) No Take: MPAs or zones that allow human access and even some potentially harmful uses, but that totally prohibit the extraction or significant destruction of natural or cultural resources. This includes Papahanuamokuakea Marine National Monument, which allows very limited subsistence fishing activities by Native Hawaiians by permit.
+
+(5) No Impact: MPAs or zones that allow human access, but that prohibit all activities that could harm the site's resources or disrupt the ecological or cultural services they provide. Examples of activities typically prohibited in no-impact MPAs include resource extraction of any kind (fishing, collecting, or mining); discharge of pollutants 
+
+(6) No Access: MPAs or zones that restrict all human access to the area in order to prevent potential ecological disturbance, unless specifically permitted for designated special uses such as research, monitoring or restoration
+
+**Management Level (1-Low, 7-High):**
+(1) No Management Plan: No management plan has been developed for the site, or the management plan is still in draft form
+
+(2) Community Agreement: A verbal or written community agreement has been reached for the management of the site
+
+(3) Non-MPA Programmatic Species Management Plan: A species management plan has been developed, which includes the management of the site
+
+(4) Non-MPA Programmatic Fisheries Management Plan: A fisheries management plan has been developed, which includes the management of the site
+
+(5) Non-MPA Programmatic Habitat Management Plan: A habitat management plan has been developed, which includes the management of the site
+
+(6) MPA Programmatic Management Plan: A management plan has been developed for a broader MPA program, which includes the site
+
+(7) Site-Specific Management Plan: A management plan has been developed specifically for the site
+
+These rankings were then assigned to each MPA.
+
+```{r Assigning Rankings, echo=FALSE, message = FALSE, warning = FALSE}
+# Creating a new column with number values assigned to each Level of Protection.
+# Range from 1 (lowest level of protection) to 6 (highest level of protection).
+# Values/ranking based off metadata information of what each Level allows.
+
+# Starting with Level of Protection
+MPA_ttest_df$Level_Val <- as.numeric(ifelse(MPA_ttest_df$Level.of.Protection == "No Access", '6',
+                                      ifelse(MPA_ttest_df$Level.of.Protection == "No Impact",'5',
+                                      ifelse(MPA_ttest_df$Level.of.Protection == "No Take",'4',
+                                      ifelse(MPA_ttest_df$Level.of.Protection == "Uniform Multiple Use",'1',
+                                      ifelse(MPA_ttest_df$Level.of.Protection == "Zoned Multiple Use",'2',
+                                      ifelse(MPA_ttest_df$Level.of.Protection == "Zoned w/No Take Areas",'3',
+                                             '0')))))))
+
+# Do the same thing as above for the Management Plan column.
+MPA_ttest_df$Mngmt_Val <- as.numeric(ifelse(MPA_ttest_df$Management.Plan == 
+                                              "Community Agreement", '2',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "MPA Management Plan", '6',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "MPA Programmatic Management Plan", '6',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "No Management Plan", '1',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "Non-MPA Programmatic Fisheries Management Plan", '4',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "Non-MPA Programmatic Habitat Management Plan", '5',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "Non-MPA Programmatic Species Management Plan", '3',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "Non-MPA Programmatic Species Management Plan\n", '3',
+                                      ifelse(MPA_ttest_df$Management.Plan == 
+                                               "Site-Specific Management Plan", '7',
+                                             '0'))))))))))
+
+# Make another column for the combined average of the ranking from Level of Protection and Management Plan
+MPA_ttest_df$Combo_Val <- rowMeans(MPA_ttest_df[ , c(6,7)], na.rm=TRUE)
+
+# Make another column that separates years into two categories for t-test (pre and post 2000)
+MPA_ttest_df$PrePost <- as.factor(ifelse(MPA_ttest_df$year < 2000, 'pre2000','post2000'))
+
+```
+
+Before performing the t-tests, three plots for visualization of the data were created. These help show the difference between the pre- and post-2000 groups to get a better idea of the data.
+
+```{r Levels Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure X: Plot showing variation in Levels of Protection in the pre-2000 and post-2000 groups.'}
+# Making a basic plot to visualize the frequency of different rankings for pre/post 2000.
+
+# Starting with Level of Protection
+LevelProt_density <-
+  ggplot(MPA_ttest_df,
+         aes(Level_Val, fill = factor(PrePost))) +
+  geom_density(alpha = 0.2) +
+  labs(x = "Level of Protection Ranking",
+       y = "Density",
+       fill = "",
+       title = "Comparison of Level of Protection Rankings")
+
+LevelProt_density
+```
+
+```{r Management Plan Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure X: Plot showing variation in Management Plans in the pre-2000 and post-2000 groups.'}
+# Moving on to Management Plan
+Mngmt_density <-
+  ggplot(MPA_ttest_df,
+         aes(Mngmt_Val, fill = factor(PrePost))) +
+  geom_density(alpha = 0.2) +
+  labs(x = "Management Plan Ranking",
+       y = "Density",
+       fill = "",
+       title = "Comparison of Management Plan Rankings")
+
+Mngmt_density
+```
+
+```{r Combined Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure X: Plot showing variation in combined ranking scores in the pre-2000 and post-2000 groups.'}
+# Finally on to Combined Ranking
+Combo_density <-
+  ggplot(MPA_ttest_df,
+         aes(Combo_Val, fill = factor(PrePost))) +
+  geom_density(alpha = 0.2) +
+  labs(x = "Combined Ranking",
+       y = "Density",
+       fill = "",
+       title = "Comparison of Combined Rankings")
+
+Combo_density
+
+```
+
+Next, perform the Welch Two Sample t-test to compare means before and after 2000 for the Level of Protection, Management Plan, and the Combined Average Ranking.
+
+```{r t-tests, echo=FALSE, message = FALSE, warning = FALSE}
+# Two-sample T-test for Level of Protection
+# Null: the protection level means are equal; alt: means are not equal)
+level.twosample <- t.test(MPA_ttest_df$Level_Val ~ MPA_ttest_df$PrePost)
+level.twosample
+
+# Two-sample T-test for Management Plan
+# Null: the protection level means are equal; alt: means are not equal)
+mngmt.twosample <- t.test(MPA_ttest_df$Mngmt_Val ~ MPA_ttest_df$PrePost)
+mngmt.twosample
+
+# Two-sample T-test for Combo of Level of Protection and Management Plan
+# Null: the protection level means are equal; alt: means are not equal)
+combo.twosample <- t.test(MPA_ttest_df$Combo_Val ~ MPA_ttest_df$PrePost)
+combo.twosample
+
+```
+
+Results:
+
+For Levels of Protection, the t-test reveals that in the post-2000 era, MPAs were given significantly higher Levels of Protection than before 2000 (df = 362.42, p-value = 4.593e-10). For Management Plans, no significant difference was found between the two time periods (df = 574, p-value = 0.2563). However, when using the combined ranking for the MPAs, which took the average score between Level of Protection and Management Plan, the post-2000 group still had significantly higher protections than the pre-2000 group (df = 403.16, p-value = 0.0006872). 
+
+##Qestion 3: Where are the MPAs and how can we visualize it across the USA?
+
+<Justin insert some overview info about what you did in your code>
+```{r, echo=FALSE, message = FALSE, warning = FALSE}
+MPA.sites.sf <- MPA.data.clean %>% 
+  st_as_sf(coords = c("Longitude","Latitude"),
+           crs = 4326)
+
+MPA.data.sf <- MPA.data %>% 
+  st_as_sf(coords = c("Longitude","Latitude"),
+           crs = 4326)
+
+
+database <- sf::st_read(here('DataRaw/NOAA_MPAI_2023.gdb')) 
+
+database_transformed <- st_transform(database, c=4326)
+
+df1 <- MPA.data.sf %>% 
+  select(Site.ID, Level.of.Protection)
+
+joined_data <- st_join(database_transformed, df1, by = "Site.ID")
+
+
+joined_data_renamed <- joined_data %>% 
+  mutate(Regions = recode(State,
+                          "AK" = "Alaska",
+                          "NC" = "South",
+                          "ASM" = "Pacific",
+                          "CT" ="Northeast",
+                          "DE" = "Northeast",
+                          "FL" = "South",
+                          "CA" = "West",
+                          "GA" = "South",
+                          "US-GU" = "Pacific",
+                          "HI" = "Pacific",
+                          "IL" = "Midwest",
+                          "MN" = "Midwest",
+                          "US-MP" = "Pacific",
+                          "IN" = "Midwest",
+                          "LA" = "South",
+                          "MA" = "Northeast",
+                          "MI" = "Midwest",
+                          "MS" = "South",
+                          "AL, MS" = "South",
+                          "NH" = "Northeast",
+                          "NJ" = "Northeast",
+                          "OH" = "Midwest",
+                          "OR" = "West",
+                          "PR" = "Pacific",
+                          "TX" = "South",
+                          "VA" = "South",
+                          "US-VI" = "Pacific",
+                          "WA" = "West",
+                          "PRI" = "Pacific",
+                          "NY" = "Northeast",
+                          "PA" = "Northeast",
+                          "SC" = "South",
+                          "RI" = "Northeast",
+                          "ME" = "Northeast",
+                          "MD" = "Northeast",
+                          "WI" = "Midwest",
+                          "FL, MS" = "South",
+                          "VA, MD" = "South",
+                          "AL" = "South",
+                          "OR, WA" = "West",
+                          "NC, VA" = "South",
+                          "NJ, NY" = "Northeast",
+                          "US-MI, CA-ON" = "Canada",
+                          "GA, SC" = "South",
+                          "TX, LA" = "South",
+                          ))
+
+ui <- fluidPage(
+  leafletOutput("map"),
+  absolutePanel(bottom = 10, right = 10,
+                selectInput("regions", label = "Select region to visualize", choices = unique(joined_data_renamed$Regions), selected = "Northeast"),
+                                selectInput("filter", 
+                            label = "Select way to filter",
+                            choices = c("Mgmt_Plan", "Level.of.Protection"))
+                            #choices = c("Management.Plan", "Level.of.Protection"))
+  
+
+                  
+  )
+)
+  
+
+
+
+server <- function(input, output, session) {
+  
+
+  observe({
+    
+    regionSelection =  input$regions 
+    filterSelection = input$filter
+    
+    m <- mapview(filter(joined_data_renamed, Regions == regionSelection), zcol = filterSelection, layer.name= c(filterSelection)) 
+    
+    output$map <- renderLeaflet({
+      m@map
+    })
+  })
+   
+}
+
+shinyApp(ui, server)
+
+
+```
+
+
+\newpage
+
+# Summary and Conclusions
+
+<Eric insert something about your plots>
+
+When comparing pre-2000 and post-2000 ranked Levels of Protection and Management Plans, we can conclude that overall there appears to a significant difference between the two time periods. This means we can reject our null hypothesis and accept our alternative hypothesis that the pre- and post-2000 groups would have different overall protections. We can also infer that the executive order from President Clinton may have helped make this change, although this cannot be 100% confirmed, as correlation does not always mean causation. Further studies into the creation of each MPA should be done to evaluate the reasons behind various Level of Protection and Management Plan choices.
+
+<Justin insert something about your maps>

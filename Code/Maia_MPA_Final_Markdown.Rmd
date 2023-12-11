@@ -2,11 +2,13 @@
 title: "Maia_MPA_Final_Markdown"
 author: "Maia Griffith"
 date: "2023-11-15"
-output: pdf_document
+output: html_document
 editor_options: 
   chunk_output_type: console
+toc: true
 ---
 
+## Test
 ```{r setup, include=FALSE}
 #knitr::opts_chunk$set(echo = TRUE)
 library(here)
