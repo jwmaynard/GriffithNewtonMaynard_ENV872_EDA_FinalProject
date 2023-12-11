@@ -279,7 +279,7 @@ Combined.no.Zoned.w.No.Take <-
 ```
   
 ```{r LoP bar plot, echo=FALSE, fig.cap='Figure 6: Count of MPAs in the United States by Level of Protection.', message=FALSE, warning=FALSE}
-LevelofProtection.Count <- ggplot(MPA.data.clean) +
+LevelofProtection.Count <- ggplot(Combined.Cumulative.Level.of.Protection) +
   geom_bar(aes(x=Level.of.Protection)) +
   labs(title = "Count of MPAs by Level of Protection",
        x = "Level of Protection",
@@ -389,7 +389,7 @@ Combined.no.Site.Specific <-
 ```
 
 ```{r Management Plan count, echo=FALSE, fig.cap='Figure 9: Count of MPAs in the United States by Level of Protection.', message=FALSE, warning=FALSE}
-Management.Plan.Count <- ggplot(MPA.data.clean) +
+Management.Plan.Count <- ggplot(Combined.Cumulative.Management.Plan) +
   geom_bar(aes(x=Management.Plan)) +
   labs(title = "Count of MPAs by Management Plan",
        x = "Management Plan Type",
