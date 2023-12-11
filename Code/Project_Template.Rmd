@@ -557,32 +557,47 @@ combo.twosample
 
 ## Question 3: 
 
+
 Where are the MPAs and how can we visualize it across the USA?
 
-<Justin insert some overview info about what you did in your code>
-```{r Shiny Maps, echo=FALSE, message=FALSE, warning=FALSE}
-MPA.sites.sf <- MPA.data.clean %>% 
-  st_as_sf(coords = c("Longitude","Latitude"),
-           crs = 4326)
+To visualize MPAs across the United States and it's territories, RShiny was used. A geodatabase containing raster files of areas covered by MPAs along with information regarding MPAs was used. RShiny was used so users could select the region of the United States they wish to visualize MPAs for, and users could select to filter by management plan or level of protection, allowing users to interactivly undserstand where MPAs exist and what protections they offer.
 
+
+When looking at where the MPAs are distributed, the majority of them are in the American South or West. 551 MPAs are in the South, and 441 are in the West. Islands in the Pacific Ocean have 150 MPAs, while the Northeast and Midwest have 142 and 43 respectively. 
+Out of the total 1328 represented MPAs from the geodatabase, 678 had site specific management plans, 344 had programmatic management plans, and 105 had no management plans, with other less common management plans also occurring. When looking at the level of protection there are 752 MPAs that are uniform multiple use, 256 that are no take, and 113 that had no level of protection attached.
+In the South, an overwhelming majority of management plans are site specific (395), while most had a level of protection of uniform multiple use (369). The West has a majority programmatic management plans (216), followed by 126 site-specific management plans. Level of protection from MPAs in the West are mostly uniform multiple use with 213 occurrences, and no take with 146 occurrences. Out of the 150 Pacific MPAs, 75 have site specific management plans, while 35 have programmatic management plans. There are 60 uniform multiple use sites and 25 no take site in the Pacific. Out of the Northeast’s 142 MPAs 64 are site specific and 43 are programmatic management plans. There are 92 uniform multiple use sites and 21 zones multiple use sites in the northeast. In the Midwest there are 19 site specific management plans, but 14 MPAs with no management plans, which is 32% of MPAs in the midwest. 18 of the MPAs in the Midwest are uniform multiple use.
+
+
+
+
+```{r Shiny Maps, echo=FALSE, message=FALSE, warning=FALSE}
+
+#Read MPA.data into a sf
 MPA.data.sf <- MPA.data %>% 
   st_as_sf(coords = c("Longitude","Latitude"),
            crs = 4326)
 
-
+#read geodatabase into sf
 database <- sf::st_read(here('DataRaw/NOAA_MPAI_2023.gdb')) 
 
+#transform to WGS84
 database_transformed <- st_transform(database, c=4326)
 
+#Select just ID and level of protection for join
 df1 <- MPA.data.sf %>% 
   select(Site.ID, Level.of.Protection)
 
+#Join full GDB with above dataframe
 joined_data <- st_join(database_transformed, df1, by = "Site.ID")
 
 
+
+
+
+#Group states and territories by area
 joined_data_renamed <- joined_data %>% 
   mutate(Regions = recode(State,
-                          "AK" = "Alaska",
+                          "AK" = "West",
                           "NC" = "South",
                           "ASM" = "Pacific",
                           "CT" ="Northeast",
@@ -629,15 +644,18 @@ joined_data_renamed <- joined_data %>%
                           "TX, LA" = "South",
                           ))
 
+joined_data_renamed <- joined_data_renamed %>% 
+  mutate(Mgmt_Plan = recode(Mgmt_Plan,
+                          "Non-MPA Programmatic Species Management Plan\r\n" = "Non-MPA Programmatic Species Management"))
+#UI for Shiny, user can select region and way to visualize
 ui <- fluidPage(
   leafletOutput("map"),
   absolutePanel(bottom = 10, right = 10,
                 selectInput("regions", label = "Select region to visualize", choices = unique(joined_data_renamed$Regions), selected = "Northeast"),
                                 selectInput("filter", 
-                            label = "Select way to filter",
+                            label = "Select way to visualize",
                             choices = c("Mgmt_Plan", "Level.of.Protection"))
-                            #choices = c("Management.Plan", "Level.of.Protection"))
-  
+
 
                   
   )
@@ -645,15 +663,16 @@ ui <- fluidPage(
   
 
 
-
+#Server for Shiny
 server <- function(input, output, session) {
   
 
   observe({
-    
+    #Take inputs from UI
     regionSelection =  input$regions 
     filterSelection = input$filter
     
+    #Use mapview for map vizualization, set zcol to user's selection and filter by region
     m <- mapview(filter(joined_data_renamed, Regions == regionSelection), zcol = filterSelection, layer.name= c(filterSelection)) 
     
     output$map <- renderLeaflet({
@@ -668,6 +687,35 @@ shinyApp(ui, server)
 
 ```
 
+```{r MPA Spatial Exploration, message=FALSE, warning=FALSE, include=FALSE}
+
+
+summary(as.factor((joined_data_renamed$Regions)))
+summary(as.factor(joined_data_renamed$Mgmt_Plan))
+summary(as.factor(joined_data_renamed$Level.of.Protection))
+
+south_table <- joined_data_renamed[joined_data_renamed$Regions=="South",] 
+table(south_table$Mgmt_Plan)
+table(south_table$Level.of.Protection)
+
+northeast_table <- joined_data_renamed[joined_data_renamed$Regions=="Northeast",] 
+table(northeast_table$Mgmt_Plan)
+table(northeast_table$Level.of.Protection)
+
+midwest_table <- joined_data_renamed[joined_data_renamed$Regions=="Midwest",] 
+table(midwest_table$Mgmt_Plan)
+table(midwest_table$Level.of.Protection)
+
+west_table <- joined_data_renamed[joined_data_renamed$Regions=="West",] 
+table(west_table$Mgmt_Plan)
+table(west_table$Level.of.Protection)
+
+pac_table <- joined_data_renamed[joined_data_renamed$Regions=="Pacific",] 
+table(pac_table$Mgmt_Plan)
+table(pac_table$Level.of.Protection)
+
+```
+
 \newpage
 
 # Summary and Conclusions
@@ -678,4 +726,4 @@ To better visualize the change in MPA area over time for other Level of Protecti
 
 When comparing pre-2000 and post-2000 ranked Levels of Protection and Management Plans, we can conclude that overall there appears to a significant difference between the two time periods. This means we can reject our null hypothesis and accept our alternative hypothesis that the pre- and post-2000 groups would have different overall protections. We can also infer that the executive order from President Clinton may have helped make this change, although this cannot be 100% confirmed, as correlation does not always mean causation. Further studies into the creation of each MPA should be done to evaluate the reasons behind various Level of Protection and Management Plan choices.
 
-<Justin insert something about your maps>
+Most MPAs across the United States have a  'Uniform Multiple Use' protection level, with many also being 'No Take.' There is no large difference between geographic location and protection level, as all regions have 'Uniform Multiple Use' as the most common level of protection, and all regions except the Midwest and Northeast have 'No Take' as the second most common level of protection. The most common management plan throughout the US is 'Site-Specific Management Plan,' followed by 'MPA Programmatic Management Plan.' These were the two most common management plans in all regions except for the Midwest, which had 'Site-Specific Management Plan' and 'No Management Plan' for its two most common.
