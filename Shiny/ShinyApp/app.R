@@ -6,34 +6,32 @@
 #
 #    http://shiny.rstudio.com/
 #
-
-
 library(shiny)
 library(leaflet)
-library(RColorBrewer)
 library(here)
 library(tidyverse)
 library(lubridate)
 library(dplyr)
-library(ggplot2)
 library(sf)
-library(shiny)
-library(leaflet)
-library(RColorBrewer)
 library(mapview); mapviewOptions(fgb = FALSE)
 sf::sf_use_s2(FALSE)
 
 
-MPA.data <- read.csv(here('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.csv'),
+#MPA.data <- read.csv(here('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.csv'),
+#                     stringsAsFactors = TRUE, 
+#                     colClasses = c('Year.Established' = 'factor'))
+
+MPA.data <- read.csv('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.csv',
                      stringsAsFactors = TRUE, 
                      colClasses = c('Year.Established' = 'factor'))
+
 
 MPA.data.sf <- MPA.data %>% 
   st_as_sf(coords = c("Longitude","Latitude"),
            crs = 4326)
 
 
-database <- sf::st_read(here('DataRaw/NOAA_MPAI_2023.gdb')) 
+database <- sf::st_read('DataRaw/NOAA_MPAI_2023.gdb') 
 
 database_transformed <- st_transform(database, c=4326)
 
@@ -103,7 +101,6 @@ joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "631"] <- "Pacific"
 joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "319"] <- "Pacific"
 joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "324"] <- "Pacific"
 
-#joined_data_renamed$Regions <- as.character(joined_data_renamed$Regions)
 
 joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "767"] <- "Pacific"
 joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "765"] <- "Pacific"
@@ -111,22 +108,16 @@ joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "534"] <- "Pacific"
 joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "764"] <- "Pacific"
 joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "624"] <- "Pacific"
 
-#joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "767"] <- "Pacific West of Date Line"
-#joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "765"] <- "Pacific West of Date Line"
-#joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "534"] <- "Pacific West of Date Line"
-#joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "764"] <- "Pacific West of Date Line"
-#joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "624"] <- "Pacific West of Date Line"
-#joined_data_renamed$Regions <- as.factor(joined_data_renamed$Regions)
+
 
 ui <- fluidPage(
   leafletOutput("map"),
   absolutePanel(bottom = 150, left = 10,
-               # selectInput("regions", label = "Select region to visualize", choices = unique(MPA.sites.sf$Regions), selected = "Northeast"),
                 selectInput("regions", label = "Select region to visualize", choices = unique(joined_data_renamed$Regions), selected = "Northeast"),
                                 selectInput("filter", 
                             label = "Select way to filter",
                             choices = c("Mgmt_Plan", "Level.of.Protection"))
-                            #choices = c("Management.Plan", "Level.of.Protection"))
+                           
   
 
                   
@@ -137,14 +128,12 @@ ui <- fluidPage(
 
 
 server <- function(input, output, session) {
-  
-
+  options(shiny.maxRequestSize = 160*1024^2)
   observe({
     
     regionSelection =  input$regions 
     filterSelection = input$filter
     
-   # m <- mapview(filter(MPA.sites.sf, Regions == regionSelection), zcol = filterSelection, layer.name= c(filterSelection))
     m <- mapview(filter(joined_data_renamed, Regions == regionSelection), zcol = filterSelection, layer.name= c(filterSelection)) 
     
     output$map <- renderLeaflet({
