@@ -1,23 +1,15 @@
 ---
-output: html_document
-editor_options: 
-  chunk_output_type: console
----
-\---
 title: "Final Project"
 author: "Justin Maynard, Eric Newton, Maia Griffith"
-date: '`r Sys.Date()`'
-output: 
-  html_notebook: 
-    toc: yes
-    fig_width: 7
-    fig_caption: yes
-  
+date: "`r Sys.Date()`"
+output: pdf_document
+toc: yes
+fig_width: 7
+fig_caption: yes
+urlcolor: blue
+editor_options:
+  chunk_output_type: console
 ---
-\newpage
-\tableofcontents 
-\newpage
-\listoftables 
 \newpage
 \listoffigures 
 \newpage
@@ -67,7 +59,7 @@ MPA.data <- read.csv(here('DataRaw/NOAA_Marine_Protected_Areas_Inventory_2023.cs
 
 # Rationale and Research Questions
 
-Many countries around the world, including the United States, have committed to protecting 30% of their land and water, including protecting 30% of their ocean, [by 2030](https://www.state.gov/the-united-states-announces-the-first-cohort-of-countries-to-endorse-the-ocean-conservation-pledge-at-cop27/#:~:text=During%20the%20seventh%20Our%20Ocean,their%20national%20jurisdiction%20by%202030.) by 2030. Current estimates reveal that the USA appears to be doing quite well, with [around 26%](https://www.frontiersin.org/articles/10.3389/fmars.2022.849927/full) of our oceans and waters currently under some type of protection. However, not all of the protected areas provide the same level of conservation or management. Understanding and visualizing the growth of MPAs and analyzing their protective strength in the United States over time is a critical piece in achieving the 30x30 goal.
+Many countries around the world, including the United States, have committed to protecting 30% of their land and water, including protecting 30% of their ocean, [by 2030](https://www.state.gov/the-united-states-announces-the-first-cohort-of-countries-to-endorse-the-ocean-conservation-pledge-at-cop27/#:~:text=During%20the%20seventh%20Our%20Ocean,their%20national%20jurisdiction%20by%202030.). Current estimates reveal that the USA appears to be doing quite well, with [around 26%](https://www.frontiersin.org/articles/10.3389/fmars.2022.849927/full) of our oceans and waters currently under some type of protection. However, not all of the protected areas provide the same level of conservation or management. Understanding and visualizing the growth of MPAs and analyzing their protective strength in the United States over time is a critical piece in achieving the 30x30 goal.
 
 We decided to focus on MPAs before and after an executive order was released from President Bill Clinton in 2000, which aimed to improve the protections provided from MPAs. 
 
@@ -96,7 +88,7 @@ Table 1: Basic Dataset Information
 |Variables Used | OBJECTID, Site.Name, State, Level.of.Protection, Management.Plan, Year.Established, Marine.Status, Area..km2., Marine.Area..km2., Percent.Area.Marine, No.Take.Area..km2., Longitude, Latitude|
 |Data Range|1903 to 2022|
 
-```{r First Wrangling of Data, echo=FALSE, message=FALSE, warning=FALSE}
+```{r First Wrangling of Data, message=FALSE, warning=FALSE, include=FALSE}
 MPA.data.clean <- MPA.data %>%
   select(OBJECTID, Site.Name, State, Level.of.Protection, Management.Plan, Year.Established, Marine.Status, Area..km2., Marine.Area..km2., Percent.Area.Marine, No.Take.Area..km2., Longitude, Latitude) %>% 
   filter(Year.Established != 0)
@@ -119,7 +111,7 @@ colnames(MPA.data.clean)[11] <- "No.Take.Area"
 
 Before analyzing the data, wanted to get an idea of the data we were working with, and created a simple visualization of the number MPAs created per year (see Figure 1 below). This showed us that there is quite a lot of variance among the years.
 
-```{r Exploring Processed Data 1, echo=FALSE, fig.cap = 'Figure 1: Preliminary data visualiztion to understand our data, showing the number of MPAs created per year in the United States.', message=FALSE, warning=FALSE}
+```{r Exploring Processed Data 1, echo=FALSE, fig.cap = 'Preliminary data visualiztion to understand our data, showing the number of MPAs created per year in the United States.', message=FALSE, warning=FALSE}
 Clean.plot <- 
   ggplot(MPA.data.clean) +
   geom_bar(aes(x=Year.Established)) +
@@ -132,7 +124,7 @@ Clean.plot
 
 Understanding and visualizing the growth of MPAs in the United States over time is a critical piece in achieving the 30x30 goal. The following figures show the cumulative growth over time of the number of MPAs (Figure 2) and the total area of MPAs (Figure 3). 
 
-```{r Cumulative Number of Parks, echo=TRUE, fig.cap='Figure 2: Plot showing the cumulative sum of the total number of MPAs in the United States over time.', message=FALSE, warning=FALSE}
+```{r Cumulative Number of Parks, echo=FALSE, fig.cap='Plot showing the cumulative sum of the total number of MPAs in the United States over time.', message=FALSE, warning=FALSE}
 MPA.parks.year <- MPA.data.clean %>%
   mutate("year" = year(Year.Established)) %>%
   group_by(year) %>%
@@ -160,7 +152,7 @@ total_num_plot <-
 total_num_plot
 ```
 
-```{r Cumulative Area of Parks, echo=FALSE, fig.cap = 'Figure 3: Plot showing the cumulative sum of total MPA area in the United States over time.', message=FALSE, warning=FALSE}
+```{r Cumulative Area of Parks, echo=FALSE, fig.cap='Plot showing the cumulative sum of total MPA area in the United States over time.', message=FALSE, warning=FALSE}
 # Wrangle data to have the cumulative total area over time.
 MPA.totalarea.year <- MPA.data.clean %>%
   mutate("year" = year(Year.Established)) %>%
@@ -180,6 +172,7 @@ total_area_plot <-
 
 total_area_plot
 ```
+
 These plots reveal a strong upward trend of MPAs both in number and in area. However, this does not tell us anything about the strength of the MPAs being created. Our analysis will focus on visualizing and testing to see if there was in fact a difference in park strength before and after President Clinton's executive order.
 
 \newpage
@@ -237,11 +230,11 @@ Combined.Cumulative.Level.of.Protection <- rbind(
 
 ## Question 1: 
 
-What is the comparison of different Levels of Protection and Management Plans across all MPAs overtime?
+**What is the comparison of different Levels of Protection and Management Plans across all MPAs overtime?**
 
 <Eric add some info here about the plots you are making and how the plots answer the question>
 
-```{r Level of Protection Plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 4: Plot showing the cumulative sum of MPA area over time by Level of Protection.'}
+```{r Level of Protection Plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Plot showing the cumulative sum of MPA area over time by Level of Protection.'}
 # Create plot of cumulative area of MPAs over time by Level of Protection. 
 Combined.plot.LoP <-
   ggplot(Combined.Cumulative.Level.of.Protection) +
@@ -258,7 +251,7 @@ Combined.plot.LoP <-
   print(Combined.plot.LoP)
 ```
 
-```{r LoP no Zoned No Take, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 5: Plot showing cumulative area of MPAs over time by Level of Protection with MPAs Zoned with No Take Areas omitted.'}
+```{r LoP no Zoned No Take, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Plot showing cumulative area of MPAs over time by Level of Protection with MPAs Zoned with No Take Areas omitted.'}
 # Create plot of cumulative area of MPAs over time by Level of Protection without
 # 'Zoned w No Take' Level of Protection for visualization of Level of Protection levels
 # with smaller cumulative areas.   
@@ -278,7 +271,7 @@ Combined.no.Zoned.w.No.Take <-
   print(Combined.no.Zoned.w.No.Take)
 ```
   
-```{r LoP bar plot, echo=FALSE, fig.cap='Figure 6: Count of MPAs in the United States by Level of Protection.', message=FALSE, warning=FALSE}
+```{r LoP bar plot, echo=FALSE, fig.cap='Count of MPAs in the United States by Level of Protection.', message=FALSE, warning=FALSE}
 LevelofProtection.Count <- ggplot(Combined.Cumulative.Level.of.Protection) +
   geom_bar(aes(x=Level.of.Protection)) +
   labs(title = "Count of MPAs by Level of Protection",
@@ -289,7 +282,6 @@ LevelofProtection.Count <- ggplot(Combined.Cumulative.Level.of.Protection) +
 
 
 ```
-
 
 ```{r Management Plan dfs, echo=FALSE, message=FALSE, warning=FALSE}
 # Create new data frames for each Management Plan.
@@ -348,7 +340,7 @@ Combined.Cumulative.Management.Plan <- rbind(
 ```
 
 
-```{r Management Plan plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 7: Plot showing the cumulative sum of MPA area over time by Management Plan'}
+```{r Management Plan plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Plot showing the cumulative sum of MPA area over time by Management Plan'}
 
 # Create plot of cumulative area of MPAs over time by Management Plan. 
 Combined.Management.Plan.plot <-
@@ -367,7 +359,7 @@ Combined.Management.Plan.plot <-
   print(Combined.Management.Plan.plot)
 ```
 
-```{r MP w/o site specific, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 8: Plot showing the cumulative sum of MPA area over time by Management Area with Site-Specific Management Plans omitted.'}
+```{r MP w/o site specific, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Plot showing the cumulative sum of MPA area over time by Management Area with Site-Specific Management Plans omitted.'}
 # Create plot of cumulative area of MPAs over time by Management Plan without
 # 'Site Specific' Management Plans for visualization of Managmenet Plan levels 
 # with smaller cumulative areas.  
@@ -388,7 +380,7 @@ Combined.no.Site.Specific <-
   print(Combined.no.Site.Specific)
 ```
 
-```{r Management Plan count, echo=FALSE, fig.cap='Figure 9: Count of MPAs in the United States by Level of Protection.', message=FALSE, warning=FALSE}
+```{r Management Plan count, echo=FALSE, fig.cap='Count of MPAs in the United States by Level of Protection.', message=FALSE, warning=FALSE}
 Management.Plan.Count <- ggplot(Combined.Cumulative.Management.Plan) +
   geom_bar(aes(x=Management.Plan)) +
   labs(title = "Count of MPAs by Management Plan",
@@ -400,12 +392,12 @@ Management.Plan.Count <- ggplot(Combined.Cumulative.Management.Plan) +
 
 ```
 
-
+\newpage
 ## Question 2: 
 
-How do MPAs from pre-2000 compare to post-2000 in terms of Level of Protection and Management Plan?
+**How do MPAs from pre-2000 compare to post-2000 in terms of Level of Protection and Management Plan?**
 
-```{r Pre- T-test Wrangling, echo=FALSE, message = FALSE, warning = FALSE}
+```{r Pre- T-test Wrangling, message=FALSE, warning=FALSE, include=FALSE}
 # Wrangling the data in order to turn qualitative variables into numeric values.
 
 # Checking the categories of Level of Protection and Management Plan columns in the df.
@@ -423,32 +415,34 @@ MPA_ttest_df <- MPA.data.clean %>%
 To assign rankings for each Level of Protection and Management Plan, the metadata was used to compare the various types. Low numbers are lower protections, and high numbers are higher protections. Information used along with our rankings (in parenthesis) are below.
 
 **Level of Protection (1-Low, 7-High):**
-(1) Uniform Multiple Use: MPAs or zones with a consistent level of protection and allowable activities, including certain extractive uses, across the entire protected area 
 
-(2) Zoned Multiple Use: MPAs that allow some extractive activities throughout the entire site, but that use marine zoning to allocate specific uses to compatible places or times in order to reduce user conflicts and adverse impacts
+Uniform Multiple Use (1): MPAs or zones with a consistent level of protection and allowable activities, including certain extractive uses, across the entire protected area 
 
-(3) Zoned w/No Take Areas: Multiple-use MPAs that contain at least one legally established management zone in which all resource extraction is prohibited
+Zoned Multiple Use (2): MPAs that allow some extractive activities throughout the entire site, but that use marine zoning to allocate specific uses to compatible places or times in order to reduce user conflicts and adverse impacts
 
-(4) No Take: MPAs or zones that allow human access and even some potentially harmful uses, but that totally prohibit the extraction or significant destruction of natural or cultural resources. This includes Papahanuamokuakea Marine National Monument, which allows very limited subsistence fishing activities by Native Hawaiians by permit.
+Zoned w/No Take Areas (3): Multiple-use MPAs that contain at least one legally established management zone in which all resource extraction is prohibited
 
-(5) No Impact: MPAs or zones that allow human access, but that prohibit all activities that could harm the site's resources or disrupt the ecological or cultural services they provide. Examples of activities typically prohibited in no-impact MPAs include resource extraction of any kind (fishing, collecting, or mining); discharge of pollutants 
+No Take (4): MPAs or zones that allow human access and even some potentially harmful uses, but that totally prohibit the extraction or significant destruction of natural or cultural resources. This includes Papahanuamokuakea Marine National Monument, which allows very limited subsistence fishing activities by Native Hawaiians by permit.
 
-(6) No Access: MPAs or zones that restrict all human access to the area in order to prevent potential ecological disturbance, unless specifically permitted for designated special uses such as research, monitoring or restoration
+No Impact (5): MPAs or zones that allow human access, but that prohibit all activities that could harm the site's resources or disrupt the ecological or cultural services they provide. Examples of activities typically prohibited in no-impact MPAs include resource extraction of any kind (fishing, collecting, or mining); discharge of pollutants 
+
+No Access (6): MPAs or zones that restrict all human access to the area in order to prevent potential ecological disturbance, unless specifically permitted for designated special uses such as research, monitoring or restoration
 
 **Management Level (1-Low, 7-High):**
-(1) No Management Plan: No management plan has been developed for the site, or the management plan is still in draft form
 
-(2) Community Agreement: A verbal or written community agreement has been reached for the management of the site
+No Management Plan (1): No management plan has been developed for the site, or the management plan is still in draft form
 
-(3) Non-MPA Programmatic Species Management Plan: A species management plan has been developed, which includes the management of the site
+Community Agreement (2): A verbal or written community agreement has been reached for the management of the site
 
-(4) Non-MPA Programmatic Fisheries Management Plan: A fisheries management plan has been developed, which includes the management of the site
+Non-MPA Programmatic Species Management Plan (3): A species management plan has been developed, which includes the management of the site
 
-(5) Non-MPA Programmatic Habitat Management Plan: A habitat management plan has been developed, which includes the management of the site
+Non-MPA Programmatic Fisheries Management Plan (4): A fisheries management plan has been developed, which includes the management of the site
 
-(6) MPA Programmatic Management Plan: A management plan has been developed for a broader MPA program, which includes the site
+Non-MPA Programmatic Habitat Management Plan (5): A habitat management plan has been developed, which includes the management of the site
 
-(7) Site-Specific Management Plan: A management plan has been developed specifically for the site
+MPA Programmatic Management Plan (6): A management plan has been developed for a broader MPA program, which includes the site
+
+Site-Specific Management Plan (7): A management plan has been developed specifically for the site
 
 These rankings were then assigned to each MPA.
 
@@ -497,9 +491,11 @@ MPA_ttest_df$PrePost <- as.factor(ifelse(MPA_ttest_df$year < 2000, 'pre2000','po
 
 ### Q2 Plots
 
-Before performing the t-tests, three plots for visualization of the data were created. These help show the difference between the pre- and post-2000 groups to get a better idea of the data.
+Before performing the t-tests, three plots for visualization of the data were created. These help show the difference between the pre- and post-2000 groups to get a better idea of the data. Next, we performed the Welch Two Sample t-test to compare means before and after 2000 for the Level of Protection, Management Plan, and the Combined Average Ranking. 
 
-```{r Levels Visuals Pre and Post 2000, echo=FALSE, fig.cap='Figure 10: Plot showing variation in Levels of Protection in the pre-2000 and post-2000 groups.', message=FALSE, warning=FALSE}
+For **Levels of Protection**, the t-test reveals that in the post-2000 era, MPAs were given significantly higher Levels of Protection than before 2000 (df = 362.42, p-value = 4.593e-10). For **Management Plans**, no significant difference was found between the two time periods (df = 574, p-value = 0.2563). However, when using the **combined ranking** for the MPAs, which took the average score between Level of Protection and Management Plan, the post-2000 group still had significantly higher protections than the pre-2000 group (df = 403.16, p-value = 0.0006872). 
+
+```{r Levels Visuals Pre and Post 2000, echo=FALSE, fig.cap='Plot showing variation in Levels of Protection in the pre-2000 and post-2000 groups.', message=FALSE, warning=FALSE}
 # Making a basic plot to visualize the frequency of different rankings for pre/post 2000.
 
 # Starting with Level of Protection
@@ -510,12 +506,13 @@ LevelProt_density <-
   labs(x = "Level of Protection Ranking",
        y = "Density",
        fill = "",
-       title = "Comparison of Level of Protection Rankings")
+       title = "Comparison of Level of Protection Rankings") +
+  scale_x_continuous(n.breaks=6)
 
 LevelProt_density
 ```
 
-```{r Management Plan Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 11: Plot showing variation in Management Plans in the pre-2000 and post-2000 groups.'}
+```{r Management Plan Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Plot showing variation in Management Plans in the pre-2000 and post-2000 groups.'}
 # Moving on to Management Plan
 Mngmt_density <-
   ggplot(MPA_ttest_df,
@@ -524,12 +521,13 @@ Mngmt_density <-
   labs(x = "Management Plan Ranking",
        y = "Density",
        fill = "",
-       title = "Comparison of Management Plan Rankings")
+       title = "Comparison of Management Plan Rankings") +
+  scale_x_continuous(n.breaks=7)
 
 Mngmt_density
 ```
 
-```{r Combined Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Figure 12: Plot showing variation in combined ranking scores in the pre-2000 and post-2000 groups.'}
+```{r Combined Visuals Pre and Post 2000, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Plot showing variation in combined ranking scores in the pre-2000 and post-2000 groups.'}
 # Finally on to Combined Ranking
 Combo_density <-
   ggplot(MPA_ttest_df,
@@ -538,13 +536,13 @@ Combo_density <-
   labs(x = "Combined Ranking",
        y = "Density",
        fill = "",
-       title = "Comparison of Combined Rankings")
+       title = "Comparison of Combined Rankings") +
+  scale_x_continuous(n.breaks=7)
 
 Combo_density
 
 ```
 
-Next, perform the Welch Two Sample t-test to compare means before and after 2000 for the Level of Protection, Management Plan, and the Combined Average Ranking. For **Levels of Protection**, the t-test reveals that in the post-2000 era, MPAs were given significantly higher Levels of Protection than before 2000 (df = 362.42, p-value = 4.593e-10). For **Management Plans**, no significant difference was found between the two time periods (df = 574, p-value = 0.2563). However, when using the **combined ranking** for the MPAs, which took the average score between Level of Protection and Management Plan, the post-2000 group still had significantly higher protections than the pre-2000 group (df = 403.16, p-value = 0.0006872). 
 
 ```{r t-tests, message=FALSE, warning=FALSE, include=FALSE}
 # Two-sample T-test for Level of Protection
@@ -563,7 +561,7 @@ combo.twosample <- t.test(MPA_ttest_df$Combo_Val ~ MPA_ttest_df$PrePost)
 combo.twosample
 
 ```
-
+\newpage
 ## Question 3: 
 Where are the MPAs and how can we visualize it across the USA?
 
