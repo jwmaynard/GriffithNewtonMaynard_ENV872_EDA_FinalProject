@@ -106,6 +106,32 @@ joined_data_renamed$Regions[joined_data_renamed$OBJECTID == "624"] <- "Pacific"
 
 
 
+
+summary(as.factor((joined_data_renamed$Regions)))
+summary(as.factor(joined_data_renamed$Mgmt_Plan))
+summary(as.factor(joined_data_renamed$Level.of.Protection))
+
+south_table <- joined_data_renamed[joined_data_renamed$Regions=="South",] 
+table(south_table$Mgmt_Plan)
+table(south_table$Level.of.Protection)
+
+northeast_table <- joined_data_renamed[joined_data_renamed$Regions=="Northeast",] 
+table(northeast_table$Mgmt_Plan)
+table(northeast_table$Level.of.Protection)
+
+midwest_table <- joined_data_renamed[joined_data_renamed$Regions=="Midwest",] 
+table(midwest_table$Mgmt_Plan)
+table(midwest_table$Level.of.Protection)
+
+west_table <- joined_data_renamed[joined_data_renamed$Regions=="West",] 
+table(west_table$Mgmt_Plan)
+table(west_table$Level.of.Protection)
+
+pac_table <- joined_data_renamed[joined_data_renamed$Regions=="Pacific",] 
+table(pac_table$Mgmt_Plan)
+table(pac_table$Level.of.Protection)
+
+
 ui <- fluidPage(
   leafletOutput("map"),
   absolutePanel(bottom = 150, left = 10,

@@ -569,30 +569,6 @@ Where are the MPAs and how can we visualize it across the USA?
 
 ```{r MPA Spatial Exploration, message=FALSE, warning=FALSE, include=FALSE}
 
-summary(as.factor((joined_data_renamed$Regions)))
-summary(as.factor(joined_data_renamed$Mgmt_Plan))
-summary(as.factor(joined_data_renamed$Level.of.Protection))
-
-south_table <- joined_data_renamed[joined_data_renamed$Regions=="South",] 
-table(south_table$Mgmt_Plan)
-table(south_table$Level.of.Protection)
-
-northeast_table <- joined_data_renamed[joined_data_renamed$Regions=="Northeast",] 
-table(northeast_table$Mgmt_Plan)
-table(northeast_table$Level.of.Protection)
-
-midwest_table <- joined_data_renamed[joined_data_renamed$Regions=="Midwest",] 
-table(midwest_table$Mgmt_Plan)
-table(midwest_table$Level.of.Protection)
-
-west_table <- joined_data_renamed[joined_data_renamed$Regions=="West",] 
-table(west_table$Mgmt_Plan)
-table(west_table$Level.of.Protection)
-
-pac_table <- joined_data_renamed[joined_data_renamed$Regions=="Pacific",] 
-table(pac_table$Mgmt_Plan)
-table(pac_table$Level.of.Protection)
-
 #Due to issues with shinyapps and reading in data, only the Shiny app with point files could be used on shinyapps.
 
 ```
