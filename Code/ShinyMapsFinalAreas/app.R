@@ -110,16 +110,16 @@ ui <- fluidPage(
   leafletOutput("map"),
   absolutePanel(bottom = 150, left = 10,
                 selectInput("regions", label = "Select region to visualize", choices = unique(joined_data_renamed$Regions), selected = "Northeast"),
-                                selectInput("filter", 
+                selectInput("filter", 
                             label = "Select way to filter",
                             choices = c("Mgmt_Plan", "Level.of.Protection"))
-                           
-  
-
-                  
+                
+                
+                
+                
   )
 )
-  
+
 
 
 
@@ -136,7 +136,7 @@ server <- function(input, output, session) {
       m@map
     })
   })
-   
+  
 }
 
 shinyApp(ui, server)
