@@ -173,6 +173,7 @@ total_area_plot <-
 total_area_plot
 ```
 
+
 These plots reveal a strong upward trend of MPAs both in number and in area. However, this does not tell us anything about the strength of the MPAs being created. Our analysis will focus on visualizing and testing to see if there was in fact a difference in park strength before and after President Clinton's executive order.
 
 \newpage
@@ -233,6 +234,8 @@ Combined.Cumulative.Level.of.Protection <- rbind(
 **What is the comparison of different Levels of Protection and Management Plans across all MPAs over time?**
 
 The following plots show the cumulative growth of MPAs over time by Level of Protection and Management Plan. This analysis provides a clear account of how the type of protection and management plan for MPAs has changed as they have been implemented over time. Figures 6 and 9, below, also reveal the count of MPAs in the United States by Level of Protection and Management Plan.  
+
+These plots illustrate a Level of Protection - 'Zoned with No Take Areas' - and a Management Plan - 'Site Specific Management Plan' - that far exceed the others in terms of area. While this distinction is refelected in the count of MPAs by Management Plan, 'Zoned with no Take Areas' is only the third most numerous Level of Protection category.
 
 ```{r Level of Protection Plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Plot showing the cumulative sum of MPA area over time by Level of Protection.'}
 # Create plot of cumulative area of MPAs over time by Level of Protection. 
@@ -392,7 +395,6 @@ Management.Plan.Count <- ggplot(Combined.Cumulative.Management.Plan) +
 
 ```
 
-These plots illustrate a Level of Protection - 'Zoned with No Take Areas' - and a Management Plan - 'Site Specific Management Plan' - that far exceed the others in terms of area. While this distinction is refelected in the count of MPAs by Management Plan, 'Zoned with no Take Areas' is only the third most numerous Level of Protection category. 
 
 \newpage
 ## Question 2: 
