@@ -81,19 +81,21 @@ Files are primarly in .csv format. Spatial data is in .gdb format. Files named w
 
 ## Scripts and code
 
-'Project_Template' - Final project report with R shiny included.
+'MaynardNewtonGriffith_ENV872_FinalProj.Rmd' - Final project report kitted to pdf with shiny link.
+
+'Project_Template.Rmd' - Final project report with R shiny included.
 
 'Copy_Proj_Template.Rmd' - Copy of final project report with R shiny included.
 
-'Final_Project' - Final project with R shiny link'
+'Final_Project.Rmd' - Final project with R shiny link, html.
 
-'Eric_MPA_Final_Markdown' - Eric Newton's individual RMD file. 
+'Eric_MPA_Final_Markdown.Rmd' - Eric Newton's individual RMD file. 
 
-'Maia_MPA_Final_Markdown' - Maia Griffith's individual RMD file.
+'Maia_MPA_Final_Markdown.Rmd' - Maia Griffith's individual RMD file.
 
-'Justin_MPA_Final_Markdown' - Justin Maynard's individual RMD file.
+'Justin_MPA_Final_Markdown.Rmd' - Justin Maynard's individual RMD file.
 
-'JustinShiny' - Maps created by Justin Maynard using R Shiny.
+'JustinShiny.Rmd' - Maps created by Justin Maynard using R Shiny.
 
 
 ## Quality assurance/quality control
