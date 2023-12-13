@@ -230,9 +230,9 @@ Combined.Cumulative.Level.of.Protection <- rbind(
 
 ## Question 1: 
 
-**What is the comparison of different Levels of Protection and Management Plans across all MPAs overtime?**
+**What is the comparison of different Levels of Protection and Management Plans across all MPAs over time?**
 
-<Eric add some info here about the plots you are making and how the plots answer the question>
+The following plots show the cumulative growth of MPAs over time by Level of Protection and Management Plan. This analysis provides a clear account of how the type of protection and management plan for MPAs has changed as they have been implemented over time. Figures 6 and 9, below, also reveal the count of MPAs in the United States by Level of Protection and Management Plan.  
 
 ```{r Level of Protection Plots, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Plot showing the cumulative sum of MPA area over time by Level of Protection.'}
 # Create plot of cumulative area of MPAs over time by Level of Protection. 
@@ -251,9 +251,9 @@ Combined.plot.LoP <-
   print(Combined.plot.LoP)
 ```
 
-```{r LoP no Zoned No Take, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Plot showing cumulative area of MPAs over time by Level of Protection with MPAs Zoned with No Take Areas omitted.'}
+```{r LoP no Zoned No Take Area, echo=FALSE, message = FALSE, warning = FALSE, fig.cap='Plot showing cumulative area of MPAs over time by Level of Protection with MPAs Zoned with No Take Areas omitted.'}
 # Create plot of cumulative area of MPAs over time by Level of Protection without
-# 'Zoned w No Take' Level of Protection for visualization of Level of Protection levels
+# 'Zoned w No Take Area' Level of Protection for visualization of Level of Protection levels
 # with smaller cumulative areas.   
 Combined.no.Zoned.w.No.Take <-
   ggplot(Combined.Cumulative.Level.of.Protection %>% 
@@ -391,6 +391,8 @@ Management.Plan.Count <- ggplot(Combined.Cumulative.Management.Plan) +
 
 
 ```
+
+These plots illustrate a Level of Protection - 'Zoned with No Take Areas' - and a Management Plan - 'Site Specific Management Plan' - that far exceed the others in terms of area. While this distinction is refelected in the count of MPAs by Management Plan, 'Zoned with no Take Areas' is only the third most numerous Level of Protection category. 
 
 \newpage
 ## Question 2: 
@@ -595,3 +597,6 @@ To better visualize the change in MPA area over time for other Level of Protecti
 When comparing pre-2000 and post-2000 ranked Levels of Protection and Management Plans, we can conclude that overall there appears to a significant difference between the two time periods. This means we can reject our null hypothesis and accept our alternative hypothesis that the pre- and post-2000 groups would have different overall protections. We can also infer that the executive order from President Clinton may have helped make this change, although this cannot be 100% confirmed, as correlation does not always mean causation. Further studies into the creation of each MPA should be done to evaluate the reasons behind various Level of Protection and Management Plan choices.
 
 Most MPAs across the United States have a  'Uniform Multiple Use' protection level, with many also being 'No Take.' There is no large difference between geographic location and protection level, as all regions have 'Uniform Multiple Use' as the most common level of protection, and all regions except the Midwest and Northeast have 'No Take' as the second most common level of protection. The most common management plan throughout the US is 'Site-Specific Management Plan,' followed by 'MPA Programmatic Management Plan.' These were the two most common management plans in all regions except for the Midwest, which had 'Site-Specific Management Plan' and 'No Management Plan' for its two most common.
+
+
+Link to Github Repository: https://github.com/jwmaynard/GriffithNewtonMaynard_ENV872_EDA_FinalProject
